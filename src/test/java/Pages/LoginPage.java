@@ -74,11 +74,6 @@ public class LoginPage {
             Select actingAs = new Select(dropDownActingAs);
             actingAs.selectByIndex(1);
         }
-        else if(url.contains("Location")){
-            dropDownActingAs.click();
-            Select actingAs = new Select(dropDownActingAs);
-            actingAs.selectByIndex(1);
-        }
         else if(url.contains("HumanResources")){
             dropDownActingAs.click();
             Select actingAs = new Select(dropDownActingAs);
