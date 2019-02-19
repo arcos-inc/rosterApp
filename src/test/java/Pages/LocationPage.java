@@ -12,6 +12,10 @@ public class LocationPage {
         PageFactory.initElements(driver, this);
     }
 
+    @FindBy(how = How.ID, using = "ucPageHeader_ucRoleSwitcher_cboRole")
+    //@CacheLookup
+    public WebElement dropDownActingAs;
+
     @FindBy(how = How.ID, using = "lnkNew")
     public WebElement lnkCreateLocation;
 
@@ -50,6 +54,31 @@ public class LocationPage {
 
     @FindBy(how = How.ID, using = "btnAddEdit")
     public WebElement btnAddLocation;
+
+    public void GetLocationURL(WebDriver driver) {
+        //String locationLabel = getLocationLabel.getText().toLowerCase();
+        String url = driver.getCurrentUrl();
+
+        //System.out.println("You got this value: " + locationLabel);
+
+        if (url.contains("Supervisor")) {
+            dropDownActingAs.click();
+            Select actingAs = new Select(dropDownActingAs);
+            actingAs.selectByIndex(1);
+        } else if (url.contains("ScheduleView")) {
+            dropDownActingAs.click();
+            Select actingAs = new Select(dropDownActingAs);
+            actingAs.selectByIndex(1);
+        } else if (url.contains("HumanResources")) {
+            dropDownActingAs.click();
+            Select actingAs = new Select(dropDownActingAs);
+            actingAs.selectByIndex(1);
+        } else if (url.contains("Admin")) {
+            dropDownActingAs.click();
+            Select actingAs = new Select(dropDownActingAs);
+            actingAs.selectByIndex(1);
+        }
+    }
 
     public void CreateNewLocation() {
         lnkCreateLocation.click();

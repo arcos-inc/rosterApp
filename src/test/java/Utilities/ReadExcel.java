@@ -2,24 +2,43 @@ package Utilities;
 
 import java.io.File;
 import java.io.FileInputStream;
-
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
-//import org.apache.poi.
 
 public class ReadExcel {
 
-    public static void readExcelFile() throws Exception{
-        File src = new File("E:\\Projects\\Automation\\BDD Framework\\TestCaseDoc.xlsx");
+    private static XSSFSheet mSheet;
 
-        FileInputStream file = new FileInputStream(src);
+    private ReadExcel() {
+    }
 
-        XSSFWorkbook wb = new XSSFWorkbook(file);
+    public static void readExcelFile() {
+        if (mSheet != null) {
+            return;
+        }
+        File src = new File("E:\\Projects\\ARCOS\\rosterAppKeywords.xlsx");
 
-        XSSFSheet sheet1 = wb.getSheetAt(0);
+        try {
+            FileInputStream file = new FileInputStream(src);
 
-        String data1 = sheet1.getRow(1).getCell(1).getStringCellValue();
+            XSSFWorkbook wb = new XSSFWorkbook(file);
 
-        System.out.println("Data from Excel is " + data1);
+            mSheet = wb.getSheetAt(0);
+
+            //String data1 = sheet1.getRow(1).getCell(1).getStringCellValue();
+
+            //return sheet1.getRow(1).getCell(2).getStringCellValue();
+        } catch (Exception ex) {
+            System.out.println("You got: " + ex);
+        }
+
+        return;
+    }
+
+    public static String GetCellValue(int row, int column) {
+        if (mSheet == null) {
+            return "";
+        }
+        return mSheet.getRow(row).getCell(column).getStringCellValue();
     }
 }

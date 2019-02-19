@@ -1,7 +1,10 @@
 package Pages;
 
+import Utilities.ReadExcel;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
@@ -11,34 +14,23 @@ public class LoginPage {
 
     public LoginPage(WebDriver driver) {
         PageFactory.initElements(driver, this);
+        this.dropDownAdminRole = driver.findElement(By.id(ReadExcel.GetCellValue(1, 2)));
+        this.btnLogin = driver.findElement(By.id(ReadExcel.GetCellValue(3, 2)));
     }
 
     @FindBy(how = How.XPATH, using = "...")
+    @CacheLookup
     public WebElement txtUsername;
 
     @FindBy(how = How.XPATH, using = "...")
+    //@CacheLookup
     public WebElement txtPassword;
 
-    @FindBy(how = How.ID, using = "cboRole")
+    //@FindBy(how = How.ID, using = "cboRole")
     public WebElement dropDownAdminRole;
 
-    @FindBy(how = How.ID, using = "btnLogin")
+    //@FindBy(how = How.ID, using = "btnLogin")
     public WebElement btnLogin;
-
-    @FindBy(how = How.ID, using = "lblPageHeading")
-    public WebElement getLocationLabel;
-
-    @FindBy(how = How.ID, using = "ucPageHeader_ucRoleSwitcher_cboRole")
-    public WebElement dropDownActingAs;
-
-    @FindBy(how = How.XPATH, using = "...")
-    public WebElement btnAddRole;
-
-    @FindBy(how = How.XPATH, using = "...")
-    public WebElement txtRoleName;
-
-    @FindBy(how = How.XPATH, using = "...")
-    public WebElement btnSaveRole;
 
     public void Login(String userName, String Password) {
         txtUsername.sendKeys(userName);
@@ -53,37 +45,10 @@ public class LoginPage {
         dropDownAdminRole.click();
     }
 
-    public void SelectAdminRole(){
+    public void SelectAdminRole() {
         Select adminRole = new Select(dropDownAdminRole);
         adminRole.selectByIndex(1);
     }
-
-    public void GetLocationlabel(WebDriver driver) {
-        //String locationLabel = getLocationLabel.getText().toLowerCase();
-        String url = driver.getCurrentUrl();
-
-        //System.out.println("You got this value: " + locationLabel);
-
-        if(url.contains("Supervisor")){
-            dropDownActingAs.click();
-            Select actingAs = new Select(dropDownActingAs);
-            actingAs.selectByIndex(1);
-        }
-        else if(url.contains("ScheduleView")){
-            dropDownActingAs.click();
-            Select actingAs = new Select(dropDownActingAs);
-            actingAs.selectByIndex(1);
-        }
-        else if(url.contains("HumanResources")){
-            dropDownActingAs.click();
-            Select actingAs = new Select(dropDownActingAs);
-            actingAs.selectByIndex(1);
-        }
-        else if(url.contains("Admin")){
-            dropDownActingAs.click();
-            Select actingAs = new Select(dropDownActingAs);
-            actingAs.selectByIndex(1);
-        }
 /*
         if(!(locationLabel.equals("locations for my airline"))){
             dropDownActingAs.click();
@@ -91,21 +56,4 @@ public class LoginPage {
             actingAs.selectByIndex(1);
         }
 */
-    }
-
-    public void ClickRoleManagement() {
-        //roleManagementTab.click();
-    }
-
-    public void ClickAddRole() {
-        btnAddRole.click();
-    }
-
-    public void WriteRoleName(String roleName) {
-        txtRoleName.sendKeys(roleName);
-    }
-
-    public void ClickSaveRole() {
-        btnSaveRole.click();
-    }
 }

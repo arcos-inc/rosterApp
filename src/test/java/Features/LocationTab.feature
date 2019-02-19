@@ -1,7 +1,7 @@
 @LocationTab
 
 Feature: LocationTab
-  From this Feature user should able to create a New Location or edit existing location
+  From this Feature user should able to create a New Location
 
   Background: Flow till home page
     Given User is on Application Login Page
@@ -11,15 +11,14 @@ Feature: LocationTab
     And User Should select his login role
     And User click on login button
     Then User is on Application home page
-    And User Should select Acting role
-    When user should see the Location Tab
 
   Scenario: Add New Location
+    Given User Should select Acting roles
     When User see the Location Tab
     Then User should click on Create New Location
     When User gets the New Location Label
-    Then User enters "SASC" the Name
-    And User enters "SAS Test Location Description" Description
+    Then User enters "SASK" the Name
+    And User enters "SASI Test Location Description" Description
     And User select Time Zone
     And User select First day of Week
     And User mark/unmark check on Display Bid Packages
@@ -31,5 +30,7 @@ Feature: LocationTab
     And User select New Employee Status Code
     And User select New Employee Job Title
     And User click on Add Button
+
+
 
 

@@ -3,8 +3,11 @@ package Steps;
 import Base.BaseUtil;
 import Pages.LocationPage;
 import cucumber.api.java.en.And;
+import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+
+import java.util.concurrent.TimeUnit;
 
 public class LocationSD extends BaseUtil {
 
@@ -14,6 +17,13 @@ public class LocationSD extends BaseUtil {
     public LocationSD(BaseUtil base) {
         page = new LocationPage(base.Web_Driver);
         this.base = base;
+    }
+
+    @Given("^User Should select Acting roles$")
+    public void userShouldSelectActingRoles() throws Throwable {
+        page.GetLocationURL(base.Web_Driver);
+
+        base.Web_Driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }
 
     @When("^User see the Location Tab$")

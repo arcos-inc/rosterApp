@@ -1,6 +1,7 @@
 package Steps;
 
 import Base.BaseUtil;
+import Utilities.ReadExcel;
 import cucumber.api.Scenario;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
@@ -20,6 +21,7 @@ public class Hook extends BaseUtil {
         System.out.println("Opening the browser : Chrome Browser");
         System.setProperty("webdriver.chrome.driver", "C:\\WebDriver\\chromedriver.exe");
         base.Web_Driver = new ChromeDriver();
+        ReadExcel.readExcelFile();
     }
 
     @After
