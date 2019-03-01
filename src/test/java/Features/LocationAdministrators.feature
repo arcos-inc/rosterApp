@@ -21,13 +21,17 @@ Feature: Location Administrators
     Then List of Registered Administrators will display
     And User should select the Administrator
     And User should press the Create Button
+    Then User should press the cancel button to redirect on Location Tab
 
   Scenario: Add Administrator to Multiple Locations
+    Given User should be on Location Administrator page
     When User click on Add Administrator to Multiple Locations
     Then Find New Location Administrator search box will appear
     And User should enter the Registered Administrator name
     And User should press the search button
     Then List of Registered Administrators will display
     And User should select the Administrator
-    And User should press Next Button
+    When User press Next Button
+    Then User should select multiple Locations
     And User should press the Create Button
+    Then User should press the cancel button to redirect on Location Tab

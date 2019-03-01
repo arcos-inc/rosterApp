@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>groupId</groupId>
-    <artifactId>veeMedportal</artifactId>
+    <artifactId>arcosrosterapp</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <build>
@@ -36,7 +36,7 @@
                             <goal>generate</goal>
                         </goals>
                         <configuration>
-                            <projectName>SkillOrbit</projectName>
+                            <projectName>ARCOS</projectName>
                             <outputDirectory>${project.build.directory}/cucumber-report-html</outputDirectory>
                             <cucumberOutput>${project.build.directory}/cucumber.json</cucumberOutput>
                         </configuration>

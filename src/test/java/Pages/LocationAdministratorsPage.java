@@ -29,6 +29,15 @@ public class LocationAdministratorsPage {
     @FindBy(how = How.ID, using = "btnSubmit")
     public WebElement btnSubmit;
 
+    @FindBy(how = How.ID, using = "lnkMultipleNew")
+    public WebElement lnkMultipleNew;
+
+    @FindBy(how = How.ID, using = "btnNext")
+    public WebElement btnNext;
+
+    @FindBy(how = How.ID, using = "btnCancel")
+    public WebElement btnCancel;
+
     public void clickAddAdministrator() {
         addAdministratorLink.click();
     }
@@ -61,5 +70,17 @@ public class LocationAdministratorsPage {
 
     public void clickOnCreateButton() {
         btnSubmit.click();
+    }
+
+    public void clickOnAddMultipleLocation() {
+        lnkMultipleNew.click();
+    }
+
+    public void clickOnNextButton() {
+        btnNext.click();
+    }
+
+    public void clickCancelButton(){
+        btnCancel.click();
     }
 }
