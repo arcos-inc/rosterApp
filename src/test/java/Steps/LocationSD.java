@@ -2,10 +2,13 @@ package Steps;
 
 import Base.BaseUtil;
 import Pages.LocationPage;
+import Utilities.ReadDynamicTables;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 
 import java.util.concurrent.TimeUnit;
 
@@ -22,7 +25,6 @@ public class LocationSD extends BaseUtil {
     @Given("^User Should select Acting roles$")
     public void userShouldSelectActingRoles() throws Throwable {
         page.GetLocationURL(base.Web_Driver);
-
         base.Web_Driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }
 

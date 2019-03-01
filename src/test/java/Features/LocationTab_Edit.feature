@@ -3,7 +3,7 @@
 Feature: EditLocationTab
   From this Feature user should able to edit Existing Location
 
-  Background: Flow till home page
+  Background: Login Flow till home page
     Given User is on Application Login Page
     And I enter the following details for login
       | username               | password |

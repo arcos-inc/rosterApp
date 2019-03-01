@@ -6,8 +6,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 
-public class EditLocationPage {
-    public EditLocationPage(WebDriver driver) {
+public class LocationPageEdit {
+    public LocationPageEdit(WebDriver driver) {
         PageFactory.initElements(driver, this);
     }
 

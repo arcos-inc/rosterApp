@@ -1,9 +1,9 @@
-@Login
+@Template
 
-Feature: loginFeature
-  This login feature deals with the login functionality of the application
+Feature: Template
+  This is a Template Feature File used to create other Feature File, just create a copy of this Template and Rename it.
 
-  Scenario: Login Flow till home page
+  Background: Login Flow till home page
     Given User is on Application Login Page
     And I enter the following details for login
       | username               | password |

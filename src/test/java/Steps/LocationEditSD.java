@@ -1,25 +1,33 @@
 package Steps;
 
 import Base.BaseUtil;
-import Pages.EditLocationPage;
+import Pages.LocationPageEdit;
+import Utilities.RDTLocationsTab;
+import Utilities.ReadDynamicTables;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import org.openqa.selenium.WebElement;
 
-public class EditLocationSD extends BaseUtil {
+public class LocationEditSD extends BaseUtil {
 
     private BaseUtil base;
-    EditLocationPage page;
+    LocationPageEdit page;
+    RDTLocationsTab RDT;
 
-    public EditLocationSD(BaseUtil base) {
-        page = new EditLocationPage(base.Web_Driver);
+    public LocationEditSD(BaseUtil base) {
+        page = new LocationPageEdit(base.Web_Driver);
+        RDT = new RDTLocationsTab();
         this.base = base;
     }
 
     @When("^User click on Edit link of an existing location$")
     public void userClickOnEditLinkOfAnExistingLocation() throws Throwable {
         System.out.println("User Should Click on Edit Link");
-        page.clickEditLocation();
+        WebElement locationEditLink = RDT.getLocationTabEditLink(base.Web_Driver);
+        if (locationEditLink != null) {
+            locationEditLink.click();
+        }
     }
 
     @Then("^User should see the edit location window$")

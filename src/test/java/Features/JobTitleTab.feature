@@ -3,7 +3,7 @@
 Feature: JobTitleTab
   From this Feature user should able to Add New Job Titles
 
-  Background: Flow till home page
+  Background: Login Flow till home page
     Given User is on Application Login Page
     And I enter the following details for login
       | username               | password |
