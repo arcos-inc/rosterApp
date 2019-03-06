@@ -23,8 +23,36 @@ public class RDTLocationsTab {
         }
     }
     //endregion
+    
+    //This method is used to get table of Edit Location Administrator - Profile info and Permissions
+    public List<WebElement> getTableEditProfInfo(WebDriver driver) throws Exception {
+        try {
+            WebElement tableElement = driver.findElement(By.xpath("//*[@id=\"PostForm\"]/div[3]/div/table/tbody/tr"));
+            List<WebElement> tr_collection = tableElement.findElements(By.xpath("//*[@id=\"PostForm\"]/div[3]/div/table/tbody/tr"));
 
-    //region This Method is used to click on Administrators Link From Dynamic Data Grid
+            System.out.println("Num of rows in this table is " + tr_collection.size());
+            return tr_collection;
+        } catch (Exception ex) {
+            System.out.println("you got " + ex);
+            return null;
+        }
+    }
+
+    //This method is used to click on "Edit profile" from Dynamic Data Grid
+    public WebElement getLAEditProfile(WebDriver driver) throws Exception {
+        try {
+            WebElement tableElement = driver.findElement(By.id("gridBody"));
+            List<WebElement> tr_collection = tableElement.findElements(By.xpath("id('gridBody')/tbody/tr"));
+
+            System.out.println("Num of rows in this table is " + tr_collection.size());
+            return tr_collection.get(1).findElements(By.xpath("td")).get(2);
+        } catch (Exception ex) {
+            System.out.println("you got" + ex);
+            return null;
+        }
+    }
+
+    //This Method is used to click on Administrators Link From Dynamic Data Grid
     public WebElement getLocationTabAdministratorsLink(WebDriver driver) throws Exception {
         try {
             WebElement table_element = driver.findElement(By.id("grdLocations"));
