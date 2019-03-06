@@ -1,6 +1,6 @@
 @LocationTab
 
-Feature: LocationTab
+Feature: Location Tab
   From this Feature user should able to create a New Location
 
   Background: Login Flow till home page

@@ -1,6 +1,6 @@
 @EditLocationTab
 
-Feature: EditLocationTab
+Feature: Edit Location Tab
   From this Feature user should able to edit Existing Location
 
   Background: Login Flow till home page

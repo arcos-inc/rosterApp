@@ -1,6 +1,6 @@
 @Login
 
-Feature: loginFeature
+Feature: Login Feature
   This login feature deals with the login functionality of the application
 
   Scenario: Login Flow till home page

@@ -1,6 +1,6 @@
 @JobTitleTab
 
-Feature: JobTitleTab
+Feature: Job Title Tab
   From this Feature user should able to Add New Job Titles
 
   Background: Login Flow till home page
