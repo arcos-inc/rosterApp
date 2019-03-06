@@ -23,7 +23,7 @@ public class LoginSD extends BaseUtil {
 
     @Given("^User is on Application Login Page$")
     public void userIsOnApplicationLoginPage() throws Throwable {
-        base.Web_Driver.navigate().to("http://localhost/RosterAppDebug/Login.aspx");
+        base.Web_Driver.navigate().to("http://test.rosterapps.com/Login.aspx");
         base.Web_Driver.manage().window().maximize();
         System.out.println("Application launch successfully...");
     }

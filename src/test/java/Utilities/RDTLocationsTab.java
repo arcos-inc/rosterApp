@@ -23,6 +23,34 @@ public class RDTLocationsTab {
         }
     }
 
+    //This method is used to get table of Edit Location Administrator - Profile info and Permissions
+    public List<WebElement> getTableEditProfInfo(WebDriver driver) throws Exception {
+        try {
+            WebElement tableElement = driver.findElement(By.xpath("//*[@id=\"PostForm\"]/div[3]/div/table/tbody/tr"));
+            List<WebElement> tr_collection = tableElement.findElements(By.xpath("//*[@id=\"PostForm\"]/div[3]/div/table/tbody/tr"));
+
+            System.out.println("Num of rows in this table is " + tr_collection.size());
+            return tr_collection;
+        } catch (Exception ex) {
+            System.out.println("you got " + ex);
+            return null;
+        }
+    }
+
+    //This method is used to click on "Edit profile" from Dynamic Data Grid
+    public WebElement getLAEditProfile(WebDriver driver) throws Exception {
+        try {
+            WebElement tableElement = driver.findElement(By.id("gridBody"));
+            List<WebElement> tr_collection = tableElement.findElements(By.xpath("id('gridBody')/tbody/tr"));
+
+            System.out.println("Num of rows in this table is " + tr_collection.size());
+            return tr_collection.get(1).findElements(By.xpath("td")).get(2);
+        } catch (Exception ex) {
+            System.out.println("you got" + ex);
+            return null;
+        }
+    }
+
     //This Method is used to click on Administrators Link From Dynamic Data Grid
     public WebElement getLocationTabAdministratorsLink(WebDriver driver) throws Exception {
         try {
@@ -38,15 +66,15 @@ public class RDTLocationsTab {
         }
     }
 
-    public WebElement getAllLocationCheckbox(WebDriver driver) throws Exception{
-        try{
+    public WebElement getAllLocationCheckbox(WebDriver driver) throws Exception {
+        try {
             WebElement span_element = driver.findElement(By.id("ucLocationPicker_lstLocations"));
             List<WebElement> span_collection = span_element.findElements(By.xpath("id('ucLocationPicker_lstLocations')/span"));
 
             System.out.println("NUMBER OF CHECK BOXES ARE = " + span_collection.size());
-            
+
             return span_collection.get(1);
-        }catch (Exception ex){
+        } catch (Exception ex) {
             System.out.println("You got: " + ex);
             return null;
         }
