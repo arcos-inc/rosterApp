@@ -52,7 +52,7 @@ public class RDTLocationsTab {
         }
     }
 
-    //This Method is used to click on Administrators Link From Dynamic Data Grid
+    //region This Method is used to click on Administrators Link From Dynamic Data Grid
     public WebElement getLocationTabAdministratorsLink(WebDriver driver) throws Exception {
         try {
             WebElement table_element = driver.findElement(By.id("grdLocations"));
