@@ -23,7 +23,21 @@ public class RDTLocationsTab {
         }
     }
     //endregion
-    
+
+    //This method is used to click on "Edit profile" from Dynamic Data Grid
+    public WebElement getLocationAdministratorEditProfile(WebDriver driver) throws Exception {
+        try {
+            WebElement tableElement = driver.findElement(By.id("gridBody"));
+            List<WebElement> tr_collection = tableElement.findElements(By.xpath("id('gridBody')/tbody/tr"));
+
+            System.out.println("Num of rows in this table is " + tr_collection.size());
+            return tr_collection.get(1).findElements(By.xpath("td")).get(2);
+        } catch (Exception ex) {
+            System.out.println("you got" + ex);
+            return null;
+        }
+    }
+
     //This method is used to get table of Edit Location Administrator - Profile info and Permissions
     public List<WebElement> getTableEditProfInfo(WebDriver driver) throws Exception {
         try {
@@ -38,21 +52,59 @@ public class RDTLocationsTab {
         }
     }
 
-    //This method is used to click on "Edit profile" from Dynamic Data Grid
-    public WebElement getLAEditProfile(WebDriver driver) throws Exception {
-        try {
+    //This method is used to click on "Edit Assignment" from Dynamic Data Grid
+    public WebElement getLocationAdministratorEditAssignment(WebDriver driver) throws Exception{
+        try{
             WebElement tableElement = driver.findElement(By.id("gridBody"));
             List<WebElement> tr_collection = tableElement.findElements(By.xpath("id('gridBody')/tbody/tr"));
 
             System.out.println("Num of rows in this table is " + tr_collection.size());
-            return tr_collection.get(1).findElements(By.xpath("td")).get(2);
-        } catch (Exception ex) {
+            return tr_collection.get(1).findElements(By.xpath("td")).get(1);
+        } catch (Exception ex){
             System.out.println("you got" + ex);
             return null;
         }
     }
 
-    //This Method is used to click on Administrators Link From Dynamic Data Grid
+    //This method is used to click on get all check boxes of active Locations under Edit a Location Administrator - Edit Assignment
+    public WebElement getLocationCheckbox(WebDriver driver) throws Exception {
+        try {
+            WebElement span_element = driver.findElement(By.id("ucLocationPicker_lstLocations"));
+            List<WebElement> span_collection = span_element.findElements(By.xpath("id('ucLocationPicker_lstLocations')/span"));
+
+            System.out.println("NUMBER OF CHECK BOXES ARE = " + span_collection.size());
+
+            return span_collection.get(1);
+        } catch (Exception ex) {
+            System.out.println("You got: " + ex);
+            return null;
+        }
+    }
+    //This method is used to click Update button
+//    public WebElement SubmitButton(WebDriver driver) throws Exception {
+//        try {
+//            WebElement submit = driver.findElement(By.id("//*[@id=\"btnSubmit\"]"));
+//            return submit;
+//        } catch (Exception ex) {
+//            System.out.println("You got: " + ex);
+//            return null;
+//        }
+//    }
+    //This method is used to click on Remove to remove a Location Administrator
+    public WebElement RemoveLocationAdministrator(WebDriver driver) throws Exception{
+        try{
+            WebElement tableElement = driver.findElement(By.id("gridBody"));
+            List<WebElement> tr_collection = tableElement.findElements(By.xpath("id('gridBody')/tbody/tr"));
+
+            System.out.println("Num of rows in this table is " + tr_collection.size());
+            return tr_collection.get(1).findElements(By.xpath("td")).get(3);
+        } catch (Exception ex){
+            System.out.println("you got" + ex);
+            return null;
+        }
+    }
+
+    //region This Method is used to click on Administrators Link From Dynamic Data Grid
     public WebElement getLocationTabAdministratorsLink(WebDriver driver) throws Exception {
         try {
             WebElement table_element = driver.findElement(By.id("grdLocations"));
