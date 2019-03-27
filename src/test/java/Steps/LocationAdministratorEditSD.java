@@ -71,7 +71,6 @@ public class LocationAdministratorEditSD extends BaseUtil {
             System.out.println("the field is " + getTableLink.getTagName());
             getTableLink.clear();
             getTableLink.sendKeys("max");
-            //getTableLink.findElement(By.id("ucProfile_txtFirstName")).sendKeys("test");
         }
     }
 
@@ -139,7 +138,6 @@ public class LocationAdministratorEditSD extends BaseUtil {
             System.out.println("the field is " + getTableLink.getTagName());
             getTableLink.clear();
             getTableLink.sendKeys("max");
-            //getTableLink.findElement(By.id("ucProfile_txtFirstName")).sendKeys("test");
         }
     }
 
