@@ -24,7 +24,7 @@ public class RDTLocationsTab {
     }
     //endregion
 
-    //This method is used to click on "Edit profile" from Dynamic Data Grid
+    //region This method is used to click on "Edit profile" from Dynamic Data Grid
     public WebElement getLocationAdministratorEditProfile(WebDriver driver) throws Exception {
         try {
             WebElement tableElement = driver.findElement(By.id("gridBody"));
@@ -37,8 +37,9 @@ public class RDTLocationsTab {
             return null;
         }
     }
+    //endregion
 
-    //This method is used to get table of Edit Location Administrator - Profile info and Permissions
+    //region This method is used to get table of Edit Location Administrator - Profile info and Permissions
     public List<WebElement> getTableEditProfInfo(WebDriver driver) throws Exception {
         try {
             WebElement tableElement = driver.findElement(By.xpath("//*[@id=\"PostForm\"]/div[3]/div/table/tbody/tr"));
@@ -51,22 +52,24 @@ public class RDTLocationsTab {
             return null;
         }
     }
+    //endregion
 
-    //This method is used to click on "Edit Assignment" from Dynamic Data Grid
-    public WebElement getLocationAdministratorEditAssignment(WebDriver driver) throws Exception{
-        try{
+    //region This method is used to click on "Edit Assignment" from Dynamic Data Grid
+    public WebElement getLocationAdministratorEditAssignment(WebDriver driver) throws Exception {
+        try {
             WebElement tableElement = driver.findElement(By.id("gridBody"));
             List<WebElement> tr_collection = tableElement.findElements(By.xpath("id('gridBody')/tbody/tr"));
 
             System.out.println("Num of rows in this table is " + tr_collection.size());
             return tr_collection.get(1).findElements(By.xpath("td")).get(1);
-        } catch (Exception ex){
+        } catch (Exception ex) {
             System.out.println("you got" + ex);
             return null;
         }
     }
+    //endregion
 
-    //This method is used to click on get all check boxes of active Locations under Edit a Location Administrator - Edit Assignment
+    //region This method is used to click on get all check boxes of active Locations under Edit a Location Administrator - Edit Assignment
     public WebElement getLocationCheckbox(WebDriver driver) throws Exception {
         try {
             WebElement span_element = driver.findElement(By.id("ucLocationPicker_lstLocations"));
@@ -80,29 +83,22 @@ public class RDTLocationsTab {
             return null;
         }
     }
-    //This method is used to click Update button
-//    public WebElement SubmitButton(WebDriver driver) throws Exception {
-//        try {
-//            WebElement submit = driver.findElement(By.id("//*[@id=\"btnSubmit\"]"));
-//            return submit;
-//        } catch (Exception ex) {
-//            System.out.println("You got: " + ex);
-//            return null;
-//        }
-//    }
-    //This method is used to click on Remove to remove a Location Administrator
-    public WebElement RemoveLocationAdministrator(WebDriver driver) throws Exception{
-        try{
+    //endregion
+
+    //region This method is used to click on Remove to remove a Location Administrator
+    public WebElement RemoveLocationAdministrator(WebDriver driver) throws Exception {
+        try {
             WebElement tableElement = driver.findElement(By.id("gridBody"));
             List<WebElement> tr_collection = tableElement.findElements(By.xpath("id('gridBody')/tbody/tr"));
 
             System.out.println("Num of rows in this table is " + tr_collection.size());
             return tr_collection.get(1).findElements(By.xpath("td")).get(3);
-        } catch (Exception ex){
+        } catch (Exception ex) {
             System.out.println("you got" + ex);
             return null;
         }
     }
+    //endregion
 
     //region This Method is used to click on Administrators Link From Dynamic Data Grid
     public WebElement getLocationTabAdministratorsLink(WebDriver driver) throws Exception {
