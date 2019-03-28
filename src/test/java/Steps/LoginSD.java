@@ -1,6 +1,7 @@
 package Steps;
 
 import Base.BaseUtil;
+import DataProvider.ConfigFileReader;
 import Pages.LoginPage;
 import cucumber.api.DataTable;
 import cucumber.api.java.en.And;
@@ -14,6 +15,7 @@ public class LoginSD extends BaseUtil {
 
 
     private BaseUtil base;
+    ConfigFileReader configFileReader;
     //LoginPage page;
 
     public LoginSD(BaseUtil base) {
@@ -23,8 +25,10 @@ public class LoginSD extends BaseUtil {
 
     @Given("^User is on Application Login Page$")
     public void userIsOnApplicationLoginPage() throws Throwable {
-        base.Web_Driver.navigate().to("http://test.rosterapps.com/Login.aspx");
+        configFileReader= new ConfigFileReader();
+        base.Web_Driver.navigate().to(configFileReader.getApplicationUrl());
         base.Web_Driver.manage().window().maximize();
+        base.Web_Driver.manage().timeouts().implicitlyWait(configFileReader.getImplicitlyWait(), TimeUnit.SECONDS);
         System.out.println("Application launch successfully...");
     }
 

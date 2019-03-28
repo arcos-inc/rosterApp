@@ -2,21 +2,25 @@ package Utilities;
 
 import java.io.File;
 import java.io.FileInputStream;
+
+import DataProvider.ConfigFileReader;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 public class ReadExcel {
 
     private static XSSFSheet mSheet;
+    static ConfigFileReader configFileReader;
 
     private ReadExcel() {
     }
 
     public static void readExcelFile() {
+        configFileReader= new ConfigFileReader();
         if (mSheet != null) {
             return;
         }
-        File src = new File("C:\\\\Users\\\\SO-PC-008\\\\Documents\\\\GitHub\\\\rosterApp\\\\src\\\\test\\\\java\\\\ExcelFiles\\rosterAppKeywords.xlsx");
+        File src = new File(configFileReader.getRosterAppKeywords());
 
         try {
             FileInputStream file = new FileInputStream(src);
