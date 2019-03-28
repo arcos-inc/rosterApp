@@ -10,6 +10,15 @@ public class LocationAdministratorsEditPage {
     public LocationAdministratorsEditPage(WebDriver driver){
         PageFactory.initElements(driver, this);
     }
-    /*@FindBy(how = How.ID, using = "TagName")
-    public WebElement TagName; */
+
+    @FindBy(how = How.ID, using = "btnSubmit")
+    public WebElement submitButton;
+
+    @FindBy(how = How.ID, using = "btnCancel")
+    public WebElement cancelButton;
+
+    public void clickSubmitButton(){
+        submitButton.click();
+    }
+    public void clickCancelButton() { cancelButton.click(); }
 }
