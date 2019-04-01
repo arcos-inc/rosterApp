@@ -8,7 +8,7 @@ import java.util.List;
 
 public class RDTRuleSetsTab {
 
-    public List<WebElement> getNewPaidTimeOffRuleSetTable(WebDriver driver) throws Exception {
+    public List<WebElement> getNewPaidTimeOffRuleSetTable(WebDriver driver) {
         try {
             WebElement table_element = driver.findElement(By.xpath("//*[@id=\"PostForm\"]/div[3]/table"));
             List<WebElement> tr_collection = table_element.findElements(By.xpath("//*[@id=\"PostForm\"]/div[3]/table/tbody/tr"));
