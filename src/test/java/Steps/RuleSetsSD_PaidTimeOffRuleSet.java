@@ -1,7 +1,7 @@
 package Steps;
 
 import Base.BaseUtil;
-import Pages.RuleSetsPagePTO;
+import Pages.RuleSetsPage_PaidTimeOffRuleSet;
 import Utilities.RDTRuleSetsTab;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
@@ -12,15 +12,15 @@ import org.openqa.selenium.WebElement;
 
 import java.util.List;
 
-public class RuleSetsSDPTO extends BaseUtil {
+public class RuleSetsSD_PaidTimeOffRuleSet extends BaseUtil {
 
     private BaseUtil base;
-    RuleSetsPagePTO page;
+    RuleSetsPage_PaidTimeOffRuleSet page;
     RDTRuleSetsTab RDT;
     List<WebElement> ruleSetCollection;
 
-    public RuleSetsSDPTO(BaseUtil base) {
-        page = new RuleSetsPagePTO(base.Web_Driver);
+    public RuleSetsSD_PaidTimeOffRuleSet(BaseUtil base) {
+        page = new RuleSetsPage_PaidTimeOffRuleSet(base.Web_Driver);
         RDT = new RDTRuleSetsTab();
         ruleSetCollection = RDT.getNewPaidTimeOffRuleSetTable(base.Web_Driver);
         this.base = base;

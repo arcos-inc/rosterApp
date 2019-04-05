@@ -6,9 +6,9 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 
-public class RuleSetsPagePTO {
+public class RuleSetsPage_PaidTimeOffRuleSet {
 
-    public RuleSetsPagePTO(WebDriver driver) {
+    public RuleSetsPage_PaidTimeOffRuleSet(WebDriver driver) {
         PageFactory.initElements(driver, this);
     }
 
