@@ -1,24 +1,14 @@
-@LocationTab
-
 Feature: Location Tab
   From this Feature user should able to create a New Location
 
-  Background: Login Flow till home page
-    Given User is on Application Login Page
-    And I enter the following details for login
-      | username               | password |
-      | shussain@arcos-int.com | Pass@123 |
-    And User Should select his login role
-    And User click on login button
-    Then User is on Application home page
-
+  @B_LocationTab
   Scenario: Add New Location
     Given User Should select Acting roles
     When User see the Location Tab
     Then User should click on Create New Location
     When User gets the New Location Label
-    Then User enters "SASO" the Name
-    And User enters "SASO Test Location Description" Description
+    Then User enters "SASAN" the Name
+    And User enters "SASAN Test Location Description" Description
     And User select Time Zone
     And User select First day of Week
     And User mark/unmark check on Display Bid Packages

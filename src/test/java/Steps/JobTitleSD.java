@@ -8,24 +8,27 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
+import java.util.concurrent.TimeUnit;
+
 public class JobTitleSD extends BaseUtil {
 
     private BaseUtil base;
     JobTitlePage page;
 
     public JobTitleSD(BaseUtil base) {
-        page = new JobTitlePage(base.Web_Driver);
+        page = new JobTitlePage(Web_Driver);
         this.base = base;
     }
 
     @Given("^User is on Job Titles Tab$")
-    public void userIsOnJobTitlesTab() throws Throwable {
+    public void userIsOnJobTitlesTab() {
+        Web_Driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
         System.out.println("User Should Click on Job Title Tab");
         page.clickOnJobTitleTab();
     }
 
     @When("^User click on create new Job Title$")
-    public void userClickOnCreateNewJobTitle() throws Throwable {
+    public void userClickOnCreateNewJobTitle()  {
         System.out.println("User Click on Create New Job Title");
         page.clickOnCreateNewJobTitle();
     }

@@ -8,10 +8,12 @@ import java.util.List;
 
 public class RDTRuleSetsTab {
 
+    //region This Method is used to fetch the complete table of Create New Paid Time Off Rule Set
+    /*
     public List<WebElement> getNewPaidTimeOffRuleSetTable(WebDriver driver) {
         try {
-            WebElement table_element = driver.findElement(By.xpath("//*[@id=\"PostForm\"]/div[3]/table"));
-            List<WebElement> tr_collection = table_element.findElements(By.xpath("//*[@id=\"PostForm\"]/div[3]/table/tbody/tr"));
+            WebElement table_element = driver.findElement(By.xpath("/html/body/form/div[3]/table"));
+            List<WebElement> tr_collection = table_element.findElements(By.xpath("/html/body/form/div[3]/table/tbody/tr"));
 
             //System.out.println("NUMBER OF ROWS IN THIS TABLE = " + tr_collection.size());
 
@@ -22,4 +24,21 @@ public class RDTRuleSetsTab {
             return null;
         }
     }
+     */
+    //endregion
+
+    //region This Method is used to fetch the complete table of Create New Shift Rule Set
+    /*
+    public List<WebElement> getNewShiftRuleSets(WebDriver driver) {
+        try {
+            WebElement table_element = driver.findElement(By.id("tblShiftRuleSet"));
+            List<WebElement> tr_collection = table_element.findElements(By.xpath("/html/body/form/div[3]/table/tbody/tr"));
+            return  tr_collection;
+        } catch (Exception ex) {
+            System.out.println("You got the Exception: " + ex);
+            return null;
+        }
+    }
+     */
+    //endregion
 }

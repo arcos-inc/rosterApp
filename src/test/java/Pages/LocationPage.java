@@ -1,5 +1,6 @@
 package Pages;
 
+import Base.BaseUtil;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -7,7 +8,8 @@ import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
-public class LocationPage {
+public class LocationPage extends BaseUtil {
+
     public LocationPage(WebDriver driver) {
         PageFactory.initElements(driver, this);
     }
@@ -55,9 +57,9 @@ public class LocationPage {
     @FindBy(how = How.ID, using = "btnAddEdit")
     public WebElement btnAddLocation;
 
-    public void GetLocationURL(WebDriver driver) {
+    public void GetLocationURL() {
         //String locationLabel = getLocationLabel.getText().toLowerCase();
-        String url = driver.getCurrentUrl();
+        String url = BaseUtil.Web_Driver.getCurrentUrl();
 
         //System.out.println("You got this value: " + locationLabel);
 
@@ -65,7 +67,7 @@ public class LocationPage {
             dropDownActingAs.click();
             Select actingAs = new Select(dropDownActingAs);
             actingAs.selectByIndex(1);
-        } else if (url.contains("ScheduleView")) {
+        } else if (url.contains("Location")) {
             dropDownActingAs.click();
             Select actingAs = new Select(dropDownActingAs);
             actingAs.selectByIndex(1);
@@ -73,7 +75,11 @@ public class LocationPage {
             dropDownActingAs.click();
             Select actingAs = new Select(dropDownActingAs);
             actingAs.selectByIndex(1);
-        } else if (url.contains("Admin")) {
+        } else if (url.contains("ScheduleView")) {
+            dropDownActingAs.click();
+            Select actingAs = new Select(dropDownActingAs);
+            actingAs.selectByIndex(1);
+        }else if (url.contains("Admin")) {
             dropDownActingAs.click();
             Select actingAs = new Select(dropDownActingAs);
             actingAs.selectByIndex(1);

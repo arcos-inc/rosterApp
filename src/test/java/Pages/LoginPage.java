@@ -1,5 +1,6 @@
 package Pages;
 
+import Base.BaseUtil;
 import Utilities.ReadExcel;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -18,11 +19,11 @@ public class LoginPage {
         this.btnLogin = driver.findElement(By.id(ReadExcel.GetCellValue(3, 2)));
     }
 
-    @FindBy(how = How.XPATH, using = "...")
+    @FindBy(how = How.ID, using = "txtUsername")
     @CacheLookup
     public WebElement txtUsername;
 
-    @FindBy(how = How.XPATH, using = "...")
+    @FindBy(how = How.ID, using = "txtPassword")
     //@CacheLookup
     public WebElement txtPassword;
 
@@ -31,6 +32,9 @@ public class LoginPage {
 
     //@FindBy(how = How.ID, using = "btnLogin")
     public WebElement btnLogin;
+
+    @FindBy(how = How.ID, using = "ucPageHeader_ucRoleSwitcher_cboRole")
+    public WebElement dropDownActingAs;
 
     public void Login(String userName, String Password) {
         txtUsername.sendKeys(userName);
@@ -45,10 +49,26 @@ public class LoginPage {
         dropDownAdminRole.click();
     }
 
-    public void SelectAdminRole() {
+    public void SelectCompanyAdminRole() {
         Select adminRole = new Select(dropDownAdminRole);
         adminRole.selectByIndex(1);
     }
+
+    public void SelectLocationAdminRole() {
+        Select adminRole = new Select(dropDownAdminRole);
+        adminRole.selectByIndex(3);
+    }
+
+    public void SelectSupervisorRole() {
+        Select adminRole = new Select(dropDownAdminRole);
+        adminRole.selectByIndex(4);
+    }
+
+    public void SelectEmployeeRole() {
+        Select adminRole = new Select(dropDownAdminRole);
+        adminRole.selectByIndex(5);
+    }
+}
 /*
         if(!(locationLabel.equals("locations for my airline"))){
             dropDownActingAs.click();
@@ -56,4 +76,3 @@ public class LoginPage {
             actingAs.selectByIndex(1);
         }
 */
-}

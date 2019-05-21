@@ -10,6 +10,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.opera.OperaDriver;
 import org.openqa.selenium.safari.SafariDriver;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
 
 import java.util.concurrent.TimeUnit;
 
@@ -22,34 +24,35 @@ public class Hook extends BaseUtil {
         this.base = base;
     }
 
-    @Before
-
+    @Before("@A_LoginAsCompanyAdmin")
     public void InitializeTest() {
         configFileReader = new ConfigFileReader();
         System.out.println("Opening the Web Browser");
         if (configFileReader.getBrowser().contains("Chrome")) {
             System.setProperty("webdriver.chrome.driver", configFileReader.getDriverPath());
-            base.Web_Driver = new ChromeDriver();
+            Web_Driver = new ChromeDriver();
         }
         if (configFileReader.getBrowser().contains("FireFox")) {
             System.setProperty("webdriver.gecko.driver", configFileReader.getDriverPath());
-            base.Web_Driver = new FirefoxDriver();
+            Web_Driver = new FirefoxDriver();
         }
         if (configFileReader.getBrowser().contains("Opera")) {
             System.setProperty("webdriver.opera.driver", configFileReader.getDriverPath());
-            base.Web_Driver = new OperaDriver();
+            Web_Driver = new OperaDriver();
         }
-        base.Web_Driver.manage().window().maximize();
-        base.Web_Driver.manage().timeouts().implicitlyWait(configFileReader.getImplicitlyWait(), TimeUnit.SECONDS);
+        Web_Driver.manage().window().maximize();
+        Web_Driver.manage().timeouts().implicitlyWait(configFileReader.getImplicitlyWait(), TimeUnit.SECONDS);
         ReadExcel.readExcelFile();
     }
 
-    @After
+    @After("@K_EmployeeTab")
     public void TearDownTest(Scenario scenario) {
 
         if (scenario.isFailed()) {
             System.out.println(scenario.getName());
         }
+        Web_Driver.close();
+        Web_Driver.quit();
         System.out.println("Closing the Browser");
     }
 }

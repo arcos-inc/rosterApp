@@ -18,14 +18,14 @@ public class LocationSD extends BaseUtil {
     LocationPage page;
 
     public LocationSD(BaseUtil base) {
-        page = new LocationPage(base.Web_Driver);
+        page = new LocationPage(Web_Driver);
         this.base = base;
     }
 
     @Given("^User Should select Acting roles$")
     public void userShouldSelectActingRoles() throws Throwable {
-        page.GetLocationURL(base.Web_Driver);
-        base.Web_Driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        page.GetLocationURL();
+        Web_Driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }
 
     @When("^User see the Location Tab$")
