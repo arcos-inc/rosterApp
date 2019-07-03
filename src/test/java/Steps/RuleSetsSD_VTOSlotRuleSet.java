@@ -31,7 +31,7 @@ public class RuleSetsSD_VTOSlotRuleSet extends BaseUtil {
     }
 
     @And("^User should be able to enter VTOSlot \"([^\"]*)\"$")
-    public void userShouldBeAbleToEnterVTOSlot(String RuleSetName) {
+    public void userShouldBeAbleToEnterVTOSlot(String RuleSetName) throws Exception {
         System.out.println("Entering VTO Slot Rule Set Name");
         page.enteringVTOSlotRuleSetName(RuleSetName);
     }

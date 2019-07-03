@@ -80,6 +80,14 @@ public class ConfigFileReader {
     }
     //endregion
 
+    //region This Function is used to get key value of a Explicit Wait
+    public long getExplicitWait() {
+        String explicitWait = properties.getProperty("explicitWait");
+        if (explicitWait != null) return Long.parseLong(explicitWait);
+        else throw new RuntimeException("explicitWait not specified in the Configuration.properties file.");
+    }
+    //endregion
+
     //region This Function is used to get key value of a URL
     public String getApplicationUrl() {
         String url = properties.getProperty("url");

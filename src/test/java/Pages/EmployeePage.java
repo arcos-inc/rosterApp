@@ -1,6 +1,7 @@
 package Pages;
 
 import Base.BaseUtil;
+import Utilities.Helper;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -9,7 +10,11 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
 public class EmployeePage {
+
+    Helper help;
+
     public EmployeePage(WebDriver driver) {
+        help = new Helper();
         PageFactory.initElements(driver, this);
     }
 
@@ -83,6 +88,9 @@ public class EmployeePage {
     @FindBy(how = How.ID, using = "ucTradeGroups_cboLoc")
     public WebElement ucTradeGroups_cboLoc;
 
+    @FindBy(how = How.ID, using = "lstSource")
+    public WebElement lstSource;
+
     @FindBy(how = How.NAME, using = "btnAdd")
     public WebElement btnAdd;
 
@@ -92,7 +100,7 @@ public class EmployeePage {
     @FindBy(how = How.ID, using = "btnSubmit")
     public WebElement btnSubmit;
 
-    public void GetLocationURL() {
+    public void GetLocationURL() throws Exception {
         //String locationLabel = getLocationLabel.getText().toLowerCase();
         String url = BaseUtil.Web_Driver.getCurrentUrl();
 
@@ -119,6 +127,7 @@ public class EmployeePage {
             Select actingAs = new Select(dropDownActingAs);
             actingAs.selectByIndex(3);
         }
+        help.waitForAWhile(dropDownActingAs.toString());
     }
 
     public void clickEmployeeTab() {
@@ -138,28 +147,34 @@ public class EmployeePage {
         createEmployee.click();
     }
 
-    public void enterEmployeeFirstName(String empFirstName) {
+    public void enterEmployeeFirstName(String empFirstName) throws Exception {
+        help.waitForAWhile(ucProfile_txtFirstName.toString());
         ucProfile_txtFirstName.sendKeys(empFirstName);
     }
 
-    public void enterEmployeeLastName(String empLastName) {
+    public void enterEmployeeLastName(String empLastName) throws Exception {
         ucProfile_txtLastName.sendKeys(empLastName);
+        //help.waitForAWhile(ucProfile_txtLastName.toString());
     }
 
-    public void enterEmployeeUserName(String userName) {
+    public void enterEmployeeUserName(String userName) throws Exception {
         ucProfile_txtUserName.sendKeys(userName);
+        //help.waitForAWhile(ucProfile_txtUserName.toString());
     }
 
-    public void enterEmployeePassword(String password) {
+    public void enterEmployeePassword(String password) throws Exception {
         ucProfile_txtPassword.sendKeys(password);
+        //help.waitForAWhile(ucProfile_txtPassword.toString());
     }
 
-    public void enterEmployeeEmailAddress(String email) {
+    public void enterEmployeeEmailAddress(String email) throws Exception {
         ucProfile_txtEmailAddress.sendKeys(email);
+        //help.waitForAWhile(ucProfile_txtEmailAddress.toString());
     }
 
-    public void enterEmployeeNumber(String empNum) {
+    public void enterEmployeeNumber(String empNum) throws Exception {
         ucProfile_txtEmployeeNumber.sendKeys(empNum);
+        help.waitForAWhile(ucProfile_txtEmployeeNumber.toString());
     }
 
     public void clickEmployeePhoneCarrier() {
@@ -239,20 +254,30 @@ public class EmployeePage {
         sr.selectByVisibleText("SAS9 Std VTO Slot Rules");
     }
 
+    public void clickTradeGroup(){
+        ucTradeGroups_cboLoc.click();
+    }
+
     public void selectTradeGroup() {
         Select sr = new Select(ucTradeGroups_cboLoc);
-        sr.selectByIndex(3);
+        sr.selectByIndex(6);
+    }
+
+    public void selectAvailableGroups(){
+        Select sr = new Select(lstSource);
+        sr.selectByIndex(1);
     }
 
     public void clickShiftButton() {
         btnAdd.click();
     }
 
-    public void enterEmployeeNotes(String empNotes) {
+    public void enterEmployeeNotes(String empNotes) throws Exception {
         txtNotes.sendKeys(empNotes);
+        help.waitForAWhile(txtNotes.toString());
     }
 
-    public void clickCreaetButton() {
+    public void clickCreateButton() {
         btnSubmit.click();
     }
 }

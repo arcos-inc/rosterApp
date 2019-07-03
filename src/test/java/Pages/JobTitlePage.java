@@ -1,5 +1,6 @@
 package Pages;
 
+import Utilities.Helper;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -8,7 +9,11 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
 public class JobTitlePage {
+
+    Helper help;
+
     public JobTitlePage(WebDriver driver) {
+        help = new Helper();
         PageFactory.initElements(driver, this);
     }
 
@@ -48,12 +53,14 @@ public class JobTitlePage {
         }
     }
 
-    public void enterShortDescription(String sDescription) {
+    public void enterShortDescription(String sDescription) throws Exception {
+        help.waitForAWhile(shortDescription.toString());
         shortDescription.sendKeys(sDescription);
     }
 
-    public void enterLongDescription(String lDescription) {
+    public void enterLongDescription(String lDescription) throws Exception {
         longDescription.sendKeys(lDescription);
+        //help.waitForAWhile(longDescription.toString());
     }
 
     public void selectDepartment() {

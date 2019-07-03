@@ -1,5 +1,6 @@
 package Pages;
 
+import Utilities.Helper;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -7,7 +8,11 @@ import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 
 public class RuleSetsPage_UTORuleSet {
+
+    Helper help;
+
     public RuleSetsPage_UTORuleSet(WebDriver driver) {
+        help = new Helper();
         PageFactory.initElements(driver, this);
     }
 
@@ -42,29 +47,34 @@ public class RuleSetsPage_UTORuleSet {
         lnkNewVtoRuleSet.click();
     }
 
-    public void enteringUTORuleSetName(String UTORuleSetName) {
+    public void enteringUTORuleSetName(String UTORuleSetName) throws Exception {
+        help.waitForAWhile(txtName.toString());
         txtName.clear();
         txtName.sendKeys(UTORuleSetName);
     }
 
-    public void enteringMinHoursBeforeShiftStartUTORequest(String beforeShiftStart) {
+    public void enteringMinHoursBeforeShiftStartUTORequest(String beforeShiftStart) throws Exception {
         txtMinHoursBeforeVtoRequest.clear();
         txtMinHoursBeforeVtoRequest.sendKeys(beforeShiftStart);
+        //help.waitForAWhile(txtMinHoursBeforeVtoRequest.toString());
     }
 
-    public void enteringMaxHoursBeforeUTORequest(String beforeUTORequest) {
+    public void enteringMaxHoursBeforeUTORequest(String beforeUTORequest) throws Exception {
         txtMaxHoursBeforeVtoRequest.clear();
         txtMaxHoursBeforeVtoRequest.sendKeys(beforeUTORequest);
+        //help.waitForAWhile(txtMaxHoursBeforeVtoRequest.toString());
     }
 
-    public void enteringMaxOccurrencesWindow(String maxOccurrencesInWindow){
+    public void enteringMaxOccurrencesWindow(String maxOccurrencesInWindow) throws Exception {
         txtMaxOccurancesInWindow.clear();
         txtMaxOccurancesInWindow.sendKeys(maxOccurrencesInWindow);
+        //help.waitForAWhile(txtMaxOccurancesInWindow.toString());
     }
 
-    public void enteringWindowOccurrencesDays(String occurrencesDays) {
+    public void enteringWindowOccurrencesDays(String occurrencesDays) throws Exception {
         txtWindowForMaxOccurances.clear();
         txtWindowForMaxOccurances.sendKeys(occurrencesDays);
+        //help.waitForAWhile(txtWindowForMaxOccurances.toString());
     }
 
     public void checkedCountSameDayOccurrencesOne() {

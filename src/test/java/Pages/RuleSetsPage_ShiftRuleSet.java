@@ -1,5 +1,6 @@
 package Pages;
 
+import Utilities.Helper;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -8,7 +9,11 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
 public class RuleSetsPage_ShiftRuleSet {
+
+    Helper help;
+
     public RuleSetsPage_ShiftRuleSet(WebDriver driver) {
+        help = new Helper();
         PageFactory.initElements(driver, this);
     }
 
@@ -115,7 +120,7 @@ public class RuleSetsPage_ShiftRuleSet {
     @FindBy(how = How.ID, using = "btnAddEdit")
     public WebElement addButton;
 
-    public void GetLocationURL(WebDriver driver) {
+    public void GetLocationURL(WebDriver driver) throws Exception {
         //String locationLabel = getLocationLabel.getText().toLowerCase();
         String url = driver.getCurrentUrl();
 
@@ -138,6 +143,7 @@ public class RuleSetsPage_ShiftRuleSet {
             Select actingAs = new Select(dropDownActingAs);
             actingAs.selectByIndex(1);
         }
+        help.waitForAWhile(dropDownActingAs.toString());
     }
 
     public void clickRuleSetTab() {
@@ -148,18 +154,21 @@ public class RuleSetsPage_ShiftRuleSet {
         createNewShiftRuleSet.click();
     }
 
-    public void enteringRuleSetName(String ruleSetName) {
+    public void enteringRuleSetName(String ruleSetName) throws Exception {
+        help.waitForAWhile(enterRuleSetName.toString());
         enterRuleSetName.sendKeys(ruleSetName);
     }
 
-    public void enteringMinHours(String minimumHours) {
+    public void enteringMinHours(String minimumHours) throws Exception {
         minHours.clear();
         minHours.sendKeys(minimumHours);
+        //help.waitForAWhile(minHours.toString());
     }
 
-    public void enteringMaxHours(String maximumHours) {
+    public void enteringMaxHours(String maximumHours) throws Exception {
         maxHours.clear();
         maxHours.sendKeys(maximumHours);
+        //help.waitForAWhile(maxHours.toString());
     }
 
     public void canReceiveTrades() {
@@ -226,51 +235,62 @@ public class RuleSetsPage_ShiftRuleSet {
         recurringShiftTradeApproval.click();
     }
 
-    public void maxShiftOverlapSplitShiftHours(String overLapShiftHours) {
+    public void maxShiftOverlapSplitShiftHours(String overLapShiftHours) throws Exception {
         maxShiftHours.clear();
         maxShiftHours.sendKeys(overLapShiftHours);
+        help.waitForAWhile(maxShiftHours.toString());
     }
 
-    public void maxShiftOverlapDay(String overlapShiftDay) {
+    public void maxShiftOverlapDay(String overlapShiftDay) throws Exception {
+        maxShiftDay.clear();
         maxShiftDay.sendKeys(overlapShiftDay);
+        //help.waitForAWhile(maxShiftDay.toString());
     }
 
-    public void maxWeekWorkHours(String maxWorkHour) {
+    public void maxWeekWorkHours(String maxWorkHour) throws Exception {
         workHours.clear();
         workHours.sendKeys(maxWorkHour);
+        //help.waitForAWhile(workHours.toString());
     }
 
-    public void maxOvertimeQualifiedHoursPerWeek(String qualifiedHours) {
+    public void maxOvertimeQualifiedHoursPerWeek(String qualifiedHours) throws Exception {
         qualifiedHoursPerWeek.clear();
         qualifiedHoursPerWeek.sendKeys(qualifiedHours);
+        //help.waitForAWhile(qualifiedHoursPerWeek.toString());
     }
 
-    public void maxWorkHoursInWindow(String hoursInWindow) {
+    public void maxWorkHoursInWindow(String hoursInWindow) throws Exception {
         maxHoursInWindow.clear();
         maxHoursInWindow.sendKeys(hoursInWindow);
+        //help.waitForAWhile(maxHoursInWindow.toString());
     }
 
-    public void windowHoursMaxWorkHours(String maxWorkHours) {
+    public void windowHoursMaxWorkHours(String maxWorkHours) throws Exception {
         maxWindowHours.clear();
         maxWindowHours.sendKeys(maxWorkHours);
+        //help.waitForAWhile(maxWindowHours.toString());
     }
 
-    public void maxConsecutiveWorkDays(String consecutiveWorkDays) {
+    public void maxConsecutiveWorkDays(String consecutiveWorkDays) throws Exception {
         maxConsecutiveDays.clear();
         maxConsecutiveDays.sendKeys(consecutiveWorkDays);
+        //help.waitForAWhile(maxConsecutiveDays.toString());
     }
 
-    public void minContinuousRestHoursBeforeFirstShiftDay(String firstShiftDay) {
+    public void minContinuousRestHoursBeforeFirstShiftDay(String firstShiftDay) throws Exception {
+        restHours.clear();
         restHours.sendKeys(firstShiftDay);
+        //help.waitForAWhile(restHours.toString());
     }
 
     public void canEmployeeSplitShift() {
         employeeSplitShift.click();
     }
 
-    public void minShiftSegmentAfterSplitHours(String employeeSplitShift) {
+    public void minShiftSegmentAfterSplitHours(String employeeSplitShift) throws Exception {
         splitShift.clear();
         splitShift.sendKeys(employeeSplitShift);
+        help.waitForAWhile(splitShift.toString());
     }
 
     public void clickAddButton() {

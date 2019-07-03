@@ -45,7 +45,7 @@ public class RuleSetsSD_PaidTimeOffRuleSet extends BaseUtil {
     }
 
     @And("^User enter the Rule Set \"([^\"]*)\"$")
-    public void userEnterTheRuleSetName(String ruleName) {
+    public void userEnterTheRuleSetName(String ruleName) throws Exception {
         System.out.println("Entering PTO Rule Set Name");
         page.enteringPTORuleSetName(ruleName);
 //        System.out.println("User should enter the Rule Set Name");
@@ -75,7 +75,7 @@ public class RuleSetsSD_PaidTimeOffRuleSet extends BaseUtil {
     }
 
     @And("^User should enter \"([^\"]*)\" for Denial Comment$")
-    public void userShouldEnterMinCharactersForDenialComment(String minimumCharacters) {
+    public void userShouldEnterMinCharactersForDenialComment(String minimumCharacters) throws Exception {
         System.out.println("Entering Min Characters for Denial Comment");
         page.enteringMinCharactersDenialComment(minimumCharacters);
     }
@@ -87,19 +87,19 @@ public class RuleSetsSD_PaidTimeOffRuleSet extends BaseUtil {
     }
 
     @And("^User should enter \"([^\"]*)\" of Paid Time Off$")
-    public void userShouldEnterSmallestUnitOfPaidTimeOff(String smallestUnit) {
+    public void userShouldEnterSmallestUnitOfPaidTimeOff(String smallestUnit) throws Exception {
         System.out.println("Entering Smallest Unit of Paid Time Off");
         page.enteringSmallestUnitPaidTimeOff(smallestUnit);
     }
 
     @And("^User can enter \"([^\"]*)\" Before Shift Start Paid Time Off Request Zero mean ignore rule$")
-    public void userCanEnterMinHoursBeforeShiftStartPaidTimeOffRequestZeroMeanIgnoreRule(String minimumHours) {
+    public void userCanEnterMinHoursBeforeShiftStartPaidTimeOffRequestZeroMeanIgnoreRule(String minimumHours) throws Exception {
         System.out.println("Entering Min Hours Before Shift Start Paid Time Off Request");
         page.enteringMinHoursBeforeShiftStartPaidTimeOffRequest(minimumHours);
     }
 
     @And("^User should enter \"([^\"]*)\" Before Paid Time Off Request$")
-    public void userShouldEnterMaxHoursBeforePaidTimeOffRequest(String maximumHours) {
+    public void userShouldEnterMaxHoursBeforePaidTimeOffRequest(String maximumHours) throws Exception {
         System.out.println("Entering Max Hours Before Paid Time Off Request");
         page.enteringMaxHoursBeforePaidTimeOffRequest(maximumHours);
     }
@@ -123,7 +123,7 @@ public class RuleSetsSD_PaidTimeOffRuleSet extends BaseUtil {
     }
 
     @And("^User should enter \"([^\"]*)\" in Advance to Count Against Available$")
-    public void userShouldEnterMaxDaysInAdvanceToCountAgainstAvailable(String maximumDays) {
+    public void userShouldEnterMaxDaysInAdvanceToCountAgainstAvailable(String maximumDays) throws Exception {
         System.out.println("Entering Max Days in Advance to Count Against Available");
         page.enteringMaxDaysAdvanceCountAgainstAvailable(maximumDays);
     }
@@ -141,7 +141,7 @@ public class RuleSetsSD_PaidTimeOffRuleSet extends BaseUtil {
     }
 
     @And("^User should enter Rule Set \"([^\"]*)\"$")
-    public void userShouldEnterRuleSetDescription(String description) {
+    public void userShouldEnterRuleSetDescription(String description) throws Exception {
         System.out.println("Entering Rule Set Description");
         page.enteringRuleSetDescription(description);
     }

@@ -32,31 +32,31 @@ public class RuleSetsSD_UTORuleSet extends BaseUtil {
     }
 
     @And("^User should be able to enter UTO \"([^\"]*)\"$")
-    public void userShouldBeAbleToEnterUTO(String ruleSetName) {
+    public void userShouldBeAbleToEnterUTO(String ruleSetName) throws Exception {
         System.out.println("Entering UTO Rule Set Name");
         page.enteringUTORuleSetName(ruleSetName);
     }
 
     @And("^User should be able to enter \"([^\"]*)\" Before Shift Start UTO Request$")
-    public void userShouldBeAbleToEnterBeforeShiftStartUTORequest(String minHrs) {
+    public void userShouldBeAbleToEnterBeforeShiftStartUTORequest(String minHrs) throws Exception {
         System.out.println("Entering Min Hours Before Shift Start UTO Request");
         page.enteringMinHoursBeforeShiftStartUTORequest(minHrs);
     }
 
     @And("^User should be able to enter \"([^\"]*)\" Before UTO Request$")
-    public void userShouldBeAbleToEnterBeforeUTORequest(String maxHrs) {
+    public void userShouldBeAbleToEnterBeforeUTORequest(String maxHrs) throws Exception {
         System.out.println("Entering Max Hours Before UTO Request");
         page.enteringMaxHoursBeforeUTORequest(maxHrs);
     }
 
     @And("^User should be able to enter \"([^\"]*)\" in Window$")
-    public void userShouldBeAbleToEnterInWindow(String maxOccurrences) {
+    public void userShouldBeAbleToEnterInWindow(String maxOccurrences) throws Exception {
         System.out.println("Entering Max Occurrences in Window");
         page.enteringMaxOccurrencesWindow(maxOccurrences);
     }
 
     @And("^User should be able to enter \"([^\"]*)\" days$")
-    public void userShouldBeAbleToEnterDays(String windowForOccurrences) {
+    public void userShouldBeAbleToEnterDays(String windowForOccurrences) throws Exception {
         System.out.println("Entering Window for Occurrences Days");
         page.enteringWindowOccurrencesDays(windowForOccurrences);
     }

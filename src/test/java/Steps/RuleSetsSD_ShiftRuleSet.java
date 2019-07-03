@@ -50,20 +50,20 @@ public class RuleSetsSD_ShiftRuleSet extends BaseUtil {
     }
 
     @And("^User should be able to enter \"([^\"]*)\"$")
-    public void userShouldBeAbleToEnter(String ruleSetName) {
+    public void userShouldBeAbleToEnter(String ruleSetName) throws Exception {
         System.out.println("Entering Rule Set Name");
         page.enteringRuleSetName(ruleSetName);
     }
 
     @And("^User should be able to enter \"([^\"]*)\" for Before Shift Trade$")
-    public void userShouldBeAbleToEnterForBeforeShiftTrade(String MinHrs) {
+    public void userShouldBeAbleToEnterForBeforeShiftTrade(String MinHrs) throws Exception {
         System.out.println("Entering Minimum Hours");
         page.enteringMinHours(MinHrs);
     }
 
 
     @And("^User should be able to enter \"([^\"]*)\" for Before Shift Trades$")
-    public void userShouldBeAbleToEnterForBeforeShiftTrades(String MaxHrs) {
+    public void userShouldBeAbleToEnterForBeforeShiftTrades(String MaxHrs) throws Exception {
         System.out.println("Entering Maximum Hours");
         page.enteringMaxHours(MaxHrs);
     }
@@ -165,49 +165,49 @@ public class RuleSetsSD_ShiftRuleSet extends BaseUtil {
     }
 
     @And("^User should be able to enter Max Shift Overlap For \"([^\"]*)\" hours$")
-    public void userShouldBeAbleToEnterMaxShiftOverlapForHours(String SplitShifts) {
+    public void userShouldBeAbleToEnterMaxShiftOverlapForHours(String SplitShifts) throws Exception {
         System.out.println("Entering Max Shift Overlap For Split Shifts hours");
         page.maxShiftOverlapSplitShiftHours(SplitShifts);
     }
 
     @And("^User should be able to enter Max Shift Overlap For \"([^\"]*)\"$")
-    public void userShouldBeAbleToEnterMaxShiftOverlapFor(String Day) {
+    public void userShouldBeAbleToEnterMaxShiftOverlapFor(String Day) throws Exception {
         System.out.println("Entering Max Shift Overlap For Day");
         page.maxShiftOverlapDay(Day);
     }
 
     @And("^User should be able to enter Max \"([^\"]*)\"$")
-    public void userShouldBeAbleToEnterMax(String WeekWorkHrs) {
+    public void userShouldBeAbleToEnterMax(String WeekWorkHrs) throws Exception {
         System.out.println("Entering Max Week Work Hours");
         page.maxWeekWorkHours(WeekWorkHrs);
     }
 
     @And("^User should be able to enter Max Overtime \"([^\"]*)\" per Week$")
-    public void userShouldBeAbleToEnterMaxOvertimePerWeek(String QualifiedHrs) {
+    public void userShouldBeAbleToEnterMaxOvertimePerWeek(String QualifiedHrs) throws Exception {
         System.out.println("Entering Max Overtime Qualified Hours per Week");
         page.maxOvertimeQualifiedHoursPerWeek(QualifiedHrs);
     }
 
     @And("^User should be able to enter Max Work Hours \"([^\"]*)\"$")
-    public void userShouldBeAbleToEnterMaxWorkHours(String InWindow) {
+    public void userShouldBeAbleToEnterMaxWorkHours(String InWindow) throws Exception {
         System.out.println("Entering Max Work Hours In Window");
         page.maxWorkHoursInWindow(InWindow);
     }
 
     @And("^User should be able to enter \"([^\"]*)\" for Max Work Hours$")
-    public void userShouldBeAbleToEnterForMaxWorkHours(String WindowHrs) {
+    public void userShouldBeAbleToEnterForMaxWorkHours(String WindowHrs) throws Exception {
         System.out.println("Entering Window Hours for Max Work Hours");
         page.windowHoursMaxWorkHours(WindowHrs);
     }
 
     @And("^User should be able to enter Max \"([^\"]*)\" Work Days$")
-    public void userShouldBeAbleToEnterMaxWorkDays(String Consecutive) {
+    public void userShouldBeAbleToEnterMaxWorkDays(String Consecutive) throws Exception {
         System.out.println("Entering Max Consecutive Work Days");
         page.maxConsecutiveWorkDays(Consecutive);
     }
 
     @And("^User should be able to enter Min \"([^\"]*)\" Hours Before First Shift of Day$")
-    public void userShouldBeAbleToEnterMinHoursBeforeFirstShiftOfDay(String ContinuousRest) {
+    public void userShouldBeAbleToEnterMinHoursBeforeFirstShiftOfDay(String ContinuousRest) throws Exception {
         System.out.println("Entering Min Continuous Rest Hours Before First Shift of Day");
         page.minContinuousRestHoursBeforeFirstShiftDay(ContinuousRest);
     }
@@ -219,7 +219,7 @@ public class RuleSetsSD_ShiftRuleSet extends BaseUtil {
     }
 
     @And("^User should be able to enter Min \"([^\"]*)\" After Split hours$")
-    public void userShouldBeAbleToEnterMinAfterSplitHours(String ShiftSegment) {
+    public void userShouldBeAbleToEnterMinAfterSplitHours(String ShiftSegment) throws Exception {
         System.out.println("Entering Min Shift Segment After Split Hours");
         page.minShiftSegmentAfterSplitHours(ShiftSegment);
     }
@@ -228,5 +228,9 @@ public class RuleSetsSD_ShiftRuleSet extends BaseUtil {
     public void userShouldBeAbleToClickOnAddButtonSuccessfully() {
         System.out.println("Click Add Button");
         page.clickAddButton();
+    }
+
+    @And("^User should be able to check Can Receive Tradess$")
+    public void userShouldBeAbleToCheckCanReceiveTradess() {
     }
 }

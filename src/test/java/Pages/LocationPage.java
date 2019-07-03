@@ -1,6 +1,7 @@
 package Pages;
 
 import Base.BaseUtil;
+import Utilities.Helper;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -10,7 +11,10 @@ import org.openqa.selenium.support.ui.Select;
 
 public class LocationPage extends BaseUtil {
 
+    Helper help;
+
     public LocationPage(WebDriver driver) {
+        help = new Helper();
         PageFactory.initElements(driver, this);
     }
 
@@ -57,7 +61,7 @@ public class LocationPage extends BaseUtil {
     @FindBy(how = How.ID, using = "btnAddEdit")
     public WebElement btnAddLocation;
 
-    public void GetLocationURL() {
+    public void GetLocationURL() throws Exception {
         //String locationLabel = getLocationLabel.getText().toLowerCase();
         String url = BaseUtil.Web_Driver.getCurrentUrl();
 
@@ -84,18 +88,21 @@ public class LocationPage extends BaseUtil {
             Select actingAs = new Select(dropDownActingAs);
             actingAs.selectByIndex(1);
         }
+        //help.waitForAWhile(dropDownActingAs.toString());
     }
 
     public void CreateNewLocation() {
         lnkCreateLocation.click();
     }
 
-    public void enterLocationName(String locationName) {
+    public void enterLocationName(String locationName) throws Exception {
         txtName.sendKeys(locationName);
+        //help.waitForAWhile(txtName.toString());
     }
 
-    public void enterLocationDescription(String locationDescription) {
+    public void enterLocationDescription(String locationDescription) throws Exception {
         txtDescription.sendKeys(locationDescription);
+        //help.waitForAWhile(txtDescription.toString());
     }
 
     public void selectLocationTimeZone() {
@@ -134,7 +141,8 @@ public class LocationPage extends BaseUtil {
         employeeJobTitle.selectByIndex(4);
     }
 
-    public void clickAddLocationButton() {
+    public void clickAddLocationButton() throws Exception {
         btnAddLocation.click();
+        help.waitForAWhile(btnAddLocation.toString());
     }
 }

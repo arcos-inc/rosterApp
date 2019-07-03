@@ -1,5 +1,6 @@
 package Pages;
 
+import Utilities.Helper;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -7,7 +8,11 @@ import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 
 public class RuleSetsPage_VTOSlotRuleSet {
+
+    Helper help;
+
     public RuleSetsPage_VTOSlotRuleSet(WebDriver driver) {
+        help = new Helper();
         PageFactory.initElements(driver, this);
     }
 
@@ -30,9 +35,10 @@ public class RuleSetsPage_VTOSlotRuleSet {
         lnkNewVt2RuleSet.click();
     }
 
-    public void enteringVTOSlotRuleSetName(String VTOSlotName) {
+    public void enteringVTOSlotRuleSetName(String VTOSlotName) throws Exception {
         txtName.clear();
         txtName.sendKeys(VTOSlotName);
+        help.waitForAWhile(txtName.toString());
     }
 
     public void checkedCanClaimVTOSlot() {

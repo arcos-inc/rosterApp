@@ -1,7 +1,9 @@
 package Steps;
 
 import Base.BaseUtil;
+import DataProvider.ConfigFileReader;
 import Pages.EmployeePage;
+import Utilities.Helper;
 import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
@@ -14,16 +16,17 @@ public class EmployeeSD extends BaseUtil {
 
     private BaseUtil base;
     EmployeePage page;
+    Helper help;
 
     public EmployeeSD(BaseUtil base) {
         page = new EmployeePage(Web_Driver);
+        help = new Helper();
         this.base = base;
     }
 
     @Given("^User should select acting role as Location Admin$")
-    public void userShouldSelectActingRoleAsLocationAdmin() {
+    public void userShouldSelectActingRoleAsLocationAdmin() throws Exception {
         page.GetLocationURL();
-        Web_Driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }
 
     @When("^User see the Employee Tab$")
@@ -45,40 +48,40 @@ public class EmployeeSD extends BaseUtil {
         page.clickCreateEmployee();
     }
 
-    @And("^User should enter the employee First Name \"([^\"]*)\"$")
-    public void userShouldEnterTheEmployeeFirstName(String fname) {
+    @And("^User should enter the employee First Name$")
+    public void userShouldEnterTheEmployeeFirstName() throws Exception {
         System.out.println("Entering Employee First Name");
-        page.enterEmployeeFirstName(fname);
+        page.enterEmployeeFirstName(help.generateNames());
     }
 
-    @And("^User should enter the employee Last Name \"([^\"]*)\"$")
-    public void userShouldEnterTheEmployeeLastName(String lname) {
+    @And("^User should enter the employee Last Name$")
+    public void userShouldEnterTheEmployeeLastName() throws Exception {
         System.out.println("Entering Employee Last Name");
-        page.enterEmployeeLastName(lname);
+        page.enterEmployeeLastName(help.generateNames());
     }
 
     @And("^User should enter the employee User Name \"([^\"]*)\"$")
-    public void userShouldEnterTheEmployeeUserName(String userName) {
+    public void userShouldEnterTheEmployeeUserName(String userName) throws Exception {
         System.out.println("Entering Employee User Name");
         page.enterEmployeeUserName(userName);
     }
 
     @And("^User should enter the employee Password \"([^\"]*)\"$")
-    public void userShouldEnterTheEmployeePassword(String pass) {
+    public void userShouldEnterTheEmployeePassword(String pass) throws Exception {
         System.out.println("Entering Employee Password");
         page.enterEmployeePassword(pass);
     }
 
     @And("^User should enter the employee Email Address \"([^\"]*)\"$")
-    public void userShouldEnterTheEmployeeEmailAddress(String email) {
+    public void userShouldEnterTheEmployeeEmailAddress(String email) throws Exception {
         System.out.println("Entering Employee Email Address");
         page.enterEmployeeEmailAddress(email);
     }
 
-    @And("^User should enter the employee Number \"([^\"]*)\"$")
-    public void userShouldEnterTheEmployeeNumber(String num) {
+    @And("^User should enter the employee Number$")
+    public void userShouldEnterTheEmployeeNumber() throws Exception {
         System.out.println("Entering Employee Number");
-        page.enterEmployeeNumber(num);
+        page.enterEmployeeNumber(help.randomString(5));
     }
 
     @And("^User should select the employee Phone Carrier$")
@@ -146,12 +149,14 @@ public class EmployeeSD extends BaseUtil {
     @And("^User should select the Trade Work Group$")
     public void userShouldSelectTheTradeWorkGroup() {
         System.out.println("Selecting Employee Trade Work Group");
+        page.clickTradeGroup();
         page.selectTradeGroup();
+        page.selectAvailableGroups();
         page.clickShiftButton();
     }
 
     @And("^User should enter Employee Note \"([^\"]*)\"$")
-    public void userShouldEnterEmployeeNote(String note) {
+    public void userShouldEnterEmployeeNote(String note) throws Exception {
         System.out.println("Entering Employee Notes");
         page.enterEmployeeNotes(note);
     }
@@ -159,6 +164,6 @@ public class EmployeeSD extends BaseUtil {
     @And("^User should click on Create Button$")
     public void userShouldClickOnCreateButton() {
         System.out.println("Clicking Create Button");
-        page.clickCreaetButton();
+        page.clickCreateButton();
     }
 }

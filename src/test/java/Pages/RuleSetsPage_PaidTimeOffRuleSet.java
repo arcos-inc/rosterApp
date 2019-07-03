@@ -1,5 +1,6 @@
 package Pages;
 
+import Utilities.Helper;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -8,7 +9,10 @@ import org.openqa.selenium.support.PageFactory;
 
 public class RuleSetsPage_PaidTimeOffRuleSet {
 
+    Helper help;
+
     public RuleSetsPage_PaidTimeOffRuleSet(WebDriver driver) {
+        help = new Helper();
         PageFactory.initElements(driver, this);
     }
 
@@ -80,9 +84,10 @@ public class RuleSetsPage_PaidTimeOffRuleSet {
         }
     }
 
-    public void enteringPTORuleSetName(String PTOName) {
+    public void enteringPTORuleSetName(String PTOName) throws Exception {
         txtName.clear();
         txtName.sendKeys(PTOName);
+        help.waitForAWhile(txtName.toString());
     }
 
     public void checkedCanRequestPaidTimeOff() {
@@ -97,28 +102,32 @@ public class RuleSetsPage_PaidTimeOffRuleSet {
         chkApprovalRequired.click();
     }
 
-    public void enteringMinCharactersDenialComment(String denialComment) {
+    public void enteringMinCharactersDenialComment(String denialComment) throws Exception {
         txtMinDenialCommentCharacters.clear();
         txtMinDenialCommentCharacters.sendKeys(denialComment);
+        help.waitForAWhile(txtMinDenialCommentCharacters.toString());
     }
 
     public void checkedAllowPartialShiftPaidTimeOff() {
         chkAllowPartialShiftPTO.click();
     }
 
-    public void enteringSmallestUnitPaidTimeOff(String smallestUnit) {
+    public void enteringSmallestUnitPaidTimeOff(String smallestUnit) throws Exception {
         txtSmallestUnitOfPto.clear();
         txtSmallestUnitOfPto.sendKeys(smallestUnit);
+        help.waitForAWhile(txtSmallestUnitOfPto.toString());
     }
 
-    public void enteringMinHoursBeforeShiftStartPaidTimeOffRequest(String beforeShiftStart) {
+    public void enteringMinHoursBeforeShiftStartPaidTimeOffRequest(String beforeShiftStart) throws Exception {
         txtMinHoursBeforePtoRequest.clear();
         txtMinHoursBeforePtoRequest.sendKeys(beforeShiftStart);
+        help.waitForAWhile(txtMinHoursBeforePtoRequest.toString());
     }
 
-    public void enteringMaxHoursBeforePaidTimeOffRequest(String maxHoursBeforePaidTimeOff) {
+    public void enteringMaxHoursBeforePaidTimeOffRequest(String maxHoursBeforePaidTimeOff) throws Exception {
         txtMaxHoursBeforePtoRequest.clear();
         txtMaxHoursBeforePtoRequest.sendKeys(maxHoursBeforePaidTimeOff);
+        help.waitForAWhile(txtMaxHoursBeforePtoRequest.toString());
     }
 
     public void checkedSupervisorCanOverrideRules() {
@@ -133,9 +142,10 @@ public class RuleSetsPage_PaidTimeOffRuleSet {
         chkDispCurrBal.click();
     }
 
-    public void enteringMaxDaysAdvanceCountAgainstAvailable(String maxDaysAdvance) {
+    public void enteringMaxDaysAdvanceCountAgainstAvailable(String maxDaysAdvance) throws Exception {
         txtMaxDaysAdvanceAgainstAvail.clear();
         txtMaxDaysAdvanceAgainstAvail.sendKeys(maxDaysAdvance);
+        help.waitForAWhile(txtMaxDaysAdvanceAgainstAvail.toString());
     }
 
     public void checkedRequireAvailableBalanceRequests() {
@@ -146,9 +156,10 @@ public class RuleSetsPage_PaidTimeOffRuleSet {
         chkAllowEEToViewDescription.click();
     }
 
-    public void enteringRuleSetDescription(String ruleSetDescription) {
+    public void enteringRuleSetDescription(String ruleSetDescription) throws Exception {
         txtRuleSetDescription.clear();
         txtRuleSetDescription.sendKeys(ruleSetDescription);
+        help.waitForAWhile(txtRuleSetDescription.toString());
     }
 
     public void clickingAddButton() {
