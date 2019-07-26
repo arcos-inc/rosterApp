@@ -3,6 +3,7 @@ package Steps;
 import Base.BaseUtil;
 import DataProvider.ConfigFileReader;
 import Pages.LoginPage;
+import com.aventstack.extentreports.GherkinKeyword;
 import cucumber.api.DataTable;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
@@ -26,7 +27,8 @@ public class LoginSD extends BaseUtil {
     }
 
     @Given("^User is on Application Login Page$")
-    public void userIsOnApplicationLoginPage() {
+    public void userIsOnApplicationLoginPage() throws Throwable {
+        scenarioDef.createNode(new GherkinKeyword("Given"), "User is on Application Login Page");
         configFileReader = new ConfigFileReader();
         Web_Driver.navigate().to(configFileReader.getApplicationUrl());
         Web_Driver.manage().window().maximize();
@@ -49,25 +51,29 @@ public class LoginSD extends BaseUtil {
     }
 
     @When("^User click on Admin Login DropDown$")
-    public void userShouldClickOnAdminLoginDropDown() {
+    public void userShouldClickOnAdminLoginDropDown() throws Throwable{
+        scenarioDef.createNode(new GherkinKeyword("When"), "User click on Admin Login DropDown");
         LoginPage page = new LoginPage(Web_Driver);
         page.ClickAdminRole();
     }
 
     @And("^User select role as a Company Admin$")
-    public void userShouldRoleAsACompanyAdmin() {
+    public void userShouldRoleAsACompanyAdmin() throws Throwable{
+        scenarioDef.createNode(new GherkinKeyword("And"), "User select role as a Company Admin");
         LoginPage page = new LoginPage(Web_Driver);
         page.SelectCompanyAdminRole();
     }
 
     @And("^User click on login button$")
-    public void iClickLoginButton() {
+    public void iClickLoginButton() throws Throwable{
+        scenarioDef.createNode(new GherkinKeyword("And"), "User click on login button");
         LoginPage page = new LoginPage(Web_Driver);
         page.ClickLogin();
     }
 
     @Then("^User is on Application home page$")
-    public void userIsOnApplicationHomePage() {
+    public void userIsOnApplicationHomePage() throws Throwable{
+        scenarioDef.createNode(new GherkinKeyword("Then"), "User is on Application home page");
         System.out.println("Welcome to ARCOS-RosterApp Home Page");
     }
 
@@ -87,6 +93,13 @@ public class LoginSD extends BaseUtil {
     public void userSelectRoleAsAEmployee() {
         LoginPage page = new LoginPage(Web_Driver);
         page.SelectEmployeeRole();
+    }
+
+    @And("^User should select Admin User$")
+    public void userShouldSelectAdminUser() throws Throwable{
+        scenarioDef.createNode(new GherkinKeyword("And"), "User should select Admin User");
+        LoginPage page = new LoginPage(Web_Driver);
+        page.SelectUser();
     }
 
     public class User {

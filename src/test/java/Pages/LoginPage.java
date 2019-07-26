@@ -36,6 +36,9 @@ public class LoginPage {
     @FindBy(how = How.ID, using = "ucPageHeader_ucRoleSwitcher_cboRole")
     public WebElement dropDownActingAs;
 
+    @FindBy(how = How.ID, using = "cboEmployee")
+    public WebElement selectUser;
+
     public void Login(String userName, String Password) {
         txtUsername.sendKeys(userName);
         txtPassword.sendKeys(Password);
@@ -67,6 +70,12 @@ public class LoginPage {
     public void SelectEmployeeRole() {
         Select adminRole = new Select(dropDownAdminRole);
         adminRole.selectByIndex(5);
+    }
+
+    public void SelectUser(){
+        selectUser.click();
+        Select companyAdmin = new Select(selectUser);
+        companyAdmin.selectByIndex(2);
     }
 }
 /*

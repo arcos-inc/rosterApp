@@ -85,13 +85,13 @@ public class EmployeePage {
     @FindBy(how = How.ID, using = "cboVt2RS")
     public WebElement cboVt2RS;
 
-    @FindBy(how = How.ID, using = "ucTradeGroups_cboLoc")
+    @FindBy(how = How.ID, using = "ucTradeGroup_cboLoc")
     public WebElement ucTradeGroups_cboLoc;
 
-    @FindBy(how = How.ID, using = "lstSource")
+    @FindBy(how = How.ID, using = "ucTradeGroup_lstSource")
     public WebElement lstSource;
 
-    @FindBy(how = How.NAME, using = "btnAdd")
+    @FindBy(how = How.ID, using = "ucTradeGroup_btnAddGroups")
     public WebElement btnAdd;
 
     @FindBy(how = How.ID, using = "txtNotes")
@@ -127,7 +127,7 @@ public class EmployeePage {
             Select actingAs = new Select(dropDownActingAs);
             actingAs.selectByIndex(3);
         }
-        help.waitForAWhile(dropDownActingAs.toString());
+        //help.waitForAWhile(dropDownActingAs.toString());
     }
 
     public void clickEmployeeTab() {
@@ -140,7 +140,7 @@ public class EmployeePage {
 
     public void selectWorkGroup() {
         Select sr = new Select(cboWorkGroup);
-        sr.selectByVisibleText("SAS001");
+        sr.selectByVisibleText("TRAINER CSA FT");
     }
 
     public void clickCreateEmployee() {
@@ -148,7 +148,7 @@ public class EmployeePage {
     }
 
     public void enterEmployeeFirstName(String empFirstName) throws Exception {
-        help.waitForAWhile(ucProfile_txtFirstName.toString());
+        //help.waitForAWhile(ucProfile_txtFirstName.toString());
         ucProfile_txtFirstName.sendKeys(empFirstName);
     }
 
@@ -174,7 +174,7 @@ public class EmployeePage {
 
     public void enterEmployeeNumber(String empNum) throws Exception {
         ucProfile_txtEmployeeNumber.sendKeys(empNum);
-        help.waitForAWhile(ucProfile_txtEmployeeNumber.toString());
+        //help.waitForAWhile(ucProfile_txtEmployeeNumber.toString());
     }
 
     public void clickEmployeePhoneCarrier() {
@@ -206,7 +206,7 @@ public class EmployeePage {
 
     public void selectEmployeeWorkGroup() {
         Select sr = new Select(cboWorkgroup);
-        sr.selectByVisibleText("SAS001");
+        sr.selectByVisibleText("TRAINER CSA FT");
     }
 
     public void clickEmployeeJobTitle() {
@@ -215,7 +215,7 @@ public class EmployeePage {
 
     public void selectEmployeeJobTitle() {
         Select sr = new Select(cboTitle);
-        sr.selectByVisibleText("Agent");
+        sr.selectByVisibleText("Departure Coordinator");
     }
 
     public void clickShiftRuleSet() {
@@ -224,7 +224,7 @@ public class EmployeePage {
 
     public void selectShiftRuleSet() {
         Select sr = new Select(cboShiftRS);
-        sr.selectByVisibleText("SASTest001");
+        sr.selectByVisibleText("COPS Standard");
     }
 
     public void clickPTORuleSet() {
@@ -233,7 +233,7 @@ public class EmployeePage {
 
     public void selectPTORuleSet() {
         Select sr = new Select(cboPtoRS);
-        sr.selectByVisibleText("SAS Test Rule Set A");
+        sr.selectByVisibleText("AMFA Standard");
     }
 
     public void clickUTORuleSet() {
@@ -242,7 +242,7 @@ public class EmployeePage {
 
     public void selectUTORuleSet() {
         Select sr = new Select(cboVtoRS);
-        sr.selectByVisibleText("SAS5 Std UTO Rules");
+        sr.selectByVisibleText("SAS Std UTO Rules 14");
     }
 
     public void clickVTOSlotRuleSet() {
@@ -251,7 +251,7 @@ public class EmployeePage {
 
     public void selectVTOSlotRuleSet() {
         Select sr = new Select(cboVt2RS);
-        sr.selectByVisibleText("SAS9 Std VTO Slot Rules");
+        sr.selectByIndex(2);
     }
 
     public void clickTradeGroup(){
@@ -260,12 +260,12 @@ public class EmployeePage {
 
     public void selectTradeGroup() {
         Select sr = new Select(ucTradeGroups_cboLoc);
-        sr.selectByIndex(6);
+        sr.selectByIndex(12);
     }
 
     public void selectAvailableGroups(){
         Select sr = new Select(lstSource);
-        sr.selectByIndex(1);
+        sr.selectByIndex(4);
     }
 
     public void clickShiftButton() {
@@ -274,7 +274,7 @@ public class EmployeePage {
 
     public void enterEmployeeNotes(String empNotes) throws Exception {
         txtNotes.sendKeys(empNotes);
-        help.waitForAWhile(txtNotes.toString());
+        //help.waitForAWhile(txtNotes.toString());
     }
 
     public void clickCreateButton() {

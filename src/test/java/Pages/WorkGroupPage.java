@@ -56,7 +56,7 @@ public class WorkGroupPage {
     }
 
     public void enterWorkGroupName(String workGroupName) throws Exception {
-        help.waitForAWhile(txtName.toString());
+        //help.waitForAWhile(txtName.toString());
         txtName.sendKeys(workGroupName);
     }
 
@@ -71,7 +71,7 @@ public class WorkGroupPage {
 
     public void selectSeniorityRule() throws Exception {
         Select sr = new Select(cboSeniorityRule);
-        sr.selectByVisibleText("Company Hire Date 1");
+        sr.selectByVisibleText("Company Hire Date");
         //help.waitForAWhile(cboSeniorityRule.toString());
     }
 
@@ -81,7 +81,7 @@ public class WorkGroupPage {
 
     public void selectShiftRuleSet() throws Exception {
         Select sr = new Select(cboShiftRuleSet);
-        sr.selectByVisibleText("SASTest001");
+        sr.selectByVisibleText("COPS Standard");
         //help.waitForAWhile(cboShiftRuleSet.toString());
     }
 
@@ -91,7 +91,7 @@ public class WorkGroupPage {
 
     public void selectPTORuleSet() throws Exception {
         Select sr = new Select(cboPtoRuleSet);
-        sr.selectByVisibleText("SAS Test Rule Set A");
+        sr.selectByVisibleText("AMFA Standard");
         //help.waitForAWhile(cboPtoRuleSet.toString());
     }
 
@@ -101,7 +101,7 @@ public class WorkGroupPage {
 
     public void selectUTORuleSet() throws Exception {
         Select sr = new Select(cboVtoRuleSet);
-        sr.selectByVisibleText("SAS5 Std UTO Rules");
+        sr.selectByVisibleText("SAS Std UTO Rules 14");
         //help.waitForAWhile(cboVtoRuleSet.toString());
     }
 
@@ -111,7 +111,7 @@ public class WorkGroupPage {
 
     public void selectVTOSlotRuleSet() throws Exception {
         Select sr = new Select(cboVt2RuleSet);
-        sr.selectByVisibleText("SAS9 Std VTO Slot Rules");
+        sr.selectByVisibleText("SAS Std VTO Slot Rules 14");
         //help.waitForAWhile(cboVt2RuleSet.toString());
     }
 

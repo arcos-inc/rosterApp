@@ -143,7 +143,7 @@ public class RuleSetsPage_ShiftRuleSet {
             Select actingAs = new Select(dropDownActingAs);
             actingAs.selectByIndex(1);
         }
-        help.waitForAWhile(dropDownActingAs.toString());
+        //help.waitForAWhile(dropDownActingAs.toString());
     }
 
     public void clickRuleSetTab() {
@@ -155,7 +155,7 @@ public class RuleSetsPage_ShiftRuleSet {
     }
 
     public void enteringRuleSetName(String ruleSetName) throws Exception {
-        help.waitForAWhile(enterRuleSetName.toString());
+        //help.waitForAWhile(enterRuleSetName.toString());
         enterRuleSetName.sendKeys(ruleSetName);
     }
 
@@ -238,7 +238,7 @@ public class RuleSetsPage_ShiftRuleSet {
     public void maxShiftOverlapSplitShiftHours(String overLapShiftHours) throws Exception {
         maxShiftHours.clear();
         maxShiftHours.sendKeys(overLapShiftHours);
-        help.waitForAWhile(maxShiftHours.toString());
+        //help.waitForAWhile(maxShiftHours.toString());
     }
 
     public void maxShiftOverlapDay(String overlapShiftDay) throws Exception {
@@ -290,7 +290,7 @@ public class RuleSetsPage_ShiftRuleSet {
     public void minShiftSegmentAfterSplitHours(String employeeSplitShift) throws Exception {
         splitShift.clear();
         splitShift.sendKeys(employeeSplitShift);
-        help.waitForAWhile(splitShift.toString());
+        //help.waitForAWhile(splitShift.toString());
     }
 
     public void clickAddButton() {

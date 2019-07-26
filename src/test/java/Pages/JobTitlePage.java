@@ -54,7 +54,7 @@ public class JobTitlePage {
     }
 
     public void enterShortDescription(String sDescription) throws Exception {
-        help.waitForAWhile(shortDescription.toString());
+        //help.waitForAWhile(shortDescription.toString());
         shortDescription.sendKeys(sDescription);
     }
 

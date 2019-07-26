@@ -87,7 +87,7 @@ public class RuleSetsPage_PaidTimeOffRuleSet {
     public void enteringPTORuleSetName(String PTOName) throws Exception {
         txtName.clear();
         txtName.sendKeys(PTOName);
-        help.waitForAWhile(txtName.toString());
+        //help.waitForAWhile(txtName.toString());
     }
 
     public void checkedCanRequestPaidTimeOff() {
@@ -105,7 +105,7 @@ public class RuleSetsPage_PaidTimeOffRuleSet {
     public void enteringMinCharactersDenialComment(String denialComment) throws Exception {
         txtMinDenialCommentCharacters.clear();
         txtMinDenialCommentCharacters.sendKeys(denialComment);
-        help.waitForAWhile(txtMinDenialCommentCharacters.toString());
+        //help.waitForAWhile(txtMinDenialCommentCharacters.toString());
     }
 
     public void checkedAllowPartialShiftPaidTimeOff() {
@@ -115,19 +115,19 @@ public class RuleSetsPage_PaidTimeOffRuleSet {
     public void enteringSmallestUnitPaidTimeOff(String smallestUnit) throws Exception {
         txtSmallestUnitOfPto.clear();
         txtSmallestUnitOfPto.sendKeys(smallestUnit);
-        help.waitForAWhile(txtSmallestUnitOfPto.toString());
+        //help.waitForAWhile(txtSmallestUnitOfPto.toString());
     }
 
     public void enteringMinHoursBeforeShiftStartPaidTimeOffRequest(String beforeShiftStart) throws Exception {
         txtMinHoursBeforePtoRequest.clear();
         txtMinHoursBeforePtoRequest.sendKeys(beforeShiftStart);
-        help.waitForAWhile(txtMinHoursBeforePtoRequest.toString());
+        //help.waitForAWhile(txtMinHoursBeforePtoRequest.toString());
     }
 
     public void enteringMaxHoursBeforePaidTimeOffRequest(String maxHoursBeforePaidTimeOff) throws Exception {
         txtMaxHoursBeforePtoRequest.clear();
         txtMaxHoursBeforePtoRequest.sendKeys(maxHoursBeforePaidTimeOff);
-        help.waitForAWhile(txtMaxHoursBeforePtoRequest.toString());
+        //help.waitForAWhile(txtMaxHoursBeforePtoRequest.toString());
     }
 
     public void checkedSupervisorCanOverrideRules() {
@@ -145,7 +145,7 @@ public class RuleSetsPage_PaidTimeOffRuleSet {
     public void enteringMaxDaysAdvanceCountAgainstAvailable(String maxDaysAdvance) throws Exception {
         txtMaxDaysAdvanceAgainstAvail.clear();
         txtMaxDaysAdvanceAgainstAvail.sendKeys(maxDaysAdvance);
-        help.waitForAWhile(txtMaxDaysAdvanceAgainstAvail.toString());
+        //help.waitForAWhile(txtMaxDaysAdvanceAgainstAvail.toString());
     }
 
     public void checkedRequireAvailableBalanceRequests() {
@@ -159,7 +159,7 @@ public class RuleSetsPage_PaidTimeOffRuleSet {
     public void enteringRuleSetDescription(String ruleSetDescription) throws Exception {
         txtRuleSetDescription.clear();
         txtRuleSetDescription.sendKeys(ruleSetDescription);
-        help.waitForAWhile(txtRuleSetDescription.toString());
+        //help.waitForAWhile(txtRuleSetDescription.toString());
     }
 
     public void clickingAddButton() {

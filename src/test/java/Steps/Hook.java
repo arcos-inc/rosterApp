@@ -25,7 +25,10 @@ public class Hook extends BaseUtil {
     }
 
     @Before("@A_LoginAsCompanyAdmin")
-    public void InitializeTest() {
+    public void InitializeTest(Scenario scenario) {
+
+        scenarioDef = base.features.createNode(scenario.getName());
+
         configFileReader = new ConfigFileReader();
         System.out.println("Opening the Web Browser");
         if (configFileReader.getBrowser().contains("Chrome")) {

@@ -38,7 +38,7 @@ public class RuleSetsPage_VTOSlotRuleSet {
     public void enteringVTOSlotRuleSetName(String VTOSlotName) throws Exception {
         txtName.clear();
         txtName.sendKeys(VTOSlotName);
-        help.waitForAWhile(txtName.toString());
+        //help.waitForAWhile(txtName.toString());
     }
 
     public void checkedCanClaimVTOSlot() {

@@ -143,6 +143,6 @@ public class LocationPage extends BaseUtil {
 
     public void clickAddLocationButton() throws Exception {
         btnAddLocation.click();
-        help.waitForAWhile(btnAddLocation.toString());
+        //help.waitForAWhile(btnAddLocation.toString());
     }
 }

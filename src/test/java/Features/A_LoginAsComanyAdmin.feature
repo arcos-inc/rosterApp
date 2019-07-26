@@ -9,6 +9,7 @@ Feature: Login Feature For Company Admin
 #      | shussain@arcos-int.com | Pass@123 |
     When User click on Admin Login DropDown
     And User select role as a Company Admin
+    And User should select Admin User
     And User click on login button
     Then User is on Application home page
 

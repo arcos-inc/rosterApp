@@ -48,7 +48,7 @@ public class RuleSetsPage_UTORuleSet {
     }
 
     public void enteringUTORuleSetName(String UTORuleSetName) throws Exception {
-        help.waitForAWhile(txtName.toString());
+        //help.waitForAWhile(txtName.toString());
         txtName.clear();
         txtName.sendKeys(UTORuleSetName);
     }
