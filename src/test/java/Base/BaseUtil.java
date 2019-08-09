@@ -5,13 +5,14 @@ import com.aventstack.extentreports.ExtentTest;
 import org.openqa.selenium.WebDriver;
 
 public class BaseUtil {
+
     public static WebDriver Web_Driver;
 
-    public ExtentReports extent;
+    public static ExtentReports extent;
 
     public static ExtentTest scenarioDef;
 
     public static ExtentTest features;
 
-    public static  String reportLocation = "/Users/SO-LPT-025/Reports/";
+    public static String reportLocation = "/Users/SO-LPT-011/Reports/";
 }

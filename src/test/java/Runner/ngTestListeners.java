@@ -27,9 +27,10 @@ public class ngTestListeners implements ITestListener {
     @Override
     public void onTestFailure(ITestResult iTestResult) {
         System.out.println("On test Failure");
+
         try{
             extentReportUtil.ExtentReportScreenshots();
-        }catch (IOException ex){
+        } catch (IOException ex){
             ex.printStackTrace();
         }
     }
@@ -47,8 +48,8 @@ public class ngTestListeners implements ITestListener {
     @Override
     public void onStart(ITestContext iTestContext) {
         System.out.println("On Start");
-        extentReportUtil.ExtentReport();
 
+        extentReportUtil.ExtentReport();
         //ToDo: Feature - Hard coding the feature name
         features = extentReportUtil.extent.createTest(Feature.class, "A_LoginAsComanyAdmin Feature");
     }
@@ -56,6 +57,7 @@ public class ngTestListeners implements ITestListener {
     @Override
     public void onFinish(ITestContext iTestContext) {
         System.out.println("On Finished");
+
         extentReportUtil.FlushReport();
     }
 }

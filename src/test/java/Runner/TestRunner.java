@@ -21,9 +21,19 @@ import org.junit.runners.MethodSorters;
                 " @F_UTORuleSet," +
                 " @G_VTOSlotRuleSet," +
                 " @H_Logout," +
-                " @I_LoginAsLocationAdmin, " +
-                " @J_WorkGroupTab, " +
-                " @K_EmployeeTab"})
+                " @I_LoginAsLocationAdmin"})
+
+//        " @A_LoginAsCompanyAdmin," +
+//                " @B_LocationTab," +
+//                " @C_JobTitleTab, " +
+//                " @D_ShiftRuleSet," +
+//                " @E_PTORuleSets, " +
+//                " @F_UTORuleSet," +
+//                " @G_VTOSlotRuleSet," +
+//                " @H_Logout," +
+//                " @I_LoginAsLocationAdmin, " +
+//                " @J_WorkGroupTab, " +
+//                " @K_EmployeeTab"})
 
 public class TestRunner extends AbstractTestNGCucumberTests {
 }

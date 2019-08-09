@@ -7,7 +7,7 @@ Feature: Location Tab
     When User see the Location Tab
     Then User should click on Create New Location
     When User gets the New Location Label
-    Then User enters "SASAN" the Name
+    Then User enters "SASANISA" the Name
     And User enters "SASAN Test Location Description" Description
     And User select Time Zone
     And User select First day of Week
