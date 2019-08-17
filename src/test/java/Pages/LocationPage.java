@@ -83,7 +83,11 @@ public class LocationPage extends BaseUtil {
             dropDownActingAs.click();
             Select actingAs = new Select(dropDownActingAs);
             actingAs.selectByIndex(1);
-        }else if (url.contains("Admin")) {
+        } else if (url.contains("Admin")) {
+            dropDownActingAs.click();
+            Select actingAs = new Select(dropDownActingAs);
+            actingAs.selectByIndex(1);
+        } else if (url.contains("CompanyAdministrator")) {
             dropDownActingAs.click();
             Select actingAs = new Select(dropDownActingAs);
             actingAs.selectByIndex(1);

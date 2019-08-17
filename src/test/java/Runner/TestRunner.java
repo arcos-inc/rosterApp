@@ -13,15 +13,8 @@ import org.junit.runners.MethodSorters;
 //        glue = "Steps", monochrome = true, tags = {
 //        "@I_LoginAsLocationAdmin, @K_EmployeeTab"})
         glue = "Steps", monochrome = true, tags = {
-        " @A_LoginAsCompanyAdmin," +
-                " @B_LocationTab," +
-                " @C_JobTitleTab, " +
-                " @D_ShiftRuleSet," +
-                " @E_PTORuleSets, " +
-                " @F_UTORuleSet," +
-                " @G_VTOSlotRuleSet," +
-                " @H_Logout," +
-                " @I_LoginAsLocationAdmin"})
+            " @A_LoginAsCompanyAdmin," +
+            "@L_ScheduleViewer"})
 
 //        " @A_LoginAsCompanyAdmin," +
 //                " @B_LocationTab," +

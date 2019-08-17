@@ -75,7 +75,7 @@ public class LoginPage {
     public void SelectUser(){
         selectUser.click();
         Select companyAdmin = new Select(selectUser);
-        companyAdmin.selectByIndex(2);
+        companyAdmin.selectByIndex(1);
     }
 }
 /*
