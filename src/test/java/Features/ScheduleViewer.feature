@@ -1,7 +1,7 @@
 Feature: Schedule Viewer Feature For Company Admin
   This Schedule Viewer feature deals with the schedule viewing functionality of the application
 
-  @L_ScheduleViewer
+  @L_AddScheduleViewer
   Scenario: Add Schedule Viewer to this Location
     Given User Should select Acting roles
     When User see the Location Tab
@@ -13,3 +13,9 @@ Feature: Schedule Viewer Feature For Company Admin
     And User click on the Search Button
     And User select the new schedule viewer
     Then User click on the Create button
+
+  @M_RemoveScheduleViewer
+  Scenario: Remove Schedule Viewer
+    Given User is on the Schedule Viewers Screen
+    When User click on the Remove Link Text
+    And User click on the OK Button

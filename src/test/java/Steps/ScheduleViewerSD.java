@@ -71,4 +71,18 @@ public class ScheduleViewerSD extends BaseUtil {
         System.out.println("User click on the Create button");
         scheduleViewerPage.clickOnTheCreateButton();
     }
+
+    @When("^User click on the Remove Link Text$")
+    public void userClickOnTheRemoveLinkText() throws Throwable {
+
+        System.out.println("User click on the Remove Link Text");
+        scheduleViewerPage.removeScheduleViewer();
+    }
+
+    @And("^User click on the OK Button$")
+    public void userClickOnTheOKButton() throws Throwable {
+
+        System.out.println("User click on the OK Button");
+        scheduleViewerPage.clickOKButton();
+    }
 }

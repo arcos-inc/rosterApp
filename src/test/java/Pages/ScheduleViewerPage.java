@@ -36,6 +36,9 @@ public class ScheduleViewerPage extends BaseUtil {
     @FindBy(how = How.ID, using = "btnSubmit")
     public WebElement clickCreateBtn;
 
+    @FindBy(how = How.ID, using = "repItems_ctl01_btnRemove")
+    public WebElement removeBtn;
+
     public void clickOnScheduleViewer() {
         clickScheduleViewer.click();
     }
@@ -59,5 +62,13 @@ public class ScheduleViewerPage extends BaseUtil {
 
     public void clickOnTheCreateButton() {
         clickCreateBtn.click();
+    }
+
+    public void removeScheduleViewer() {
+        removeBtn.click();
+    }
+
+    public void clickOKButton() {
+        Web_Driver.switchTo().alert().accept();
     }
 }

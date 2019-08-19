@@ -13,8 +13,9 @@ import org.junit.runners.MethodSorters;
 //        glue = "Steps", monochrome = true, tags = {
 //        "@I_LoginAsLocationAdmin, @K_EmployeeTab"})
         glue = "Steps", monochrome = true, tags = {
-            " @A_LoginAsCompanyAdmin," +
-            "@L_ScheduleViewer"})
+            "@A_LoginAsCompanyAdmin," +
+            "@L_AddScheduleViewer," +
+            "@M_RemoveScheduleViewer"})
 
 //        " @A_LoginAsCompanyAdmin," +
 //                " @B_LocationTab," +
