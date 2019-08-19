@@ -85,4 +85,70 @@ public class ScheduleViewerSD extends BaseUtil {
         System.out.println("User click on the OK Button");
         scheduleViewerPage.clickOKButton();
     }
+
+    @Then("^User click on the Add Schedule Viewer to Multiple Location$")
+    public void userClickOnTheAddScheduleViewerToMultipleLocation() throws Throwable {
+
+        scheduleViewerPage.clickOnTheAddScheduleViewerToMultipleLocation();
+    }
+
+    @Then("^User click on the Next button$")
+    public void userClickOnTheNextButton() throws Throwable {
+
+        scheduleViewerPage.clickNextButton();
+    }
+
+    @When("^User is on the Find New Schedule Viewer Next Screen$")
+    public void userIsOnTheFindNewScheduleViewerNextScreen() throws Throwable {
+
+        System.out.println("User is on the Find New Schedule Viewer Screen");
+    }
+
+    @And("^User select multiple locations$")
+    public void userSelectMultipleLocations() throws Throwable {
+
+        scheduleViewerPage.selectLocationsFromList();
+    }
+
+    @When("^User click on the Edit Assignment link text$")
+    public void userClickOnTheEditAssignmentLinkText() throws Throwable {
+
+        scheduleViewerPage.editAssignmentLink();
+    }
+
+    @Then("^User is on the Edit Schedule Viewer Screen$")
+    public void userIsOnTheEditScheduleViewerScreen() throws Throwable {
+
+    }
+
+    @And("^User edit locations$")
+    public void userEditLocations() throws Throwable {
+
+        scheduleViewerPage.editSchedule();
+    }
+
+    @When("^User click on the Edit Profile link text$")
+    public void userClickOnTheEditProfileLinkText() throws Throwable {
+
+        scheduleViewerPage.editProfileLink();
+    }
+
+    @Then("^User is on the Edit Profile Viewer Screen$")
+    public void userIsOnTheEditProfileViewerScreen() throws Throwable {
+
+    }
+
+
+    @Then("^User click on the Update button$")
+    public void userClickOnTheUpdateButton() throws Throwable {
+
+        System.out.println("User click on the Update button");
+        scheduleViewerPage.clickOnTheUpdateButton();
+    }
+
+    @And("^User edit Profile \"([^\"]*)\"$")
+    public void userEditProfile(String editName) throws Throwable {
+
+        scheduleViewerPage.editProfile(editName);
+    }
 }

@@ -2,6 +2,7 @@ package Pages;
 
 import Base.BaseUtil;
 import Utilities.Helper;
+import Utilities.Scroll;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -39,6 +40,27 @@ public class ScheduleViewerPage extends BaseUtil {
     @FindBy(how = How.ID, using = "repItems_ctl01_btnRemove")
     public WebElement removeBtn;
 
+    @FindBy(how = How.ID, using = "lnkMultipleNew")
+    public WebElement clickAddScheduleViewerMultipleLocation;
+
+    @FindBy(how = How.ID, using = "btnNext")
+    public WebElement nextBtn;
+
+    @FindBy(how = How.ID, using = "ucLocationPicker_lstLocations_1")
+    public WebElement selectMultipleLocation;
+
+    @FindBy(how = How.XPATH, using = "//*[@id=\"gridBody\"]/tbody/tr[2]/td[2]/a")
+    public WebElement editAssignmentLinkText;
+
+    @FindBy(how = How.XPATH, using = "//*[@id=\"gridBody\"]/tbody/tr[2]/td[3]/a")
+    public WebElement editProfileLinkText;
+
+    @FindBy(how = How.ID, using = "btnSubmit")
+    public WebElement clickUpdateBtn;
+
+    @FindBy(how = How.ID, using = "ucProfile_txtFirstName")
+    public WebElement editFirstName;
+
     public void clickOnScheduleViewer() {
         clickScheduleViewer.click();
     }
@@ -56,8 +78,8 @@ public class ScheduleViewerPage extends BaseUtil {
     }
 
     public void selectNameFromList() {
-        Select firstName = new Select(selectFromList);
-        firstName.selectByIndex(1);
+        Select lastName = new Select(selectFromList);
+        lastName.selectByIndex(1);
     }
 
     public void clickOnTheCreateButton() {
@@ -70,5 +92,42 @@ public class ScheduleViewerPage extends BaseUtil {
 
     public void clickOKButton() {
         Web_Driver.switchTo().alert().accept();
+    }
+
+    public void clickOnTheAddScheduleViewerToMultipleLocation() {
+        clickAddScheduleViewerMultipleLocation.click();
+    }
+
+    public void clickNextButton() {
+        nextBtn.click();
+    }
+
+    public void selectLocationsFromList() {
+        selectMultipleLocation.click();
+//        Select multipleLocations = new Select(selectMultipleLocation);
+//        multipleLocations.selectByIndex(1);
+    }
+
+    public void editAssignmentLink() {
+        editAssignmentLinkText.click();
+    }
+
+    public void editSchedule() {
+        selectMultipleLocation.click();
+    }
+
+    public void editProfileLink() {
+        editProfileLinkText.click();
+    }
+
+    public void editProfile(String editName) throws InterruptedException {
+        editFirstName.clear();
+        editFirstName.sendKeys(editName);
+        Scroll.scrollDown();
+    }
+
+    public void clickOnTheUpdateButton() {
+
+        clickUpdateBtn.click();
     }
 }
