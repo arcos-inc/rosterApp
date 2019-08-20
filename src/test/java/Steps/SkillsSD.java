@@ -51,7 +51,7 @@ public class SkillsSD  extends BaseUtil {
     @When("^User is on the New Skill Screen$")
     public void userIsOnTheNewSkillScreen() throws Throwable {
 
-        System.out.println("");
+        System.out.println("User is on the New Skill Screen");
     }
 
     @And("^User enter the code \"([^\"]*)\"$")

@@ -13,24 +13,24 @@ import org.junit.runners.MethodSorters;
 //        glue = "Steps", monochrome = true, tags = {
 //        "@I_LoginAsLocationAdmin, @K_EmployeeTab"})
         glue = "Steps", monochrome = true, tags = {
-//            "@A_LoginAsCompanyAdmin," +
-////            "@D_ShiftRuleSet"})
-//                    "@S_FilterSkills," +
-//                    "@T_FilterSkills"})
+            "@A_LoginAsCompanyAdmin," +
+                    "@U_AddDepartment," +
+                    "@V_EditDepartment"})
 
-        " @A_LoginAsCompanyAdmin," +
-                " @B_LocationTab," +
-                " @C_JobTitleTab, " +
-                " @D_ShiftRuleSet," +
-                " @E_PTORuleSets, " +
-                " @F_UTORuleSet," +
-                " @G_VTOSlotRuleSet," +
-                " @H_Logout," +
-                " @I_LoginAsLocationAdmin, " +
-                " @J_WorkGroupTab, " +
-                " @K_EmployeeTab," +
-                "@L_AddScheduleViewer, @M_RemoveScheduleViewer, @N_AddScheduleViewerToMultipleLocations, @O_EditAssignment, @P_EditProfile," +
-                "@Q_AddSkill, @R_EditSkill, @S_FilterSkills, @T_FilterSkills,"})
+//        " @A_LoginAsCompanyAdmin," +
+//                " @B_LocationTab," +
+//                " @C_JobTitleTab, " +
+//                " @D_ShiftRuleSet," +
+//                " @E_PTORuleSets, " +
+//                " @F_UTORuleSet," +
+//                " @G_VTOSlotRuleSet," +
+//                " @H_Logout," +
+//                " @I_LoginAsLocationAdmin, " +
+//                " @J_WorkGroupTab, " +
+//                " @K_EmployeeTab," +
+//                "@L_AddScheduleViewer, @M_RemoveScheduleViewer, @N_AddScheduleViewerToMultipleLocations, @O_EditAssignment, @P_EditProfile," +
+//                "@Q_AddSkill, @R_EditSkill, @S_FilterSkills, @T_FilterSkills," +
+//                "@U_AddDepartment"})
 
 public class TestRunner extends AbstractTestNGCucumberTests {
 }
