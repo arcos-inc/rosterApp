@@ -11,7 +11,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
 public class ScheduleViewerPage extends BaseUtil {
-//    lnkNew
+
     Helper help;
 
     public ScheduleViewerPage(WebDriver driver) {
