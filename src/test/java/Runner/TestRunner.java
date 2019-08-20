@@ -14,10 +14,8 @@ import org.junit.runners.MethodSorters;
 //        "@I_LoginAsLocationAdmin, @K_EmployeeTab"})
         glue = "Steps", monochrome = true, tags = {
             "@A_LoginAsCompanyAdmin," +
-                    "@U_AddDepartment," +
-                    "@V_EditDepartment"})
 
-//        " @A_LoginAsCompanyAdmin," +
+//          " @A_LoginAsCompanyAdmin," +
 //                " @B_LocationTab," +
 //                " @C_JobTitleTab, " +
 //                " @D_ShiftRuleSet," +
@@ -30,7 +28,7 @@ import org.junit.runners.MethodSorters;
 //                " @K_EmployeeTab," +
 //                "@L_AddScheduleViewer, @M_RemoveScheduleViewer, @N_AddScheduleViewerToMultipleLocations, @O_EditAssignment, @P_EditProfile," +
 //                "@Q_AddSkill, @R_EditSkill, @S_FilterSkills, @T_FilterSkills," +
-//                "@U_AddDepartment"})
+                "@U_AddDepartment, @V_EditDepartment"})
 
 public class TestRunner extends AbstractTestNGCucumberTests {
 }
