@@ -26,10 +26,11 @@ import org.junit.runners.MethodSorters;
 //                " @I_LoginAsLocationAdmin, " +
 //                " @J_WorkGroupTab, " +
 //                " @K_EmployeeTab," +
-//                "@L_AddScheduleViewer, @M_RemoveScheduleViewer, @N_AddScheduleViewerToMultipleLocations, @O_EditAssignment, @P_EditProfile," +
-//                "@Q_AddSkill, @R_EditSkill, @S_FilterSkills, @T_FilterSkills," +
-//                "@U_AddDepartment, @V_EditDepartment," +
-                    "@W_EditAccrualAccounts"})
+//                " @L_AddScheduleViewer, @M_RemoveScheduleViewer, @N_AddScheduleViewerToMultipleLocations, @O_EditAssignment, @P_EditProfile," +
+//                " @Q_AddSkill, @R_EditSkill, @S_FilterSkills, @T_FilterSkills," +
+//                " @U_AddDepartment, @V_EditDepartment," +
+//                " @W_EditAccrualAccounts," +
+                    "@X_CreateRoundingRuleSet"})
 
 public class TestRunner extends AbstractTestNGCucumberTests {
 }
