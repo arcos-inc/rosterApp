@@ -108,4 +108,24 @@ public class RoundingRuleSetSD extends BaseUtil {
         System.out.println("User click on the Add Button to Add Rounding Rule Set");
         roundingRuleSetPage.clickOnAddButton();
     }
+
+    @When("^User should click on the Edit Rounding Rule Set$")
+    public void userShouldClickOnTheEditRoundingRuleSet() throws Throwable {
+
+        System.out.println("User should click on the Edit Rounding Rule Set");
+        roundingRuleSetPage.clickEditRounding();
+    }
+
+    @Then("^User is on the Edit Rounding Rule Set Screen$")
+    public void userIsOnTheEditRoundingRuleSetScreen() throws Throwable {
+
+        System.out.println("User is on the Edit Rounding Rule Set Screen");
+    }
+
+    @Then("^User click on the Update Button to Add Rounding Rule Set$")
+    public void userClickOnTheUpdateButtonToAddRoundingRuleSet() throws Throwable {
+
+        System.out.println("User click on the Update Button to Add Rounding Rule Set");
+        roundingRuleSetPage.clickOnUpdateButton();
+    }
 }

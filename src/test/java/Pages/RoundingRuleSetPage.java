@@ -45,6 +45,12 @@ public class RoundingRuleSetPage extends BaseUtil {
     @FindBy(how = How.ID, using = "btnAddEdit")
     public WebElement clickAddBtn;
 
+    @FindBy(how = How.XPATH, using = "//*[@id=\"grdRoundingRuleSet\"]/tbody/tr[2]/td[2]/a")
+    public WebElement clickEditRoundingRuleSet;
+
+    @FindBy(how = How.ID, using = "btnAddEdit")
+    public WebElement clickEditBtn;
+
     public void clickOnRuleSetLink() {
           clickOnRuleSet.click();
     }
@@ -84,5 +90,14 @@ public class RoundingRuleSetPage extends BaseUtil {
 
     public void clickOnAddButton() {
         clickAddBtn.click();
+    }
+
+    public void clickEditRounding() {
+        clickEditRoundingRuleSet.click();
+
+    }
+
+    public void clickOnUpdateButton() {
+        clickEditBtn.click();
     }
 }

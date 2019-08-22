@@ -30,7 +30,7 @@ import org.junit.runners.MethodSorters;
 //                " @Q_AddSkill, @R_EditSkill, @S_FilterSkills, @T_FilterSkills," +
 //                " @U_AddDepartment, @V_EditDepartment," +
 //                " @W_EditAccrualAccounts," +
-                    "@X_CreateRoundingRuleSet"})
+                    "@X_CreateRoundingRuleSet, @Y_EditRoundingRuleSet"})
 
 public class TestRunner extends AbstractTestNGCucumberTests {
 }
