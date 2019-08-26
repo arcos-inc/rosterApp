@@ -101,4 +101,42 @@ public class QualificationsSD extends BaseUtil{
         qualificationsPage.clickEditLink();
         Thread.sleep(1000);
     }
+
+    @When("^User click on the Locations Tab$")
+    public void userClickOnTheLocationsTab() throws Throwable {
+
+        System.out.println("User click on the Locations Tab");
+        qualificationsPage.clickLocationTab();
+        Thread.sleep(1000);
+    }
+
+    @And("^User is on the Locations Screen$")
+    public void userIsOnTheLocationsScreen() throws Throwable {
+
+        System.out.println("User is on the Locations Screen");
+        Thread.sleep(1000);
+    }
+
+    @Then("^User should click on Qualifications link text$")
+    public void userShouldClickOnQualificationsLinkText() throws Throwable {
+
+        System.out.println("User should click on Qualifications link text");
+        qualificationsPage.clickQualificationsLinkTxt();
+        Thread.sleep(1000);
+    }
+
+    @When("^User navigate to the Qualifications for Accounting Page$")
+    public void userNavigateToTheQualificationsForAccountingPage() throws Throwable {
+
+        System.out.println("User navigate to the Qualifications for Accounting Page");
+        Thread.sleep(1000);
+    }
+
+    @And("^User check on any existing qualification$")
+    public void userCheckOnAnyExistingQualification() throws Throwable {
+
+        System.out.println("User check on any existing qualification");
+        qualificationsPage.checkExistingQualification();
+        Thread.sleep(1000);
+    }
 }

@@ -41,6 +41,15 @@ public class QualificationsPage extends BaseUtil {
     @FindBy(how = How.XPATH, using = "//*[@id=\"tblQualifications\"]/tbody/tr[1]/td[5]/a")
     public WebElement clickEditLink;
 
+    @FindBy(how = How.XPATH, using = "//*[@id=\"form1\"]/table[1]/tbody/tr[3]/td/ul/li[1]/a")
+    public WebElement clickLocation;
+
+    @FindBy(how = How.XPATH, using = "//*[@id=\"grdLocations\"]/tbody/tr[2]/td[9]/a")
+    public WebElement clickQualification;
+
+    @FindBy(how = How.ID, using = "lstQualifications_0")
+    public WebElement checkQualification;
+
     public void clickQualificationsLink() {
         clickQualificationsLinkText.click();
     }
@@ -74,5 +83,17 @@ public class QualificationsPage extends BaseUtil {
 
     public void clickEditLink() {
         clickEditLink.click();
+    }
+
+    public void clickLocationTab() {
+        clickLocation.click();
+    }
+
+    public void clickQualificationsLinkTxt() {
+        clickQualification.click();
+    }
+
+    public void checkExistingQualification() {
+        checkQualification.click();
     }
 }
