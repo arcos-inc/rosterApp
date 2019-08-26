@@ -38,6 +38,9 @@ public class QualificationsPage extends BaseUtil {
     @FindBy(how = How.ID, using = "btnUpdate")
     public WebElement btnUpdate;
 
+    @FindBy(how = How.XPATH, using = "//*[@id=\"tblQualifications\"]/tbody/tr[1]/td[5]/a")
+    public WebElement clickEditLink;
+
     public void clickQualificationsLink() {
         clickQualificationsLinkText.click();
     }
@@ -67,5 +70,9 @@ public class QualificationsPage extends BaseUtil {
 
     public void clickSaveButton() {
         btnUpdate.click();
+    }
+
+    public void clickEditLink() {
+        clickEditLink.click();
     }
 }

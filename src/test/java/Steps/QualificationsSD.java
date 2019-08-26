@@ -2,6 +2,7 @@ package Steps;
 
 import Base.BaseUtil;
 import Pages.QualificationsPage;
+import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -90,6 +91,14 @@ public class QualificationsSD extends BaseUtil{
 
         System.out.println("User click on the Save Button to Add Qualification");
         qualificationsPage.clickSaveButton();
+        Thread.sleep(1000);
+    }
+
+    @When("^User should click on the Edit Qualification$")
+    public void userShouldClickOnTheEditQualification() throws Throwable {
+
+        System.out.println("User should click on the Edit Qualification");
+        qualificationsPage.clickEditLink();
         Thread.sleep(1000);
     }
 }
