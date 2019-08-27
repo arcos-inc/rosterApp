@@ -38,6 +38,9 @@ public class CostCenterPage extends BaseUtil {
     @FindBy(how = How.ID, using = "btnUpdate")
     public WebElement btnUpdate;
 
+    @FindBy(how = How.XPATH, using = "//*[@id=\"tblCostCenters\"]/tbody/tr[1]/td[5]/a")
+    public WebElement btnEdit;
+
     public void clickCostCentersLinkText() {
         clickCostCentersLinkText.click();
     }
@@ -47,14 +50,17 @@ public class CostCenterPage extends BaseUtil {
     }
 
     public void enterCostCenterName(String enterCostCenterName) {
+        enterName.clear();
         enterName.sendKeys(enterCostCenterName);
     }
 
     public void enterCostCenterDescription(String enterCostCenterDesc) {
+        enterDescription.clear();
         enterDescription.sendKeys(enterCostCenterDesc);
     }
 
     public void enterDisplayOrder(String enterDispOrder) {
+        enterDisplayOrder.clear();
         enterDisplayOrder.sendKeys(enterDispOrder);
     }
 
@@ -64,5 +70,9 @@ public class CostCenterPage extends BaseUtil {
 
     public void clickSaveButton() {
         btnUpdate.click();
+    }
+
+    public void clickEditButton() {
+        btnEdit.click();
     }
 }

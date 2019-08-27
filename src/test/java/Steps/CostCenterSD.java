@@ -2,6 +2,7 @@ package Steps;
 
 import Base.BaseUtil;
 import Pages.CostCenterPage;
+import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -90,6 +91,14 @@ public class CostCenterSD extends BaseUtil {
 
         System.out.println("User click on the Save Button to Add Cost Center");
         costCenterPage.clickSaveButton();
+        Thread.sleep(1000);
+    }
+
+    @When("^User should click on the Edit Cost Centers$")
+    public void userShouldClickOnTheEditCostCenters() throws Throwable {
+
+        System.out.println("User should click on the Edit Cost Centers");
+        costCenterPage.clickEditButton();
         Thread.sleep(1000);
     }
 }
