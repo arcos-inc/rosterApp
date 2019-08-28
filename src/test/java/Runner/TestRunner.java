@@ -25,7 +25,7 @@ import org.junit.runners.MethodSorters;
 //                " @G_VTOSlotRuleSet," +
 //                " @H_Logout," +
 //                " @I_LoginAsLocationAdmin, " +
-//                " @J_WorkGroupTab, " +
+//                " @J_CreateWorkGroup, " +
 //                " @K_EmployeeTab," +
 //                " @L_AddScheduleViewer, @M_RemoveScheduleViewer, @N_AddScheduleViewerToMultipleLocations, @O_EditAssignment, @P_EditProfile," +
 //                " @Q_AddSkill, @R_EditSkill, @S_FilterSkills, @T_FilterSkills," +
@@ -35,7 +35,8 @@ import org.junit.runners.MethodSorters;
 //                " @Z_CreateDependabilityRuleSet, @ZA_EditDependabilityRuleSet," +
 //                " @ZB_CreateQualifications, @ZC_EditQualifications, @ZD_EditQualificationsForLocation," +
 //                    "@ZE_CreateCostCenters, @ZF_EditCostCenters," +
-                    "@ZG_FilterAllEmployees, @ZH_FilterActiveEmployees, @ZI_FilterInactiveEmployees"})
+//                    "@ZG_FilterAllEmployees, @ZH_FilterActiveEmployees, @ZI_FilterInactiveEmployees," +
+                      "@ZL_HideInactiveWorkGroups"})
 
 public class TestRunner extends AbstractTestNGCucumberTests {
 }

@@ -47,6 +47,18 @@ public class WorkGroupPage {
     @FindBy(how = How.ID, using = "btnAddEdit")
     public WebElement btnAddEdit;
 
+    @FindBy(how = How.XPATH, using = "//*[@id=\"grdWorkgroups\"]/tbody/tr[16]/td[5]/a")
+    public WebElement btnEdit;
+
+    @FindBy(how = How.ID, using = "btnAddEdit")
+    public WebElement btnUpdate;
+
+    @FindBy(how = How.ID, using = "btnCancel")
+    public WebElement btnCancel;
+
+    @FindBy(how = How.ID, using = "chkHideInactive")
+    public WebElement chkHideInactive;
+
     public void clickWorkGroupTab() {
         navigateWorkGroup.click();
     }
@@ -57,10 +69,12 @@ public class WorkGroupPage {
 
     public void enterWorkGroupName(String workGroupName) throws Exception {
         //help.waitForAWhile(txtName.toString());
+        txtName.clear();
         txtName.sendKeys(workGroupName);
     }
 
     public void enterWorkGroupDescription(String groupDescription) throws Exception {
+        txtDescription.clear();
         txtDescription.sendKeys(groupDescription);
         //help.waitForAWhile(txtDescription.toString());
     }
@@ -117,5 +131,21 @@ public class WorkGroupPage {
 
     public void clickAddButton() {
         btnAddEdit.click();
+    }
+
+    public void clickEditLinkText() {
+        btnEdit.click();
+    }
+
+    public void clickUpdateBtn() {
+        btnUpdate.click();
+    }
+
+    public void clickCancelBtn() {
+        btnCancel.click();
+    }
+
+    public void checkHideInactiveBtn() {
+        chkHideInactive.click();
     }
 }
