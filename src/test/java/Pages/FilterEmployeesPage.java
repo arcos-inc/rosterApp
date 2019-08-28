@@ -37,7 +37,7 @@ public class FilterEmployeesPage extends BaseUtil {
             dropDownActingAs.click();
             Select actingAs = new Select(dropDownActingAs);
             actingAs.selectByIndex(0);
-//            select.selectByValue("Location Administrator");
+//            actingAs.selectByValue("Location Administrator");
         } else if (url.contains("Location")) {
             dropDownActingAs.click();
             Select actingAs = new Select(dropDownActingAs);
