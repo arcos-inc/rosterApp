@@ -24,7 +24,8 @@ public class Hook extends BaseUtil {
         this.base = base;
     }
 
-    @Before("@A_LoginAsCompanyAdmin")
+//    @Before("@A_LoginAsCompanyAdmin")
+    @Before("@A_LoginAsLocationAdmin")
     public void InitializeTest(Scenario scenario) {
 
         scenarioDef = base.features.createNode(scenario.getName());
