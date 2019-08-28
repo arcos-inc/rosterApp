@@ -13,7 +13,8 @@ import org.junit.runners.MethodSorters;
 //        glue = "Steps", monochrome = true, tags = {
 //        "@I_LoginAsLocationAdmin, @K_EmployeeTab"})
         glue = "Steps", monochrome = true, tags = {
-            "@A_LoginAsCompanyAdmin," +
+//            "@A_LoginAsCompanyAdmin," +
+              "@A_LoginAsLocationAdmin," +
 
 //          " @A_LoginAsCompanyAdmin," +
 //                " @B_LocationTab," +
@@ -33,7 +34,8 @@ import org.junit.runners.MethodSorters;
 //                " @X_CreateRoundingRuleSet, @Y_EditRoundingRuleSet," +
 //                " @Z_CreateDependabilityRuleSet, @ZA_EditDependabilityRuleSet," +
 //                " @ZB_CreateQualifications, @ZC_EditQualifications, @ZD_EditQualificationsForLocation," +
-                    "@ZE_CreateCostCenters, @ZF_EditCostCenters"})
+//                    "@ZE_CreateCostCenters, @ZF_EditCostCenters," +
+                    "@ZG_FilterAllEmployees, @ZH_FilterActiveEmployees, @ZI_FilterInactiveEmployees"})
 
 public class TestRunner extends AbstractTestNGCucumberTests {
 }

@@ -77,6 +77,15 @@ public class LoginPage {
         Select companyAdmin = new Select(selectUser);
         companyAdmin.selectByIndex(1);
     }
+
+    public void clickLocation() {
+        selectUser.click();
+    }
+
+    public void selectLocation() {
+        Select companyAdmin = new Select(selectUser);
+        companyAdmin.selectByIndex(3);
+    }
 }
 /*
         if(!(locationLabel.equals("locations for my airline"))){

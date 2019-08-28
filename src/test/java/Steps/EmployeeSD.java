@@ -27,6 +27,7 @@ public class EmployeeSD extends BaseUtil {
     @Given("^User should select acting role as Location Admin$")
     public void userShouldSelectActingRoleAsLocationAdmin() throws Exception {
         page.GetLocationURL();
+        Web_Driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }
 
     @When("^User see the Employee Tab$")

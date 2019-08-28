@@ -5,6 +5,7 @@ import DataProvider.ConfigFileReader;
 import Pages.LoginPage;
 import com.aventstack.extentreports.GherkinKeyword;
 import cucumber.api.DataTable;
+import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -19,11 +20,11 @@ public class LoginSD extends BaseUtil {
 
     private BaseUtil base;
     ConfigFileReader configFileReader;
-    //LoginPage page;
+//    LoginPage page;
 
     public LoginSD(BaseUtil base) {
+//        page = new LoginPage(Web_Driver);
         this.base = base;
-        //page = new LoginPage(base.Web_Driver);
     }
 
     @Given("^User is on Application Login Page$")
@@ -100,6 +101,24 @@ public class LoginSD extends BaseUtil {
         scenarioDef.createNode(new GherkinKeyword("And"), "User should select Admin User");
         LoginPage page = new LoginPage(Web_Driver);
         page.SelectUser();
+    }
+
+    @And("^User click on the Location$")
+    public void userClickOnTheLocation() throws Throwable {
+        scenarioDef.createNode(new GherkinKeyword("And"), "User click on the Location");
+        System.out.println("User click on the Location");
+        LoginPage page = new LoginPage(Web_Driver);
+        page.clickLocation();
+        Thread.sleep(1000);
+    }
+
+    @And("^User select location$")
+    public void userSelectLocation() throws Throwable {
+        scenarioDef.createNode(new GherkinKeyword("And"), "User select location");
+        System.out.println("User select location");
+        LoginPage page = new LoginPage(Web_Driver);
+        page.selectLocation();
+        Thread.sleep(1000);
     }
 
     public class User {
