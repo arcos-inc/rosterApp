@@ -46,7 +46,7 @@ public class ScheduleViewerPage extends BaseUtil {
     @FindBy(how = How.ID, using = "btnNext")
     public WebElement nextBtn;
 
-    @FindBy(how = How.ID, using = "ucGroupPicker_lstGroups_1")
+    @FindBy(how = How.ID, using = "ucLocationPicker_lstLocations_1")
     public WebElement selectMultipleLocation;
 
     @FindBy(how = How.XPATH, using = "//*[@id=\"gridBody\"]/tbody/tr[2]/td[2]/a")

@@ -30,7 +30,7 @@ Feature: Supervisor Feature For Company Admin
     And User select the new Supervisor
     Then User click on the Next button on Supervisor Screen
     When User is on the Find New Supervisor Next Screen
-    And User select multiple locations
+    And User select multiple locations on Supervisor Screen
     Then User click on the Create button to add Supervisor
 
   @ZN_EditAssignment
