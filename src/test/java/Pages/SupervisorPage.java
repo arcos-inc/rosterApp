@@ -10,20 +10,20 @@ import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
-public class ScheduleViewerPage extends BaseUtil {
+public class SupervisorPage extends BaseUtil {
 
     Helper help;
 
-    public ScheduleViewerPage(WebDriver driver) {
+    public SupervisorPage(WebDriver driver){
         help = new Helper();
         PageFactory.initElements(driver, this);
     }
 
-    @FindBy(how = How.XPATH, using = "//*[@id=\"grdLocations\"]/tbody/tr[2]/td[6]/a")
-    public WebElement clickScheduleViewer;
+    @FindBy(how = How.XPATH, using = "//*[@id=\"grdWorkgroups\"]/tbody/tr[2]/td[6]/a")
+    public WebElement clickSupervisor;
 
     @FindBy(how = How.ID, using = "lnkNew")
-    public WebElement clickAddScheduleViewerLocation;
+    public WebElement clickAddSupervisor;
 
     @FindBy(how = How.ID, using = "txtSearch")
     public WebElement enterLastName;
@@ -37,7 +37,7 @@ public class ScheduleViewerPage extends BaseUtil {
     @FindBy(how = How.ID, using = "btnSubmit")
     public WebElement clickCreateBtn;
 
-    @FindBy(how = How.ID, using = "repItems_ctl01_btnRemove")
+    @FindBy(how = How.ID, using = "repItems_ctl17_btnRemove")
     public WebElement removeBtn;
 
     @FindBy(how = How.ID, using = "lnkMultipleNew")
@@ -46,7 +46,7 @@ public class ScheduleViewerPage extends BaseUtil {
     @FindBy(how = How.ID, using = "btnNext")
     public WebElement nextBtn;
 
-    @FindBy(how = How.ID, using = "ucGroupPicker_lstGroups_1")
+    @FindBy(how = How.ID, using = "ucGroupPicker_lstGroups_0")
     public WebElement selectMultipleLocation;
 
     @FindBy(how = How.XPATH, using = "//*[@id=\"gridBody\"]/tbody/tr[2]/td[2]/a")
@@ -61,15 +61,16 @@ public class ScheduleViewerPage extends BaseUtil {
     @FindBy(how = How.ID, using = "ucProfile_txtFirstName")
     public WebElement editFirstName;
 
-    public void clickOnScheduleViewer() {
-        clickScheduleViewer.click();
+    public void clickOnSupervisors() {
+        clickSupervisor.click();
     }
 
-    public void clickOnTheAddScheduleViewerToThisLocation() {
-        clickAddScheduleViewerLocation.click();
+    public void clickOnTheAddSupervisorToThisLocation() {
+        clickAddSupervisor.click();
     }
 
     public void findByLastName(String lastname) {
+        enterLastName.clear();
         enterLastName.sendKeys(lastname);
     }
 
@@ -86,7 +87,7 @@ public class ScheduleViewerPage extends BaseUtil {
         clickCreateBtn.click();
     }
 
-    public void removeScheduleViewer() {
+    public void removeSupervisor() {
         removeBtn.click();
     }
 
@@ -94,7 +95,7 @@ public class ScheduleViewerPage extends BaseUtil {
         Web_Driver.switchTo().alert().accept();
     }
 
-    public void clickOnTheAddScheduleViewerToMultipleLocation() {
+    public void clickOnTheAddSupervisorToMultipleLocation() {
         clickAddScheduleViewerMultipleLocation.click();
     }
 
@@ -104,8 +105,6 @@ public class ScheduleViewerPage extends BaseUtil {
 
     public void selectLocationsFromList() {
         selectMultipleLocation.click();
-//        Select multipleLocations = new Select(selectMultipleLocation);
-//        multipleLocations.selectByIndex(1);
     }
 
     public void editAssignmentLink() {
@@ -120,7 +119,7 @@ public class ScheduleViewerPage extends BaseUtil {
         editProfileLinkText.click();
     }
 
-    public void editProfile(String editName) throws InterruptedException {
+    public void editProfile(String editName) {
         editFirstName.clear();
         editFirstName.sendKeys(editName);
         Scroll.scrollDown();

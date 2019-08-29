@@ -25,7 +25,7 @@ public class WorkGroupSD extends BaseUtil {
     }
 
     @Then("^User should click on Create New Work Group$")
-    public void userShouldClickOnCreateNewWorkGroup() throws Throwable{
+    public void userShouldClickOnCreateNewWorkGroup() throws Throwable {
         System.out.println("Click on Create New Work Group");
         page.clickCreateNewWorkGroup();
         Thread.sleep(1000);

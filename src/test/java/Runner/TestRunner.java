@@ -34,9 +34,9 @@ import org.junit.runners.MethodSorters;
 //                " @X_CreateRoundingRuleSet, @Y_EditRoundingRuleSet," +
 //                " @Z_CreateDependabilityRuleSet, @ZA_EditDependabilityRuleSet," +
 //                " @ZB_CreateQualifications, @ZC_EditQualifications, @ZD_EditQualificationsForLocation," +
-//                    "@ZE_CreateCostCenters, @ZF_EditCostCenters," +
-//                    "@ZG_FilterAllEmployees, @ZH_FilterActiveEmployees, @ZI_FilterInactiveEmployees," +
-                      "@ZL_HideInactiveWorkGroups"})
+//                " @ZE_CreateCostCenters, @ZF_EditCostCenters," +
+//                " @ZG_FilterAllEmployees, @ZH_FilterActiveEmployees, @ZI_FilterInactiveEmployees, @ZL_HideInactiveWorkGroups" +
+                      "@ZK_AddSupervisor, @ZL_RemoveSupervisor, @ZM_AddSupervisorToMultipleLocations, @ZN_EditAssignment, @ZO_EditProfile"})
 
 public class TestRunner extends AbstractTestNGCucumberTests {
 }

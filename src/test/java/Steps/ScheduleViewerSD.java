@@ -153,19 +153,18 @@ public class ScheduleViewerSD extends BaseUtil {
 
     }
 
+    @And("^User edit Profile \"([^\"]*)\"$")
+    public void userEditProfile(String editName) throws Throwable {
+
+        scheduleViewerPage.editProfile(editName);
+        Thread.sleep(1000);
+    }
 
     @Then("^User click on the Update button$")
     public void userClickOnTheUpdateButton() throws Throwable {
 
         System.out.println("User click on the Update button");
         scheduleViewerPage.clickOnTheUpdateButton();
-        Thread.sleep(1000);
-    }
-
-    @And("^User edit Profile \"([^\"]*)\"$")
-    public void userEditProfile(String editName) throws Throwable {
-
-        scheduleViewerPage.editProfile(editName);
         Thread.sleep(1000);
     }
 }
