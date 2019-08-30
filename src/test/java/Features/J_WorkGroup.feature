@@ -35,3 +35,65 @@ Feature: Work Group Tab
     Given User Should select Acting roles as Loc Admin
     When User see the Work Group Tab
     Then User should click on Hide Inactive Work Group
+
+  @ZP_AddSkillsForEmployees
+  Scenario: Add Skills For Employees Under Work Groups Tab
+    Given User Should select Acting roles as Loc Admin
+    When User see the Work Group Tab
+    Then User click on the Add/Remove Skills For Employees
+    When User is on the Add/Remove Skills for Employees
+    And User click on the Add Skills Radio Button
+    And User select skills
+    And User select employees
+    Then User click on the Submit button
+
+  @ZQ_RemoveSkillsForEmployees
+  Scenario:Remove Skills For Employees Under Work Groups Tab
+    Given User is on the Workgroup Page
+    When User click on the Add/Remove Skills For Employees
+    Then User is on the Add/Remove Skills for Employees
+    And User click on the Remove Skills Radio Button
+    And User select skills
+    And User select employees
+    Then User click on the Submit button
+
+  @ZR_AddQualificationsForEmployees
+  Scenario: Add Qualifications For Employees Under Work Groups Tab
+    Given User Should select Acting roles as Loc Admin
+    When User see the Work Group Tab
+    And User is on the Workgroup Page
+    When User click on the Add Qualifications For Employees
+    Then User is on the Add Qualifications For Employees
+    And User select employees
+    Then User click on the Update button to add Qualification
+
+  @ZS_AddTradeWorkGroupsForEmployees
+  Scenario: Add Trade Work Groups For Employees Under Work Groups Tab
+    Given User is on the Workgroup Page
+    When User click on the Add/Remove Trade Work Groups For Employees
+    Then User is on the Add/Remove Trade Work Groups For Employees
+    And User click on the Add Trade Radio Button
+    And User select Date Effective
+    And User select Shift Permissions
+    And User select employees
+    Then User click on the Submit button
+
+  @ZT_RemoveTradeWorkGroupsForEmployees
+  Scenario: Remove Trade Work Groups For Employees Under Work Groups Tab
+    Given User is on the Workgroup Page
+    When User click on the Add/Remove Trade Work Groups For Employees
+    Then User is on the Add/Remove Trade Work Groups For Employees
+    And User click on the Remove Trade Radio Button
+    And User select Date Effective
+    And User select Shift Permissions
+    And User select employees
+    Then User click on the Submit button
+
+  @ZU_ResetOvertimeBank
+  Scenario: Reset Overtime Bank Under Work Groups Tab
+    Given User is on the Workgroup Page
+    When User click on the Reset Overtime Bank
+    Then User is on the Reset Overtime Bank
+    And User select Date Effective
+    And User select employees
+    Then User click on the Submit button

@@ -59,6 +59,48 @@ public class WorkGroupPage {
     @FindBy(how = How.ID, using = "chkHideInactive")
     public WebElement chkHideInactive;
 
+    @FindBy(how = How.XPATH, using = "//*[@id=\"grdWorkgroups\"]/tbody/tr[5]/td[7]/a")
+    public WebElement clickAddRemoveSkills;
+
+    @FindBy(how = How.ID, using = "rdoAdd")
+    public WebElement addBtn;
+
+    @FindBy(how = How.ID, using = "rdoRemove")
+    public WebElement removeBtn;
+
+    @FindBy(how = How.ID, using = "ucSkillsPicker_lstSkills_0")
+    public WebElement checkSkills;
+
+    @FindBy(how = How.ID, using = "lstEmployees_0")
+    public WebElement checkEmployee;
+
+    @FindBy(how = How.ID, using = "btnUpdate")
+    public WebElement updatebtn;
+
+    @FindBy(how = How.XPATH, using = "//*[@id=\"grdWorkgroups\"]/tbody/tr[5]/td[9]/a")
+    public WebElement clickAddRemoveTradeWork;
+
+    @FindBy(how = How.ID, using = "ucTradeGroup_lstSource")
+    public WebElement selectAvailableGroups;
+
+    @FindBy(how = How.ID, using = "ucTradeGroup_btnAddGroups")
+    public WebElement btnAddGroups;
+
+    @FindBy(how = How.ID, using = "ucEffectiveDate")
+    public WebElement effectiveDate;
+
+    @FindBy(how = How.XPATH, using = "//*[@id=\"DP_MainDiv\"]/table/tbody/tr[3]/td/table/tbody/tr/td[1]/a")
+    public WebElement selectEffectiveDate;
+
+    @FindBy(how = How.XPATH, using = "//*[@id=\"grdWorkgroups\"]/tbody/tr[5]/td[10]/a")
+    public WebElement clickResetOT;
+
+    @FindBy(how = How.XPATH, using = "//*[@id=\"grdWorkgroups\"]/tbody/tr[5]/td[8]/a")
+    public WebElement clickAddQualification;
+
+    @FindBy(how = How.ID, using = "btnAdd")
+    public WebElement btnAdd;
+
     public void clickWorkGroupTab() {
         navigateWorkGroup.click();
     }
@@ -147,5 +189,70 @@ public class WorkGroupPage {
 
     public void checkHideInactiveBtn() {
         chkHideInactive.click();
+    }
+
+    public void clickAddSkillsLinkText() {
+        clickAddRemoveSkills.click();
+    }
+
+    public void clickAddSkills() {
+        addBtn.click();
+    }
+
+    public void clickRemoveSkills() {
+        removeBtn.click();
+    }
+
+    public void selectSkills() {
+        checkSkills.click();
+    }
+
+    public void selectEmployee() {
+        checkEmployee.click();
+    }
+
+    public void clickSubmit() {
+        updatebtn.click();
+    }
+
+    public void clickAddRemoveTradeWork() {
+        clickAddRemoveTradeWork.click();
+    }
+
+    public void addTradeRadioButton() {
+        addBtn.click();
+    }
+
+    public void removeTradeRadioButton() {
+        removeBtn.click();
+    }
+
+    public void dateEffective() {
+        effectiveDate.click();
+    }
+
+    public void selectDateEffective() {
+        selectEffectiveDate.click();
+    }
+
+    public void selectShiftPermissions() {
+        Select select = new Select(selectAvailableGroups);
+        select.selectByIndex(16);
+    }
+
+    public void clickOnArrow() {
+        btnAddGroups.click();
+    }
+
+    public void clickResetOTBank() {
+        clickResetOT.click();
+    }
+
+    public void clickAddQualification() {
+        clickAddQualification.click();
+    }
+
+    public void clickAddBtn() {
+        btnAdd.click();
     }
 }

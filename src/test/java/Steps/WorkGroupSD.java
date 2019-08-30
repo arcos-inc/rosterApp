@@ -4,6 +4,7 @@ import Base.BaseUtil;
 import Pages.WorkGroupPage;
 import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
+import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
@@ -117,6 +118,136 @@ public class WorkGroupSD extends BaseUtil {
     public void userShouldClickOnHideInactiveWorkGroup() throws Throwable {
         System.out.println("User should click on Hide Inactive Work Group");
         page.checkHideInactiveBtn();
+        Thread.sleep(1000);
+    }
+
+    @Then("^User click on the Add/Remove Skills For Employees$")
+    public void userClickOnTheAddRemoveSkillsForEmployees() throws Throwable {
+        System.out.println("User click on the Add Skills For Employees");
+        page.clickAddSkillsLinkText();
+        Thread.sleep(1000);
+    }
+
+    @When("^User is on the Add/Remove Skills for Employees$")
+    public void userIsOnTheAddRemoveSkillsForEmployees() throws Throwable {
+        System.out.println("User is on the Add/Remove Skills for Employees");
+        Thread.sleep(1000);
+    }
+
+    @And("^User click on the Add Skills Radio Button$")
+    public void userClickOnTheAddSkillsRadioButton() throws Throwable {
+        System.out.println("User click on the Add Skills Radio Button");
+        page.clickAddSkills();
+        Thread.sleep(1000);
+    }
+
+    @And("^User click on the Remove Skills Radio Button$")
+    public void userClickOnTheRemoveSkillsRadioButton() throws Throwable {
+        System.out.println("User click on the Remove Skills Radio Button");
+        page.clickRemoveSkills();
+        Thread.sleep(1000);
+    }
+
+    @And("^User select skills$")
+    public void userSelectSkills() throws Throwable {
+        System.out.println("User select skills");
+        page.selectSkills();
+        Thread.sleep(1000);
+    }
+
+    @And("^User select employees$")
+    public void userSelectEmployees() throws Throwable {
+        System.out.println("User select employees");
+        page.selectEmployee();
+        Thread.sleep(1000);
+    }
+
+    @Then("^User click on the Submit button$")
+    public void userClickOnTheSubmitButton() throws Throwable {
+        System.out.println("User click on the Submit button");
+        page.clickSubmit();
+        Thread.sleep(1000);
+    }
+
+    @Given("^User is on the Workgroup Page$")
+    public void userIsOnTheWorkgroupPage() throws Throwable {
+        System.out.println("User is on the Workgroup Page");
+    }
+
+    @When("^User click on the Add/Remove Trade Work Groups For Employees$")
+    public void userClickOnTheAddRemoveTradeWorkGroupsForEmployees() throws Throwable {
+        System.out.println("User click on the Add/Remove Trade Work Groups For Employees");
+        page.clickAddRemoveTradeWork();
+        Thread.sleep(1000);
+    }
+
+    @Then("^User is on the Add/Remove Trade Work Groups For Employees$")
+    public void userIsOnTheAddRemoveTradeWorkGroupsForEmployees() throws Throwable {
+        System.out.println("User is on the Add/Remove Trade Work Groups For Employees");
+        Thread.sleep(1000);
+    }
+
+    @And("^User click on the Add Trade Radio Button$")
+    public void userClickOnTheAddTradeRadioButton() throws Throwable {
+        System.out.println("User click on the Add Trade Radio Button");
+        page.addTradeRadioButton();
+        Thread.sleep(1000);
+    }
+
+    @And("^User select Date Effective$")
+    public void userSelectDateEffective() throws Throwable {
+        System.out.println("User select Date Effective");
+        page.dateEffective();
+        Thread.sleep(1000);
+        page.selectDateEffective();
+        Thread.sleep(1000);
+    }
+
+    @And("^User click on the Remove Trade Radio Button$")
+    public void userClickOnTheRemoveTradeRadioButton() throws Throwable {
+        System.out.println("User click on the Remove Trade Radio Button");
+        page.removeTradeRadioButton();
+        Thread.sleep(1000);
+    }
+
+    @And("^User select Shift Permissions$")
+    public void userSelectShiftPermissions() throws Throwable {
+        System.out.println("User select Shift Permissions");
+        page.selectShiftPermissions();
+        page.clickOnArrow();
+        Thread.sleep(1000);
+    }
+
+    @When("^User click on the Reset Overtime Bank$")
+    public void userClickOnTheResetOvertimeBank() throws Throwable {
+        System.out.println("User click on the Reset Overtime Bank");
+        page.clickResetOTBank();
+        Thread.sleep(1000);
+    }
+
+    @Then("^User is on the Reset Overtime Bank$")
+    public void userIsOnTheResetOvertimeBank() throws Throwable {
+        System.out.println("User is on the Reset Overtime Bank");
+        Thread.sleep(1000);
+    }
+
+    @When("^User click on the Add Qualifications For Employees$")
+    public void userClickOnTheAddQualificationsForEmployees() throws Throwable {
+        System.out.println("User click on the Add Qualifications For Employees");
+        page.clickAddQualification();
+        Thread.sleep(1000);
+    }
+
+    @Then("^User is on the Add Qualifications For Employees$")
+    public void userIsOnTheAddQualificationsForEmployees() throws Throwable {
+        System.out.println("User is on the Add Qualifications For Employees");
+        Thread.sleep(1000);
+    }
+
+    @Then("^User click on the Update button to add Qualification$")
+    public void userClickOnTheUpdateButtonToAddQualification() throws Throwable {
+        System.out.println("User click on the Update button to add Qualification");
+        page.clickAddBtn();
         Thread.sleep(1000);
     }
 }

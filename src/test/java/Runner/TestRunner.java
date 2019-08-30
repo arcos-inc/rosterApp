@@ -36,7 +36,9 @@ import org.junit.runners.MethodSorters;
 //                " @ZB_CreateQualifications, @ZC_EditQualifications, @ZD_EditQualificationsForLocation," +
 //                " @ZE_CreateCostCenters, @ZF_EditCostCenters," +
 //                " @ZG_FilterAllEmployees, @ZH_FilterActiveEmployees, @ZI_FilterInactiveEmployees, @ZL_HideInactiveWorkGroups" +
-                      "@ZK_AddSupervisor, @ZL_RemoveSupervisor, @ZM_AddSupervisorToMultipleLocations, @ZN_EditAssignment, @ZO_EditProfile"})
+//                " @ZK_AddSupervisor, @ZL_RemoveSupervisor, @ZM_AddSupervisorToMultipleLocations, @ZN_EditAssignment, @ZO_EditProfile," +
+                      "@ZP_AddSkillsForEmployees, @ZQ_RemoveSkillsForEmployees, @ZR_AddQualificationsForEmployees, @ZS_AddTradeWorkGroupsForEmployees, @ZT_RemoveTradeWorkGroupsForEmployees, @ZU_ResetOvertimeBank"})
+
 
 public class TestRunner extends AbstractTestNGCucumberTests {
 }
