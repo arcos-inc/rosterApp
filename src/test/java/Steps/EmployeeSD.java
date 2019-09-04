@@ -61,10 +61,10 @@ public class EmployeeSD extends BaseUtil {
         page.enterEmployeeLastName(help.generateNames());
     }
 
-    @And("^User should enter the employee User Name \"([^\"]*)\"$")
-    public void userShouldEnterTheEmployeeUserName(String userName) throws Exception {
+    @And("^User should enter the employee User Name$")
+    public void userShouldEnterTheEmployeeUserName() throws Exception {
         System.out.println("Entering Employee User Name");
-        page.enterEmployeeUserName(userName);
+        page.enterEmployeeUserName(help.generateNames());
     }
 
     @And("^User should enter the employee Password \"([^\"]*)\"$")

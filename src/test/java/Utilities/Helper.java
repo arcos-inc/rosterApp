@@ -11,10 +11,10 @@ import java.util.concurrent.ThreadLocalRandom;
 
 public class Helper extends BaseUtil {
 
-    private BaseUtil base;
-    ConfigFileReader configFileReader;
     static final String AB = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     static SecureRandom rnd = new SecureRandom();
+    ConfigFileReader configFileReader;
+    private BaseUtil base;
 
     public void Helper(BaseUtil base) {
         this.base = base;
@@ -31,10 +31,10 @@ public class Helper extends BaseUtil {
         }
     }
 
-    public String randomString(int len){
-        StringBuilder sb = new StringBuilder( len );
-        for( int i = 0; i < len; i++ )
-            sb.append( AB.charAt( rnd.nextInt(AB.length()) ) );
+    public String randomString(int len) {
+        StringBuilder sb = new StringBuilder(len);
+        for (int i = 0; i < len; i++)
+            sb.append("S"+AB.charAt(rnd.nextInt(AB.length())));
         return sb.toString();
     }
 
@@ -94,5 +94,51 @@ public class Helper extends BaseUtil {
                 "Zayne", "Zechariah", "Zeke", "Zion"};
 
         return maleNames[ThreadLocalRandom.current().nextInt(0, 935 + 1)];
+    }
+
+    public String generateDepartments() {
+        String[] departmentNames = new String[]{"Academic Affairs", "Academic Success Center", "Accountability and Assessment",
+                "Accounting, Economics & Finance ", "Administration and Finance", "Admissions Undergraduate", "Advancement", "Affirmative Action",
+                "African & African-Amer Studies", "Anthropology", "Art", "Arthur O Eve - E O P Program", "ASC Advisement and Retention",
+                "ASC Student Accessibility Svcs (Office for)", "ASC Tutoring", "Athletics", "Biology", "Brockport Downtown", "Budgeting",
+                "Business Administration", "Campus Recreation", "Career Services", "CELT", "Chemistry and Biochemistry", "College Communications",
+                "Communication", "Community Development", "Computational Science", "Computing Sciences", "Counseling Center", "Counselor Education",
+                "Criminal Justice", "Dance", "Delta College", "Design and Production", "Earth Sciences", "Education and Human Development",
+                "Education, Health and Human Svcs (School of)", "Educational Administration", "English", "Enrollment Mgt & Student Affairs",
+                "Environmental Health and Safety", "Environmental Science and Ecology", "EOC Academic Affairs", "EOC Academic Preparation Dept",
+                "EOC Administration", "EOC Admissions", "EOC Business Affairs", "EOC Business and Info Technology", "EOC Career Services",
+                "EOC College Connection", "EOC Community Relations", "EOC Cosmetology and Barbering", "EOC Counseling and Student Life",
+                "EOC Culinary Arts", "EOC Childhood Education", "EOC Student Services", "EOC Health Care", "EOC Information Technology",
+                "EOC Library", "EOC Maintenance", "EOC Partnership & Collaboration", "EOC Registrar", "EOC RISE ", "EOC Security & Safety",
+                "EOC Testing", "Equity, Diversity, and Inclusion", "Facilities and Planning", "Facilities Administration", "Facilities Alterations",
+                "Facilities Automotive", "Facilities Custodial", "Facilities Grounds", "Facilities Mail Services", "Facilities Moving/Truck",
+                "Facilities Property Control", "Facilities Utilities", "Facilities Zones", "Finance and Management", "Financial Aid Office",
+                "Global Education and Engagement (Center for)", "Graduate Studies", "Health Science", "Health and Human Performance (School of)",
+                "Healthcare Studies", "History", "Honors College", "Human Resources", "Institutional Research  Analysis",
+                "Journalism, Broadcasting and Public Relations", "Kinesiology, Sport Studies & P E ", "Library, Info & Technology Svcs", "Mail Services",
+                "Marketing Communications", "Mathematics", "Modern Languages and Cultures ", "Nursing", "Office of the President",
+                "Parking & Transportation Svcs", "Payroll", "Philosophy", "Physics", "Photographic Services", "Political Science & Intl Studies",
+                "Printing Services", "Procurement & Payment Services", "Professional Education Unit", "Psychology", "Public Administration",
+                "Public Health & Health Education", "Recreation and Leisure", "Registration and Records", "Residential Life",
+                "Scholar and Grant Development", "School of Arts and Sciences", "School of Business and Management  ", "Small Business Development Ctr",
+                "Social Work", "Sociology", "Special Sessions", "Student Accounts and Accounting", "Student Health Center ", "Student Union and Activities",
+                "Telecommunications", "Theatre and Music Studies", "University Police", "Visual Studies", "Washington Semester Program",
+                "Women and Gender Studies"};
+
+        // Returns a pseudorandom, uniformly distributed integer value between 10 and 20
+        return departmentNames[ThreadLocalRandom.current().nextInt(0, 128 + 1)];
+    }
+
+    public String generateCostCenter() {
+        String[] costCenterNames = new String[]{"Accounting Tutorials", "Budgeting in Finance", "Budgeting", "Budgeting Examples", "Master Budget",
+                "Absorption Costing", "Variable Costing vs Absorption Costing", "Activity Based Costing", "Product Cost", "Product Cost Examples",
+                "Period Costs", "Period Cost Examples", "Incremental Costs", "Variable Costing", "Semi Variable Cost", "Period Cost vs Product Cost",
+                "Incremental Revenue", "Fixed Cost Examples", "Average Cost vs Marginal Cost", "Job Costing vs Process Costing", "Variance Analysis Formula",
+                "Budgeting vs Forecasting", "Traditional Budgeting vs Zero Based Budgeting in Finance", "Fixed Budget vs Flexible Budget",
+                "Zero Based Budgeting", "Traditional Budgeting", "Budgetary Control", "Flexible Budget", "Capital Budgeting Importance",
+                "Purchasing vs Procurement", "Cost Center", "High-Low Method Formula", "EOQ Formula"};
+
+        // Returns a pseudorandom, uniformly distributed integer value between 10 and 20
+        return costCenterNames[ThreadLocalRandom.current().nextInt(0, 32 + 1)];
     }
 }

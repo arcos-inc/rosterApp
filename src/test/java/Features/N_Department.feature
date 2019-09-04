@@ -9,7 +9,7 @@ Feature: Department Feature For Company Admin
     When User is on the Departments Screen
     Then User click on the Create New Department
     When User is on the New Department Screen
-    And User enter the Department Name "Finance Department"
+    And User enter the Department Name
     And User enter the Department Description "Deals with the Financial aspect"
     And User check the Allowed for Transfer Bidding checkbox
     And User check the Is Active checkbox
@@ -20,7 +20,7 @@ Feature: Department Feature For Company Admin
     Given User is on the Departments Screen
     Then User click on the Edit Department
     When User is on the Edit Department Screen
-    And User enter the Department Name "Account Department"
+    And User enter the Department Name
     And User enter the Department Description "Deals with the account aspect"
     And User check the Allowed for Transfer Bidding checkbox
     And User check the Is Active checkbox

@@ -9,7 +9,7 @@ Feature: Employee Tab
     And User should click on Create Employee link
     And User should enter the employee First Name
     And User should enter the employee Last Name
-    And User should enter the employee User Name "<userName>"
+    And User should enter the employee User Name
     And User should enter the employee Password "<pass>"
     And User should enter the employee Email Address "<email>"
     And User should enter the employee Number

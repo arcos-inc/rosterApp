@@ -46,13 +46,13 @@ public class SupervisorPage extends BaseUtil {
     @FindBy(how = How.ID, using = "btnNext")
     public WebElement nextBtn;
 
-    @FindBy(how = How.ID, using = "ucGroupPicker_lstGroups_0")
+    @FindBy(how = How.ID, using = "ucGroupPicker_lstGroups_1")
     public WebElement selectMultipleLocation;
 
     @FindBy(how = How.XPATH, using = "//*[@id=\"gridBody\"]/tbody/tr[2]/td[2]/a")
     public WebElement editAssignmentLinkText;
 
-    @FindBy(how = How.XPATH, using = "//*[@id=\"gridBody\"]/tbody/tr[2]/td[3]/a")
+    @FindBy(how = How.XPATH, using = "//*[@id=\"gridBody\"]/tbody/tr[3]/td[3]/a")
     public WebElement editProfileLinkText;
 
     @FindBy(how = How.ID, using = "btnSubmit")

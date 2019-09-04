@@ -2,6 +2,7 @@ package Steps;
 
 import Base.BaseUtil;
 import Pages.SupervisorPage;
+import Utilities.Helper;
 import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
@@ -11,9 +12,11 @@ public class SupervisorSD extends BaseUtil {
 
     private BaseUtil base;
     SupervisorPage supervisorPage;
+    Helper help;
 
     public SupervisorSD(BaseUtil base){
         supervisorPage = new SupervisorPage(Web_Driver);
+        help =new Helper();
         this.base = base;
     }
 
@@ -165,11 +168,11 @@ public class SupervisorSD extends BaseUtil {
         Thread.sleep(1000);
     }
 
-    @And("^User edit Profile \"([^\"]*)\" on Supervisor Screen$")
-    public void userEditProfileOnSupervisorScreen(String editName) throws Throwable {
+    @And("^User edit Profile on Supervisor Screen$")
+    public void userEditProfileOnSupervisorScreen() throws Throwable {
 
         System.out.println("");
-        supervisorPage.editProfile(editName);
+        supervisorPage.editProfile(help.generateNames());
         Thread.sleep(1000);
     }
 

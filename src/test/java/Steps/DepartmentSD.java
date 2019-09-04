@@ -3,6 +3,7 @@ package Steps;
 import Base.BaseUtil;
 import Pages.DepartmentPage;
 import Pages.SkillsPage;
+import Utilities.Helper;
 import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
@@ -12,9 +13,11 @@ public class DepartmentSD extends BaseUtil {
 
     private BaseUtil baseUtil;
     DepartmentPage departmentPage;
+    Helper help;
 
     public DepartmentSD (BaseUtil baseUtil){
         departmentPage = new DepartmentPage(Web_Driver);
+        help = new Helper();
         this.baseUtil = baseUtil;
     }
 
@@ -50,10 +53,10 @@ public class DepartmentSD extends BaseUtil {
         System.out.println("User is on the New Department Screen");
     }
 
-    @And("^User enter the Department Name \"([^\"]*)\"$")
-    public void userEnterTheDepartmentName(String deptName) throws Throwable {
+    @And("^User enter the Department Name$")
+    public void userEnterTheDepartmentName() throws Throwable {
 
-        departmentPage.enterDepartmentName(deptName);
+        departmentPage.enterDepartmentName(help.generateDepartments());
         Thread.sleep(1000);
     }
 

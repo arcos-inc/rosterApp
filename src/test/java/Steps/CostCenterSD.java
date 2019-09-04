@@ -2,6 +2,7 @@ package Steps;
 
 import Base.BaseUtil;
 import Pages.CostCenterPage;
+import Utilities.Helper;
 import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
@@ -11,9 +12,11 @@ public class CostCenterSD extends BaseUtil {
 
     private BaseUtil base;
     CostCenterPage costCenterPage;
+    Helper help;
 
     public CostCenterSD(BaseUtil base){
         costCenterPage = new CostCenterPage(Web_Driver);
+        help = new Helper();
         this.base = base;
     }
 
@@ -54,11 +57,11 @@ public class CostCenterSD extends BaseUtil {
         Thread.sleep(1000);
     }
 
-    @And("^User enter the Cost Center Name \"([^\"]*)\"$")
-    public void userEnterTheCostCenterName(String enterCostCenterName) throws Throwable {
+    @And("^User enter the Cost Center Name$")
+    public void userEnterTheCostCenterName() throws Throwable {
 
         System.out.println("User enter the Cost Center Name");
-        costCenterPage.enterCostCenterName(enterCostCenterName);
+        costCenterPage.enterCostCenterName(help.generateCostCenter());
         Thread.sleep(1000);
     }
 

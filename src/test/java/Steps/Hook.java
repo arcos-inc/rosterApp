@@ -24,8 +24,7 @@ public class Hook extends BaseUtil {
         this.base = base;
     }
 
-    @Before("@A_LoginAsCompanyAdmin")
-//    @Before("@A_LoginAsLocationAdmin")
+    @Before("@I_LoginAsLocationAdmin")
     public void InitializeTest(Scenario scenario) {
 
         scenarioDef = base.features.createNode(scenario.getName());
@@ -49,7 +48,7 @@ public class Hook extends BaseUtil {
         ReadExcel.readExcelFile();
     }
 
-    @After("@ZI_FilterInactiveEmployees")
+//    @After("@ZO_EditProfile")
     public void TearDownTest(Scenario scenario) {
 
         if (scenario.isFailed()) {

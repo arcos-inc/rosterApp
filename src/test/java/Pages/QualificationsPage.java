@@ -41,13 +41,15 @@ public class QualificationsPage extends BaseUtil {
     @FindBy(how = How.XPATH, using = "//*[@id=\"tblQualifications\"]/tbody/tr[1]/td[5]/a")
     public WebElement clickEditLink;
 
-    @FindBy(how = How.XPATH, using = "//*[@id=\"form1\"]/table[1]/tbody/tr[3]/td/ul/li[1]/a")
+    @FindBy(how = How.XPATH, using = "//*[@id=\"form1\"]/table[1]/tbody/tr[3]/td/ul/li[1]")
     public WebElement clickLocation;
+    //*[@id="form1"]/table[1]/tbody/tr[3]/td/ul/li[1]
+    //*[@id="PostForm"]/table[1]/tbody/tr[3]/td/ul/li[1]/a
 
-    @FindBy(how = How.XPATH, using = "//*[@id=\"grdLocations\"]/tbody/tr[2]/td[9]/a")
+    @FindBy(how = How.XPATH, using = "//*[@id=\"grdLocations\"]/tbody/tr[2]/td[13]/a")
     public WebElement clickQualification;
 
-    @FindBy(how = How.ID, using = "lstQualifications_0")
+    @FindBy(how = How.ID, using = "lstQualifications_1")
     public WebElement checkQualification;
 
     public void clickQualificationsLink() {

@@ -46,5 +46,5 @@ Feature: Supervisor Feature For Company Admin
     Given User is on the Supervisors Screen
     When User click on the Edit Profile link text on Supervisor Screen
     Then User is on the Edit Supervisor Profile Screen
-    And User edit Profile "Asad" on Supervisor Screen
+    And User edit Profile on Supervisor Screen
     Then User click on the Update button to add Supervisor

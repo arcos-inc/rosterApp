@@ -9,7 +9,7 @@ Feature: Cost Centers Feature For Company Admin
     Then User is on the Cost Centers Screen
     When User should click on the Create New Cost Centers
     Then User is on the New Cost Centers Screen
-    And User enter the Cost Center Name "Test Cost Center2"
+    And User enter the Cost Center Name
     And User enter the Cost Center Description "This is a Test Cost Center"
     And User enter the Display Order "001"
 #    And User check on the Is Active Checkbox on Cost Center Screen
@@ -20,7 +20,7 @@ Feature: Cost Centers Feature For Company Admin
     Given User is on the Cost Centers Screen
     When User should click on the Edit Cost Centers
     Then User is on the New Cost Centers Screen
-    And User enter the Cost Center Name "Test Cost Center1"
+    And User enter the Cost Center Name
     And User enter the Cost Center Description "This is a Test Cost Center"
     And User enter the Display Order "002"
 #    And User check on the Is Active Checkbox on Cost Center Screen

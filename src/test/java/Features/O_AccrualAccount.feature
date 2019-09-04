@@ -11,4 +11,4 @@ Feature: Department Feature For Company Admin
     And User click on the None link text
     And User check on the Accrual Accounts checkbox
     Then User click on the Update Button to Update Accrual Account
-    Then User click on the Update Button to Cancel Accrual Account
+#    Then User click on the Update Button to Cancel Accrual Account

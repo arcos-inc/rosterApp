@@ -2,6 +2,7 @@ package Steps;
 
 import Base.BaseUtil;
 import Pages.WorkGroupPage;
+import Utilities.Helper;
 import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
@@ -12,9 +13,11 @@ public class WorkGroupSD extends BaseUtil {
 
     private BaseUtil base;
     WorkGroupPage page;
+    Helper help;
 
     public WorkGroupSD(BaseUtil base) {
         page = new WorkGroupPage(Web_Driver);
+        help = new Helper();
         this.base = base;
     }
 
@@ -32,10 +35,10 @@ public class WorkGroupSD extends BaseUtil {
         Thread.sleep(1000);
     }
 
-    @And("^User should enter work group \"([^\"]*)\"$")
-    public void userShouldEnterWorkGroup(String name) throws Exception {
+    @And("^User should enter work group$")
+    public void userShouldEnterWorkGroup() throws Exception {
         System.out.println("Entering Work Group Name");
-        page.enterWorkGroupName(name);
+        page.enterWorkGroupName(help.randomString(5));
         Thread.sleep(1000);
     }
 

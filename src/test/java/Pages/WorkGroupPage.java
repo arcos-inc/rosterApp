@@ -47,7 +47,7 @@ public class WorkGroupPage {
     @FindBy(how = How.ID, using = "btnAddEdit")
     public WebElement btnAddEdit;
 
-    @FindBy(how = How.XPATH, using = "//*[@id=\"grdWorkgroups\"]/tbody/tr[25]/td[5]/a")
+        @FindBy(how = How.XPATH, using = "//*[@id=\"grdWorkgroups\"]/tbody/tr[31]/td[5]/a")
     public WebElement btnEdit;
 
     @FindBy(how = How.ID, using = "btnAddEdit")
