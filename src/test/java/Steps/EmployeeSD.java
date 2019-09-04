@@ -85,6 +85,12 @@ public class EmployeeSD extends BaseUtil {
         page.enterEmployeeNumber(help.randomString(5));
     }
 
+    @And("^User should enter the CellPhone Number \"([^\"]*)\"$")
+    public void userShouldEnterTheCellPhoneNumber(String cellNumber) throws Throwable {
+        System.out.println("User should enter the CellPhone Number");
+        page.enterEmployeeCellNumber(cellNumber);
+    }
+
     @And("^User should select the employee Phone Carrier$")
     public void userShouldSelectTheEmployeePhoneCarrier() {
         System.out.println("Selecting Employee Phone Carrier");

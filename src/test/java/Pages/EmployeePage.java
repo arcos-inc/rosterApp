@@ -100,6 +100,9 @@ public class EmployeePage {
     @FindBy(how = How.ID, using = "btnSubmit")
     public WebElement btnSubmit;
 
+    @FindBy(how = How.ID, using = "ucProfile_txtCellPhone")
+    public WebElement ucProfile_txtCellNumber;
+
     public void GetLocationURL() throws Exception {
         //String locationLabel = getLocationLabel.getText().toLowerCase();
         String url = BaseUtil.Web_Driver.getCurrentUrl();
@@ -170,6 +173,10 @@ public class EmployeePage {
     public void enterEmployeeEmailAddress(String email) throws Exception {
         ucProfile_txtEmailAddress.sendKeys(email);
         //help.waitForAWhile(ucProfile_txtEmailAddress.toString());
+    }
+
+    public void enterEmployeeCellNumber(String cellNumber) {
+        ucProfile_txtCellNumber.sendKeys(cellNumber);
     }
 
     public void enterEmployeeNumber(String empNum) throws Exception {
@@ -265,7 +272,7 @@ public class EmployeePage {
 
     public void selectAvailableGroups(){
         Select sr = new Select(lstSource);
-        sr.selectByIndex(4);
+        sr.selectByIndex(0);
     }
 
     public void clickShiftButton() {
@@ -280,4 +287,6 @@ public class EmployeePage {
     public void clickCreateButton() {
         btnSubmit.click();
     }
+
+
 }

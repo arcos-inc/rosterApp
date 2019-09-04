@@ -13,6 +13,7 @@ Feature: Employee Tab
     And User should enter the employee Password "<pass>"
     And User should enter the employee Email Address "<email>"
     And User should enter the employee Number
+    And User should enter the CellPhone Number "<cellNumber>"
     And User should select the employee Phone Carrier
     And User should select the employee Hair Date
     And User should select the Skill Set
@@ -27,6 +28,6 @@ Feature: Employee Tab
     And User should click on Create Button
 
     Examples:
-      | userName         | pass      | email                           | note                    |
-      | sasFTestEmployee | test12345 | sastestemployeef@mailinator.com | SAS Test Employee Notes |
+      | userName         | pass      | email                           | note                    | cellNumber                    |
+      | sasFTestEmployee | test12345 | sastestemployeef@mailinator.com | SAS Test Employee Notes | 0123456789 |
 

@@ -6,7 +6,7 @@ Feature: Work Group Tab
     Given User Should select Acting roles as Loc Admin
     When User see the Work Group Tab
     Then User should click on Create New Work Group
-    And User should enter work group "SAS003"
+    And User should enter work group "SAS002"
     And User should enter work group description "Test Work Group Description"
     And User should select the Seniority Rule
     And User should select the Shift Rule Set
@@ -20,7 +20,7 @@ Feature: Work Group Tab
     Given User Should select Acting roles as Loc Admin
     When User see the Work Group Tab
     Then User should click on Edit Work Group
-    And User should enter work group "SAS006"
+    And User should enter work group "SAS011"
     And User should enter work group description "Test Work Group Description"
     And User should select the Seniority Rule
     And User should select the Shift Rule Set
