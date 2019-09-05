@@ -58,6 +58,9 @@ public class ScheduleViewerPage extends BaseUtil {
     @FindBy(how = How.ID, using = "btnSubmit")
     public WebElement clickUpdateBtn;
 
+    @FindBy(how = How.ID, using = "btnCancel")
+    public WebElement clickCancelBtn;
+
     @FindBy(how = How.ID, using = "ucProfile_txtFirstName")
     public WebElement editFirstName;
 
@@ -128,5 +131,9 @@ public class ScheduleViewerPage extends BaseUtil {
 
     public void clickOnTheUpdateButton() {
         clickUpdateBtn.click();
+    }
+
+    public void clickOnTheCancelButton() {
+        clickCancelBtn.click();
     }
 }

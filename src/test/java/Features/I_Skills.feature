@@ -9,7 +9,7 @@ Feature: Skill Feature For Company Admin
     When User is on the Skills Screen
     Then User click on the Create New Skill
     When User is on the New Skill Screen
-    And User enter the code "AB-05"
+    And User enter the code
     And User enter the description "Accounting"
     And User enter the third party code "E78TUN"
     Then User click on the Add Button
@@ -19,7 +19,7 @@ Feature: Skill Feature For Company Admin
     Given User is on the Skills Screen
     Then User click on the Edit Link Text
     When User is on the New Skill Screen
-    And User enter the code "GRP-001"
+    And User enter the code
     And User enter the description "Finance"
     And User enter the third party code "UVF79N"
     Then User click on the Update Button to Update Skill

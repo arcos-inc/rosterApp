@@ -5,6 +5,7 @@ import Pages.RoundingRuleSetPage;
 import Utilities.Helper;
 import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
+import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.openqa.selenium.WebDriver;
@@ -36,7 +37,7 @@ public class RoundingRuleSetSD extends BaseUtil {
         roundingRuleSetPage.clickOnRuleSetLink();
     }
 
-    @Then("^User is on the Company Rule Sets Screen$")
+    @Given("^User is on the Company Rule Sets Screen$")
     public void userIsOnTheCompanyRuleSetsScreen() throws Throwable {
 
         System.out.println("User is on the Company Rule Sets Screen");

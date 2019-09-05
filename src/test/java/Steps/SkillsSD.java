@@ -3,6 +3,7 @@ package Steps;
 import Base.BaseUtil;
 import Pages.LocationPage;
 import Pages.SkillsPage;
+import Utilities.Helper;
 import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
@@ -14,10 +15,12 @@ public class SkillsSD  extends BaseUtil {
 
     private BaseUtil baseUtil;
     SkillsPage skillsPage;
+    Helper helper;
 
     public SkillsSD (BaseUtil baseUtil){
         skillsPage = new SkillsPage(Web_Driver);
         this.baseUtil = baseUtil;
+        helper = new Helper();
     }
 
     @When("^User see the Skills Tab$")
@@ -54,11 +57,11 @@ public class SkillsSD  extends BaseUtil {
         System.out.println("User is on the New Skill Screen");
     }
 
-    @And("^User enter the code \"([^\"]*)\"$")
-    public void userEnterTheCode(String code) throws Throwable {
+    @And("^User enter the code$")
+    public void userEnterTheCode() throws Throwable {
 
         System.out.println("User enter the code");
-        skillsPage.enterCode(code);
+        skillsPage.enterCode(helper.randomString(3));
         Thread.sleep(1000);
     }
 

@@ -3,8 +3,8 @@ Feature: Qualification Feature For Company Admin
 
   @ZB_CreateQualifications
   Scenario: Add Qualifications Feature For Company Admin
-    Given User Should select Acting roles
-    When User see the Qualifications Tab
+#    Given User Should select Acting roles
+    Given User see the Qualifications Tab
     And User click on the Qualifications link text
     Then User is on the Qualifications Screen
     When User should click on the Create New Qualification

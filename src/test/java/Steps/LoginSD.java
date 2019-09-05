@@ -35,6 +35,7 @@ public class LoginSD extends BaseUtil {
         Web_Driver.manage().window().maximize();
         Web_Driver.manage().timeouts().implicitlyWait(configFileReader.getImplicitlyWait(), TimeUnit.SECONDS);
         System.out.println("Application launch successfully...");
+        Thread.sleep(1000);
     }
 
     @And("^I enter the following details for login$")
@@ -56,6 +57,7 @@ public class LoginSD extends BaseUtil {
         scenarioDef.createNode(new GherkinKeyword("When"), "User click on Admin Login DropDown");
         LoginPage page = new LoginPage(Web_Driver);
         page.ClickAdminRole();
+        Thread.sleep(1000);
     }
 
     @And("^User select role as a Company Admin$")
@@ -70,18 +72,21 @@ public class LoginSD extends BaseUtil {
         scenarioDef.createNode(new GherkinKeyword("And"), "User click on login button");
         LoginPage page = new LoginPage(Web_Driver);
         page.ClickLogin();
+        Thread.sleep(1000);
     }
 
     @Then("^User is on Application home page$")
     public void userIsOnApplicationHomePage() throws Throwable{
         scenarioDef.createNode(new GherkinKeyword("Then"), "User is on Application home page");
         System.out.println("Welcome to ARCOS-RosterApp Home Page");
+        Thread.sleep(1000);
     }
 
     @And("^User select role as a Location Admin$")
-    public void userSelectRoleAsALocationAdmin() {
+    public void userSelectRoleAsALocationAdmin() throws InterruptedException {
         LoginPage page = new LoginPage(Web_Driver);
         page.SelectLocationAdminRole();
+        Thread.sleep(1000);
     }
 
     @And("^User select role as a Supervisor$")

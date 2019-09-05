@@ -167,4 +167,12 @@ public class ScheduleViewerSD extends BaseUtil {
         scheduleViewerPage.clickOnTheUpdateButton();
         Thread.sleep(1000);
     }
+
+    @And("^User click on the Cancel button$")
+    public void userClickOnTheCancelButton() throws Throwable {
+
+        System.out.println("User click on the Cancel button");
+        scheduleViewerPage.clickOnTheCancelButton();
+        Thread.sleep(1000);
+    }
 }
