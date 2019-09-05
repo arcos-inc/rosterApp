@@ -11,29 +11,21 @@ import org.junit.runners.MethodSorters;
         "html:target/site/cucumber-pretty"},
         glue = "Steps", monochrome = true, tags = {
                 " @A_LoginAsCompanyAdmin," +
-                " @B_LocationTab," +
-                " @L_AddScheduleViewer, @M_RemoveScheduleViewer, @N_AddScheduleViewerToMultipleLocations, @O_EditAssignment, @P_EditProfile," +
-                " @W_EditAccrualAccounts," +
+                " @B_LocationTab, @L_AddScheduleViewer, @M_RemoveScheduleViewer, @N_AddScheduleViewerToMultipleLocations, @O_RemoveScheduleViewer, @P_EditAssignment, @Q_EditProfile, @R_EditAccrualAccounts" +
                 " @C_JobTitleTab, " +
-                " @D_ShiftRuleSet," +
-                " @E_PTORuleSets, " +
-                " @F_UTORuleSet," +
-                " @G_VTOSlotRuleSet," +
-                " @X_CreateRoundingRuleSet, @Y_EditRoundingRuleSet," +
-                " @Z_CreateDependabilityRuleSet, @ZA_EditDependabilityRuleSet," +
+                " @D_ShiftRuleSet, @E_PTORuleSets, @F_UTORuleSet, @G_VTOSlotRuleSet, @X_CreateRoundingRuleSet, @Y_EditRoundingRuleSet, @Z_CreateDependabilityRuleSet, @ZA_EditDependabilityRuleSet," +
                 " @Q_AddSkill, @R_EditSkill, @S_FilterSkills, @T_FilterSkills," +
                 " @U_AddDepartment, @V_EditDepartment," +
                 " @ZB_CreateQualifications, @ZC_EditQualifications, @ZD_EditQualificationsForLocation," +
                 " @ZE_CreateCostCenters, @ZF_EditCostCenters," +
                 " @H_Logout," +
 
-                        
-                " @I_LoginAsLocationAdmin, " +
-                " @ZJ_CreateWorkGroup, @ZK_EditWorkGroup, @ZL_HideInactiveWorkGroups, " +
-                " @ZP_AddSkillsForEmployees, @ZQ_RemoveSkillsForEmployees, @ZR_AddQualificationsForEmployees, @ZS_AddTradeWorkGroupsForEmployees, @ZT_RemoveTradeWorkGroupsForEmployees, @ZU_ResetOvertimeBank," +
-                " @K_EmployeeTab," +
-                " @ZG_FilterAllEmployees, @ZH_FilterActiveEmployees, @ZI_FilterInactiveEmployees, " +
-                " @ZK_AddSupervisor, @ZL_RemoveSupervisor, @ZM_AddSupervisorToMultipleLocations, @ZN_EditAssignment, @ZO_EditProfile," +
+                " @ZZA_LoginAsLocationAdmin, " +
+                " @ZZB_CreateWorkGroup, @ZZC_EditWorkGroup, @ZZD_HideInactiveWorkGroups, " +
+                " @ZZE_AddSkillsForEmployees, @ZZF_RemoveSkillsForEmployees, @ZZG_AddQualificationsForEmployees, @ZZH_AddTradeWorkGroupsForEmployees, @ZZI_RemoveTradeWorkGroupsForEmployees, @ZZJ_ResetOvertimeBank," +
+                " @ZZK_AddSupervisor, @ZZL_RemoveSupervisor, @ZZM_AddSupervisorToMultipleLocations, @ZZN_RemoveSupervisor, @ZZO_EditAssignment, @ZZP_EditProfile," +
+                " @ZZQ_EmployeeTab," +
+                " @ZZR_FilterAllEmployees, @ZZS_FilterActiveEmployees, @ZZT_FilterInactiveEmployees, " +
                 ""})
 
 

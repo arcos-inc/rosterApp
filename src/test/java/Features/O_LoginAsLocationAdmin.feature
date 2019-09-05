@@ -1,7 +1,7 @@
 Feature: Login Feature For Location Admin
   This login feature deals with the login functionality of the application
 
-  @I_LoginAsLocationAdmin
+  @ZZA_LoginAsLocationAdmin
   Scenario: Login as a Location Administrator
     Given User is on Application Login Page
     When User click on Admin Login DropDown

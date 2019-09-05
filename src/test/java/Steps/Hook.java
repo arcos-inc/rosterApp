@@ -48,7 +48,7 @@ public class Hook extends BaseUtil {
         ReadExcel.readExcelFile();
     }
 
-    @After("@ZF_EditCostCenters")
+    @After("@ZZS_FilterInactiveEmployees")
     public void TearDownTest(Scenario scenario) {
 
         if (scenario.isFailed()) {

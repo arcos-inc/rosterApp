@@ -53,7 +53,13 @@ Feature: Location Tab
     And User select multiple locations
     Then User click on the Create button
 
-  @O_EditAssignment
+  @O_RemoveScheduleViewer
+  Scenario: Remove Schedule Viewer
+    Given User is on the Schedule Viewers Screen
+    When User click on the Remove Link Text
+    And User click on the OK Button
+
+  @P_EditAssignment
   Scenario: Edit Assignment
     Given User is on the Schedule Viewers Screen
     When User click on the Edit Assignment link text
@@ -61,7 +67,7 @@ Feature: Location Tab
     And User edit locations
     Then User click on the Create button
 
-  @P_EditProfile
+  @Q_EditProfile
   Scenario: Edit Profile
     Given User is on the Schedule Viewers Screen
     When User click on the Edit Profile link text
@@ -70,7 +76,7 @@ Feature: Location Tab
     Then User click on the Update button
     And User click on the Cancel button
 
-  @W_EditAccrualAccounts
+  @R_EditAccrualAccounts
   Scenario: Edit Accrual Accounts For Company Admin
 #    Given User Should select Acting roles
     Given User see the Location Tab
@@ -81,3 +87,4 @@ Feature: Location Tab
     And User check on the Accrual Accounts checkbox
     Then User click on the Update Button to Update Accrual Account
 #    Then User click on the Update Button to Cancel Accrual Account
+
