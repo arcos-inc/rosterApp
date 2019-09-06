@@ -130,6 +130,24 @@ public class EmployeePage {
     @FindBy(how = How.ID, using = "btnUpdateChecked")
     public WebElement clickUpdate;
 
+    @FindBy(how = How.LINK_TEXT, using = "Edit Overtime Bank")
+    public WebElement clickEditOvertime;
+
+    @FindBy(how = How.ID, using = "ucEffectiveDate")
+    public WebElement clickDatePicker;
+
+    @FindBy(how = How.XPATH, using = "//*[@id=\"DP_MainDiv\"]/table/tbody/tr[3]/td/table/tbody/tr/td[1]/a")
+    public WebElement selectDate;
+
+    @FindBy(how = How.ID, using = "txtAdjustment")
+    public WebElement enterHours;
+
+    @FindBy(how = How.ID, using = "txtComment")
+    public WebElement enterComment;
+
+    @FindBy(how = How.ID, using = "btnApply")
+    public WebElement applyAndReturn;
+
 
     public void GetLocationURL() throws Exception {
         //String locationLabel = getLocationLabel.getText().toLowerCase();
@@ -350,5 +368,28 @@ public class EmployeePage {
 
     public void clickSaveUpdate() {
         clickUpdate.click();
+    }
+
+    public void editOvertimeBankTextLink() {
+        clickEditOvertime.click();
+    }
+
+    public void selectAdjustmentDate() {
+        clickDatePicker.click();
+        selectDate.click();
+//        Select select = new Select(selectRoundEarlyDirection);
+//        select.selectByIndex(1);
+    }
+
+    public void enterHours(String hours) {
+        enterHours.sendKeys(hours);
+    }
+
+    public void enterComments(String comments) {
+        enterComment.sendKeys(comments);
+    }
+
+    public void clickApplyAndReturnButton() {
+
     }
 }

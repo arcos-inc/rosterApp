@@ -26,7 +26,7 @@ import org.junit.runners.MethodSorters;
 //                " @ZZK_AddSupervisor, @ZZL_RemoveSupervisor, @ZZM_AddSupervisorToMultipleLocations, @ZZN_RemoveSupervisor, @ZZO_EditAssignment, @ZZP_EditProfile," +
 //                " @ZZQ_EmployeeTab," +
 //                " @ZZR_FilterAllEmployees, @ZZS_FilterActiveEmployees, @ZZT_FilterInactiveEmployees, " +
-                " @ZZU_CreateNotes, @ZZV_AddNotes " +
+                " @ZZU_CreateNotes, @ZZV_AddNotes, @ZZW_EditOvertimeBank " +
                 ""})
 
 

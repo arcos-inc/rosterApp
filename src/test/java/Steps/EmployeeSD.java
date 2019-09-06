@@ -240,4 +240,38 @@ public class EmployeeSD extends BaseUtil {
         Thread.sleep(1000);
     }
 
+    @When("^User should click on the Edit Overtime Bank Text Link$")
+    public void userShouldClickOnTheEditOvertimeBankTextLink() throws Throwable {
+        page.editOvertimeBankTextLink();
+        Thread.sleep(1000);
+    }
+
+    @Then("^User should be on the Edit Overtime Bank for Employee Screen$")
+    public void userShouldBeOnTheEditOvertimeBankForEmployeeScreen() throws Throwable {
+        Thread.sleep(1000);
+    }
+
+    @And("^User Select the Adjustment Date$")
+    public void userSelectTheAdjustmentDate() throws Throwable {
+        page.selectAdjustmentDate();
+        Thread.sleep(1000);
+    }
+
+    @And("^User enter the hours \"([^\"]*)\"$")
+    public void userEnterTheHours(String hours) throws Throwable {
+        page.enterHours(hours);
+        Thread.sleep(1000);
+    }
+
+    @And("^User enter the comments \"([^\"]*)\"$")
+    public void userEnterTheComments(String comments) throws Throwable {
+        page.enterComments(comments);
+        Thread.sleep(1000);
+    }
+
+    @And("^User click on the Apply and Return button$")
+    public void userClickOnTheApplyAndReturnButton() throws Throwable {
+        page.clickApplyAndReturnButton();
+        Thread.sleep(1000);
+    }
 }

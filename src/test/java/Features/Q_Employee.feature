@@ -73,3 +73,27 @@ Feature: Employee Tab
     And User click on the checkbox
     And User click on the Update Button to save update
     Then User click on the Cancel button to return on the Edit Employee Screen
+
+  @ZZW_EditOvertimeBank
+  Scenario: Edit Overtime Bank Feature For Location Admin
+    Given User is on the Employees Screen
+    When User should click on the Edit Employee
+    Then User should be on Edit Employee Screen
+    When User should click on the Edit Overtime Bank Text Link
+    Then User should be on the Edit Overtime Bank for Employee Screen
+    And User Select the Adjustment Date
+    And User enter the hours "1"
+    And User enter the comments "The following hours increases"
+    And User click on the Apply and Return button
+
+  @ZZW_EditSkills
+  Scenario: Edit Skills Feature For Location Admin under Employees tab
+    Given User is on the Employees Screen
+    When User should click on the Edit Employee
+    Then User should be on Edit Employee Screen
+    When User should click on the Edit Overtime Bank Text Link
+    Then User should be on the Edit Overtime Bank for Employee Screen
+    And User Select the Adjustment Date
+    And User enter the hours "1"
+    And User enter the comments "The following hours increases"
+    And User click on the Apply and Return button
