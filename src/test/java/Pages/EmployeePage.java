@@ -103,6 +103,34 @@ public class EmployeePage {
     @FindBy(how = How.ID, using = "ucProfile_txtCellPhone")
     public WebElement ucProfile_txtCellNumber;
 
+    @FindBy(how = How.XPATH, using = "//*[@id=\"grdEmployee\"]/tbody/tr[2]/td[8]/a")
+    public WebElement clickEditLink;
+
+    @FindBy(how = How.LINK_TEXT, using = "Add Notes")
+    public WebElement clickAddNote;
+
+    @FindBy(how = How.ID, using = "btnAddNote")
+    public WebElement clickNewNote;
+
+    @FindBy(how = How.ID, using = "txtCommentDialog")
+    public WebElement enterNote;
+
+    @FindBy(how = How.XPATH, using = "/html/body/div[1]/div[3]/div/button[1]/span")
+    public WebElement clickOk;
+
+    @FindBy(how = How.ID, using = "btnCancel")
+    public WebElement clickCancel;
+
+    @FindBy(how = How.XPATH, using = "//*[@id=\"grdEmployee\"]/tbody/tr[2]/td[7]/a")
+    public WebElement clickNotesLink;
+
+    @FindBy(how = How.ID, using = "repItems_ctl01_chkShowOnEmployeeList")
+    public WebElement clickCheck;
+
+    @FindBy(how = How.ID, using = "btnUpdateChecked")
+    public WebElement clickUpdate;
+
+
     public void GetLocationURL() throws Exception {
         //String locationLabel = getLocationLabel.getText().toLowerCase();
         String url = BaseUtil.Web_Driver.getCurrentUrl();
@@ -288,5 +316,39 @@ public class EmployeePage {
         btnSubmit.click();
     }
 
+    public void clickOnTheEdit() {
+        clickEditLink.click();
+    }
 
+    public void clickAddNotes() {
+        clickAddNote.click();
+    }
+
+    public void clickCreateNewNote() {
+        clickNewNote.click();
+    }
+
+    public void enterNotes(String notes) {
+        enterNote.sendKeys(notes);
+    }
+
+    public void clickOkButton() {
+        clickOk.click();
+    }
+
+    public void clickCancel() {
+        clickCancel.click();
+    }
+
+    public void clickNotes() {
+        clickNotesLink.click();
+    }
+
+    public void clickCheckbox() {
+        clickCheck.click();
+    }
+
+    public void clickSaveUpdate() {
+        clickUpdate.click();
+    }
 }

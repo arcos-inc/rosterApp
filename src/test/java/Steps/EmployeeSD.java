@@ -173,4 +173,71 @@ public class EmployeeSD extends BaseUtil {
         System.out.println("Clicking Create Button");
         page.clickCreateButton();
     }
+
+    @When("^User should click on the Edit Employee$")
+    public void userShouldClickOnTheEditEmployee() throws Throwable {
+        page.clickOnTheEdit();
+        Thread.sleep(1000);
+    }
+
+    @Then("^User should be on Edit Employee Screen$")
+    public void userShouldBeOnEditEmployeeScreen() throws Throwable {
+
+    }
+
+    @When("^User should click on the Add Notes Text Link$")
+    public void userShouldClickOnTheAddNotesTextLink() throws Throwable {
+        page.clickAddNotes();
+        Thread.sleep(1000);
+    }
+
+    @Then("^User should be on the Notes for Employee Screen$")
+    public void userShouldBeOnTheNotesForEmployeeScreen() throws Throwable {
+
+    }
+
+    @And("^User click on the Create new note Text link$")
+    public void userClickOnTheCreateNewNoteTextLink() throws Throwable {
+        page.clickCreateNewNote();
+        Thread.sleep(1000);
+    }
+
+
+
+    @And("^User add note \"([^\"]*)\"$")
+    public void userAddNote(String notes) throws Throwable {
+        page.enterNotes(notes);
+        Thread.sleep(1000);
+    }
+
+    @And("^User click on the OK Button to save note$")
+    public void userClickOnTheOKButtonToSaveNote() throws Throwable {
+        page.clickOkButton();
+        Thread.sleep(1000);
+    }
+
+    @Then("^User click on the Cancel button to return on the Edit Employee Screen$")
+    public void userClickOnTheCancelButtonToReturnOnTheEditEmployeeScreen() throws Throwable {
+        page.clickCancel();
+        Thread.sleep(1000);
+    }
+
+    @When("^User should click on the Notes$")
+    public void userShouldClickOnTheNotes() throws Throwable {
+        page.clickNotes();
+        Thread.sleep(1000);
+    }
+
+    @And("^User click on the checkbox$")
+    public void userClickOnTheCheckbox() throws Throwable {
+        page.clickCheckbox();
+        Thread.sleep(1000);
+    }
+
+    @And("^User click on the Update Button to save update$")
+    public void userClickOnTheUpdateButtonToSaveUpdate() throws Throwable {
+        page.clickSaveUpdate();
+        Thread.sleep(1000);
+    }
+
 }
