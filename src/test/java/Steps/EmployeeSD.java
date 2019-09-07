@@ -348,4 +348,34 @@ public class EmployeeSD extends BaseUtil {
         page.clickRemoveButton();
         Thread.sleep(1000);
     }
+
+    @When("^User should click on the Edit Trade Work Groups Link Text$")
+    public void userShouldClickOnTheEditTradeWorkGroupsLinkText() throws Throwable {
+        page.clickEditTradeWorkGroups();
+        Thread.sleep(1000);
+    }
+
+    @Then("^User is on the Edit Trade Work Groups Screen$")
+    public void userIsOnTheEditTradeWorkGroupsScreen() throws Throwable {
+        Thread.sleep(1000);
+    }
+
+    @When("^User select from the Available group$")
+    public void userSelectFromTheAvailableGroup() throws Throwable {
+        page.selectAvailableGroups();
+        page.clickShiftButton();
+        Thread.sleep(1000);
+    }
+
+    @And("^User click on the Update button to update Trade Work Group$")
+    public void userClickOnTheUpdateButtonToUpdateTradeWorkGroup() throws Throwable {
+        page.clickUpdateBtn();
+        Thread.sleep(1000);
+    }
+
+    @And("^User click on the Employees tab$")
+    public void userClickOnTheEmployeesTab() throws Throwable {
+        page.clickEmployeesTab();
+        Thread.sleep(1000);
+    }
 }

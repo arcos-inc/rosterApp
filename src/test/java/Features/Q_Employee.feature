@@ -98,6 +98,7 @@ Feature: Employee Tab
 
   @ZZY_EditQualifications
   Scenario: Edit Qualifications Feature For Location Admin under Employees tab
+    Given User Should select Acting roles as Loc Admin
     Given User is on the Employees Screen
     When User should click on the Edit Employee
     Then User should be on Edit Employee Screen
@@ -109,13 +110,22 @@ Feature: Employee Tab
     And User click on the Add Button to add Qualification
 
   @ZZZ_EditNewQualifications
-  Scenario: Edit Qualifications Feature For Location Admin under Employees tab
-    Given User Should select Acting roles as Loc Admin
-    Given User is on the Employees Screen
-    When User should click on the Edit Employee
-    Then User should be on Edit Employee Screen
-    When User should click on the Edit Qualifications Link Text
-    Then User is on the Edit Qualifications Screen
+  Scenario: Edit New Qualifications Feature For Location Admin under Employees tab
+    Given User is on the Edit Qualifications Screen
     When User click on the Edit New Qualification Link Text
     Then User is on the Edit Qualification Screen
     And User click on the remove button to remove Qualification
+    And User click on the Employees tab
+    And User is on the Employees Screen Again
+    When User should click on the Edit Employee
+
+  @ZZZA_EditTradeWorkGroups
+  Scenario: Edit Trade Work Groups Feature For Location Admin under Employees tab
+#    Given User Should select Acting roles as Loc Admin
+    Given User is on the Employees Screen
+    When User should click on the Edit Employee
+    Then User should be on Edit Employee Screen
+    When User should click on the Edit Trade Work Groups Link Text
+    Then User is on the Edit Trade Work Groups Screen
+    When User select from the Available group
+    And User click on the Update button to update Trade Work Group

@@ -175,6 +175,14 @@ public class EmployeePage {
     @FindBy(how = How.ID, using = "btnRemove")
     public WebElement clickRemove;
 
+    @FindBy(how = How.XPATH, using = "//*[@id=\"form1\"]/table[1]/tbody/tr[3]/td/ul/li[1]/a")
+    public WebElement clickEmployeesTab;
+    //*[@id="form1"]/table[1]/tbody/tr[3]/td/ul/li[1]/a
+    //*[@id="PostForm"]/table[1]/tbody/tr[3]/td/ul/li[1]/a
+
+    @FindBy(how = How.LINK_TEXT, using = "Edit Trade Work Groups")
+    public WebElement clickEditTradeWork;
+
 
     public void GetLocationURL() throws Exception {
         //String locationLabel = getLocationLabel.getText().toLowerCase();
@@ -457,5 +465,13 @@ public class EmployeePage {
 
     public void clickRemoveButton() {
         clickRemove.click();
+    }
+
+    public void clickEmployeesTab() {
+        clickEmployeesTab.click();
+    }
+
+    public void clickEditTradeWorkGroups() {
+        clickEditTradeWork.click();
     }
 }

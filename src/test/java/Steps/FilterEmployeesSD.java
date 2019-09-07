@@ -34,6 +34,12 @@ public class FilterEmployeesSD extends BaseUtil {
         Thread.sleep(1000);
     }
 
+    @And("^User is on the Employees Screen Again$")
+    public void userIsOnTheEmployeesScreenAgain() throws Throwable {
+        System.out.println("User is on the Employees Screen Again");
+        Thread.sleep(1000);
+    }
+
     @Then("^User should click on the Filter Dropdown to select all employees$")
     public void userShouldClickOnTheFilterDropdownToSelectAllEmployees() throws Throwable {
 
