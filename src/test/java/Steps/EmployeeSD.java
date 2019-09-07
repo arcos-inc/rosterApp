@@ -274,4 +274,78 @@ public class EmployeeSD extends BaseUtil {
         page.clickApplyAndReturnButton();
         Thread.sleep(1000);
     }
+
+    @When("^User should click on the Edit Skills Link Text$")
+    public void userShouldClickOnTheEditSkillsLinkText() throws Throwable {
+        page.clickEditSkills();
+        Thread.sleep(1000);
+    }
+
+    @Then("^User is on the Edit Skills Screen$")
+    public void userIsOnTheEditSkillsScreen() throws Throwable {
+        Thread.sleep(1000);
+    }
+
+    @And("^User check on the checkboxes to update skills$")
+    public void userCheckOnTheCheckboxesToUpdateSkills() throws Throwable {
+        page.clickCheckboxes();
+        Thread.sleep(1000);
+    }
+
+    @And("^User click on the Update button to update Skills$")
+    public void userClickOnTheUpdateButtonToUpdateSkills() throws Throwable {
+        page.clickUpdateBtn();
+        Thread.sleep(1000);
+    }
+
+    @When("^User should click on the Edit Qualifications Link Text$")
+    public void userShouldClickOnTheEditQualificationsLinkText() throws Throwable {
+        page.clickEditQualifications();
+        Thread.sleep(1000);
+    }
+
+    @Then("^User is on the Edit Qualifications Screen$")
+    public void userIsOnTheEditQualificationsScreen() throws Throwable {
+        Thread.sleep(1000);
+    }
+
+    @When("^User click on the Add New Qualification Link Text$")
+    public void userClickOnTheAddNewQualificationLinkText() throws Throwable {
+        page.clickAddNewQualification();
+        Thread.sleep(1000);
+    }
+
+    @Then("^User is on the Add Qualification Screen$")
+    public void userIsOnTheAddQualificationScreen() throws Throwable {
+        Thread.sleep(1000);
+    }
+
+    @And("^User click on the Code Dropdown to select the code$")
+    public void userClickOnTheCodeDropdownToSelectTheCode() throws Throwable {
+        page.clickCodeDropdown();
+        Thread.sleep(1000);
+    }
+
+    @And("^User click on the Add Button to add Qualification$")
+    public void userClickOnTheAddButtonToAddQualification() throws Throwable {
+        page.clickAddButton();
+        Thread.sleep(1000);
+    }
+
+    @When("^User click on the Edit New Qualification Link Text$")
+    public void userClickOnTheEditNewQualificationLinkText() throws Throwable {
+        page.clickEditNewQualification();
+        Thread.sleep(1000);
+    }
+
+    @Then("^User is on the Edit Qualification Screen$")
+    public void userIsOnTheEditQualificationScreen() throws Throwable {
+        Thread.sleep(1000);
+    }
+
+    @And("^User click on the remove button to remove Qualification$")
+    public void userClickOnTheRemoveButtonToRemoveQualification() throws Throwable {
+        page.clickRemoveButton();
+        Thread.sleep(1000);
+    }
 }

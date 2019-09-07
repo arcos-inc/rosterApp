@@ -25,8 +25,8 @@ import org.junit.runners.MethodSorters;
 //                " @ZZE_AddSkillsForEmployees, @ZZF_RemoveSkillsForEmployees, @ZZG_AddQualificationsForEmployees, @ZZH_AddTradeWorkGroupsForEmployees, @ZZI_RemoveTradeWorkGroupsForEmployees, @ZZJ_ResetOvertimeBank," +
 //                " @ZZK_AddSupervisor, @ZZL_RemoveSupervisor, @ZZM_AddSupervisorToMultipleLocations, @ZZN_RemoveSupervisor, @ZZO_EditAssignment, @ZZP_EditProfile," +
 //                " @ZZQ_EmployeeTab," +
-//                " @ZZR_FilterAllEmployees, @ZZS_FilterActiveEmployees, @ZZT_FilterInactiveEmployees, " +
-                " @ZZU_CreateNotes, @ZZV_AddNotes, @ZZW_EditOvertimeBank " +
+//                " @ZZR_FilterAllEmployees, @ZZS_FilterActiveEmployees, @ZZT_FilterInactiveEmployees, @ZZU_CreateNotes, @ZZV_AddNotes, @ZZW_EditOvertimeBank, @ZZX_EditSkills, @ZZY_EditQualifications, @ZZZ_EditNewQualifications, " +
+                  "" +
                 ""})
 
 

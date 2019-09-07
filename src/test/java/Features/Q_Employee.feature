@@ -53,8 +53,7 @@ Feature: Employee Tab
 
   @ZZU_CreateNotes
   Scenario: Create Notes For Location Admin
-    Given User Should select Acting roles as Loc Admin
-    When User is on the Employees Screen
+    Given User is on the Employees Screen
     When User should click on the Edit Employee
     Then User should be on Edit Employee Screen
     When User should click on the Add Notes Text Link
@@ -82,18 +81,41 @@ Feature: Employee Tab
     When User should click on the Edit Overtime Bank Text Link
     Then User should be on the Edit Overtime Bank for Employee Screen
     And User Select the Adjustment Date
-    And User enter the hours "1"
+    And User enter the hours "1.00"
     And User enter the comments "The following hours increases"
     And User click on the Apply and Return button
 
-  @ZZW_EditSkills
+  @ZZX_EditSkills
   Scenario: Edit Skills Feature For Location Admin under Employees tab
+#    Given User Should select Acting roles as Loc Admin
     Given User is on the Employees Screen
     When User should click on the Edit Employee
     Then User should be on Edit Employee Screen
-    When User should click on the Edit Overtime Bank Text Link
-    Then User should be on the Edit Overtime Bank for Employee Screen
-    And User Select the Adjustment Date
-    And User enter the hours "1"
-    And User enter the comments "The following hours increases"
-    And User click on the Apply and Return button
+    When User should click on the Edit Skills Link Text
+    Then User is on the Edit Skills Screen
+    And User check on the checkboxes to update skills
+    And User click on the Update button to update Skills
+
+  @ZZY_EditQualifications
+  Scenario: Edit Qualifications Feature For Location Admin under Employees tab
+    Given User is on the Employees Screen
+    When User should click on the Edit Employee
+    Then User should be on Edit Employee Screen
+    When User should click on the Edit Qualifications Link Text
+    Then User is on the Edit Qualifications Screen
+    When User click on the Add New Qualification Link Text
+    Then User is on the Add Qualification Screen
+    And User click on the Code Dropdown to select the code
+    And User click on the Add Button to add Qualification
+
+  @ZZZ_EditNewQualifications
+  Scenario: Edit Qualifications Feature For Location Admin under Employees tab
+    Given User Should select Acting roles as Loc Admin
+    Given User is on the Employees Screen
+    When User should click on the Edit Employee
+    Then User should be on Edit Employee Screen
+    When User should click on the Edit Qualifications Link Text
+    Then User is on the Edit Qualifications Screen
+    When User click on the Edit New Qualification Link Text
+    Then User is on the Edit Qualification Screen
+    And User click on the remove button to remove Qualification

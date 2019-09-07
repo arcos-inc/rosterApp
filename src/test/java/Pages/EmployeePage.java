@@ -148,6 +148,33 @@ public class EmployeePage {
     @FindBy(how = How.ID, using = "btnApply")
     public WebElement applyAndReturn;
 
+    @FindBy(how = How.LINK_TEXT, using = "Edit Skills")
+    public WebElement clickEditSkillsLink;
+
+    @FindBy(how = How.ID, using = "ucSkillsPicker_lstSkills_1")
+    public WebElement clickCheckBox2;
+
+    @FindBy(how = How.ID, using = "ucSkillsPicker_lstSkills_2")
+    public WebElement clickCheckBox3;
+
+    @FindBy(how = How.ID, using = "btnUpdate")
+    public WebElement clickBtnUpdate;
+
+    @FindBy(how = How.LINK_TEXT, using = "Edit Qualifications")
+    public WebElement clickEditQualification;
+
+    @FindBy(how = How.LINK_TEXT, using = "Add New Qualification")
+    public WebElement clickAddNew;
+
+    @FindBy(how = How.ID, using = "cboQualification")
+    public WebElement selectCode;
+
+    @FindBy(how = How.XPATH, using = "//*[@id=\"tblQualifications\"]/tbody/tr[1]/td[5]/a")
+    public WebElement clikcNewQualification;
+
+    @FindBy(how = How.ID, using = "btnRemove")
+    public WebElement clickRemove;
+
 
     public void GetLocationURL() throws Exception {
         //String locationLabel = getLocationLabel.getText().toLowerCase();
@@ -382,6 +409,7 @@ public class EmployeePage {
     }
 
     public void enterHours(String hours) {
+        enterHours.clear();
         enterHours.sendKeys(hours);
     }
 
@@ -390,6 +418,44 @@ public class EmployeePage {
     }
 
     public void clickApplyAndReturnButton() {
+        applyAndReturn.click();
+    }
 
+    public void clickEditSkills() {
+        clickEditSkillsLink.click();
+    }
+
+    public void clickCheckboxes() {
+        clickCheckBox2.click();
+        clickCheckBox3.click();
+    }
+
+    public void clickUpdateBtn() {
+        clickBtnUpdate.click();
+    }
+
+    public void clickEditQualifications() {
+        clickEditQualification.click();
+    }
+
+    public void clickAddNewQualification() {
+        clickAddNew.click();
+    }
+
+    public void clickCodeDropdown() {
+        Select select = new Select(selectCode);
+        select.selectByIndex(0);
+    }
+
+    public void clickAddButton() {
+        clickBtnUpdate.click();
+    }
+
+    public void clickEditNewQualification() {
+        clikcNewQualification.click();
+    }
+
+    public void clickRemoveButton() {
+        clickRemove.click();
     }
 }
