@@ -214,8 +214,44 @@ public class EmployeePage {
     @FindBy(how = How.LINK_TEXT, using = "View Dependability History")
     public WebElement clickViewDependabilityHistory;
 
+    @FindBy(how = How.LINK_TEXT, using = "Edit Employee Schedule Availability")
+    public WebElement clickEmployeeScheduleAvailability;
+
     @FindBy(how = How.ID, using = "btnDone")
     public WebElement btnDone;
+
+    @FindBy(how = How.ID, using = "grdAvailability_ctl02_lnkView")
+    public WebElement btnView;
+
+    @FindBy(how = How.LINK_TEXT, using = "Edit Rule Sets")
+    public WebElement clickEditRuleSets;
+
+    @FindBy(how = How.ID, using = "cboShiftRuleSet")
+    public WebElement selectShiftRuleSet;
+
+    @FindBy(how = How.ID, using = "cboPtoRuleSet")
+    public WebElement selectPtoRuleSet;
+
+    @FindBy(how = How.ID, using = "cboVtoRuleSet")
+    public WebElement selectVtoRuleSet;
+
+    @FindBy(how = How.ID, using = "cboVt2RuleSet")
+    public WebElement selectVt2RuleSet;
+
+    @FindBy(how = How.ID, using = "cboDependabilityRuleSet")
+    public WebElement selectDependabilityRuleSet;
+
+    @FindBy(how = How.XPATH, using = "//*[@id=\"grdEmployee\"]/tbody/tr[3]/td[8]/a")
+    public WebElement clickEditEmployee;
+
+    @FindBy(how = How.XPATH, using = "//*[@id=\"PostForm\"]/div[3]/ul/li[18]/a")
+    public WebElement clickTerminate;
+
+    @FindBy(how = How.ID, using = "cboStatus")
+    public WebElement selectEmployeeStatusTerminate;
+
+    @FindBy(how = How.ID, using = "btnTerminate")
+    public WebElement btnTerminate;
 
     public void GetLocationURL() throws Exception {
         //String locationLabel = getLocationLabel.getText().toLowerCase();
@@ -557,5 +593,59 @@ public class EmployeePage {
 
     public void clickViewDependabilityHistory() {
         clickViewDependabilityHistory.click();
+    }
+
+    public void clickEditEmployeeSchedule() {
+        clickEmployeeScheduleAvailability.click();
+    }
+
+    public void clickViewLink() {
+        btnView.click();
+    }
+
+    public void clickReturnButton() {
+        clickCancel.click();
+    }
+
+    public void clickEditRuleSets() {
+        clickEditRuleSets.click();
+    }
+
+    public void selectShiftRuleSets() {
+        selectShiftRuleSet.click();
+    }
+
+    public void selectPTORuleSets() {
+        selectPtoRuleSet.click();
+    }
+
+    public void selectUTORuleSets() {
+        selectVtoRuleSet.click();
+    }
+
+    public void selectVTOSlotRuleSets() {
+        selectVt2RuleSet.click();
+    }
+
+    public void selectDependabilityRuleSets() {
+        selectDependabilityRuleSet.click();
+    }
+
+    public void clickEditEmployeeToTerminate() {
+        clickEditEmployee.click();
+    }
+
+    public void clickTerminateEmployeeLinkText() {
+        clickTerminate.click();
+    }
+
+    public void selectStatusOfTheEmployeeTermination() {
+        selectEmployeeStatusTerminate.click();
+        Select select = new Select(selectEmployeeStatusTerminate);
+        select.selectByIndex(2);
+    }
+
+    public void clickTerminateButton() {
+        btnTerminate.click();
     }
 }

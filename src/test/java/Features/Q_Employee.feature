@@ -187,10 +187,50 @@ Feature: Employee Tab
 
   @ZZZG_ViewDependabilityHistory
   Scenario: View Dependability History Feature For Location Admin under Employees tab
-    Given User Should select Acting roles as Loc Admin
+#    Given User Should select Acting roles as Loc Admin
     Given User is on the Employees Screen
     When User should click on the Edit Employee
     Then User should be on Edit Employee Screen
     When User should click on the View Dependability History Link Text
     Then User is on the View Dependability History Screen
     And User click on the Done button to update View Dependability History
+
+  @ZZZH_EditEmployeeScheduleAvailability
+  Scenario: Edit Employee Schedule Availability Feature For Location Admin under Employees tab
+#    Given User Should select Acting roles as Loc Admin
+    Given User is on the Employees Screen
+    When User should click on the Edit Employee
+    Then User should be on Edit Employee Screen
+    When User should click on the Edit Employee Schedule Availability Link Text
+    Then User is on the Availability Patterns Screen
+    And User click on the View Link Text
+    And User click on the Return Button
+    And User click on the Done button to return on the Edit Employee Screen
+
+  @ZZZI_EditRuleSets
+  Scenario: Edit Rule Sets Feature For Location Admin under Employees tab
+#    Given User Should select Acting roles as Loc Admin
+    Given User is on the Employees Screen
+    When User should click on the Edit Employee
+    Then User should be on Edit Employee Screen
+    When User should click on the Edit Rule Sets Link Text
+    Then User is on the Edit Rule Sets Screen
+    And User select Shift Rule Set
+    And User select PTO Rule Set
+    And User select UTO Rule Set
+    And User select VTO Slot Rule Set
+    And User select Dependability Rule Set
+    And User click on the Update button to Update Rule Sets
+    Then User click on the Cancel button to return on the Edit Employee Screen
+
+  @ZZZJ_TerminateEmployee
+  Scenario: Terminate Employee Feature For Location Admin under Employees tab
+#    Given User Should select Acting roles as Loc Admin
+    Given User is on the Employees Screen
+    When User should click on the Edit Employee to terminate
+    Then User should be on Edit Employee Screen
+    When User should click on the Terminate Employee Link Text
+    Then User is on the Terminate Employee Screen
+    And User select the status of the employee termination
+    And User click on the Terminate Button
+

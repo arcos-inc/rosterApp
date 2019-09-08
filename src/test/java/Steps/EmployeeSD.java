@@ -504,4 +504,111 @@ public class EmployeeSD extends BaseUtil {
         page.clickDoneButton();
         Thread.sleep(1000);
     }
+
+    @When("^User should click on the Edit Employee Schedule Availability Link Text$")
+    public void userShouldClickOnTheEditEmployeeScheduleAvailabilityLinkText() throws Throwable {
+        page.clickEditEmployeeSchedule();
+        Thread.sleep(1000);
+    }
+
+    @Then("^User is on the Availability Patterns Screen$")
+    public void userIsOnTheAvailabilityPatternsScreen() throws Throwable {
+        Thread.sleep(1000);
+    }
+
+    @And("^User click on the View Link Text$")
+    public void userClickOnTheViewLinkText() throws Throwable {
+        page.clickViewLink();
+        Thread.sleep(1000);
+    }
+
+    @And("^User click on the Return Button$")
+    public void userClickOnTheReturnButton() throws Throwable {
+        page.clickReturnButton();
+        Thread.sleep(1000);
+    }
+
+    @And("^User click on the Done button to return on the Edit Employee Screen$")
+    public void userClickOnTheDoneButtonToReturnOnTheEditEmployeeScreen() throws Throwable {
+        page.clickDoneButton();
+        Thread.sleep(1000);
+    }
+
+    @When("^User should click on the Edit Rule Sets Link Text$")
+    public void userShouldClickOnTheEditRuleSetsLinkText() throws Throwable {
+        page.clickEditRuleSets();
+        Thread.sleep(1000);
+    }
+
+    @Then("^User is on the Edit Rule Sets Screen$")
+    public void userIsOnTheEditRuleSetsScreen() throws Throwable {
+        Thread.sleep(1000);
+    }
+
+    @And("^User select Shift Rule Set$")
+    public void userSelectShiftRuleSet() throws Throwable {
+        page.selectShiftRuleSets();
+        Thread.sleep(1000);
+    }
+
+    @And("^User select PTO Rule Set$")
+    public void userSelectPTORuleSet() throws Throwable {
+        page.selectPTORuleSets();
+        Thread.sleep(1000);
+    }
+
+    @And("^User select UTO Rule Set$")
+    public void userSelectUTORuleSet() throws Throwable {
+        page.selectUTORuleSets();
+        Thread.sleep(1000);
+    }
+
+    @And("^User select VTO Slot Rule Set$")
+    public void userSelectVTOSlotRuleSet() throws Throwable {
+        page.selectVTOSlotRuleSets();
+        Thread.sleep(1000);
+    }
+
+    @And("^User select Dependability Rule Set$")
+    public void userSelectDependabilityRuleSet() throws Throwable {
+        page.selectDependabilityRuleSets();
+        Thread.sleep(1000);
+    }
+
+    @And("^User click on the Update button to Update Rule Sets$")
+    public void userClickOnTheUpdateButtonToUpdateRuleSets() throws Throwable {
+        page.clickUpdateBtn();
+        Thread.sleep(1000);
+    }
+
+    @When("^User should click on the Edit Employee to terminate$")
+    public void userShouldClickOnTheEditEmployeeToTerminate() throws Throwable {
+        page.clickEditEmployeeToTerminate();
+        Thread.sleep(1000);
+    }
+
+    @When("^User should click on the Terminate Employee Link Text$")
+    public void userShouldClickOnTheTerminateEmployeeLinkText() throws Throwable {
+        page.clickTerminateEmployeeLinkText();
+        Thread.sleep(1000);
+    }
+
+    @Then("^User is on the Terminate Employee Screen$")
+    public void userIsOnTheTerminateEmployeeScreen() throws Throwable {
+        Thread.sleep(1000);
+    }
+
+    @And("^User select the status of the employee termination$")
+    public void userSelectTheStatusOfTheEmployeeTermination() throws Throwable {
+        page.selectStatusOfTheEmployeeTermination();
+        Thread.sleep(1000);
+    }
+
+    @And("^User click on the Terminate Button$")
+    public void userClickOnTheTerminateButton() throws Throwable {
+        page.clickTerminateButton();
+        Thread.sleep(1000);
+        Web_Driver.switchTo().alert().accept();
+        Thread.sleep(1000);
+    }
 }
