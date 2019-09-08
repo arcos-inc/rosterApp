@@ -373,9 +373,135 @@ public class EmployeeSD extends BaseUtil {
         Thread.sleep(1000);
     }
 
+    @And("^User click on the Update button to update Pay Rate$")
+    public void userClickOnTheUpdateButtonToUpdatePayRate() throws Throwable {
+        page.clickUpdateBtn();
+        Thread.sleep(1000);
+    }
+
+    @And("^User click on the Update button to update Job Title$")
+    public void userClickOnTheUpdateButtonToUpdateJobTitle() throws Throwable {
+        page.clickUpdateBtn();
+        Thread.sleep(1000);
+    }
+
     @And("^User click on the Employees tab$")
     public void userClickOnTheEmployeesTab() throws Throwable {
         page.clickEmployeesTab();
+        Thread.sleep(1000);
+    }
+
+    @When("^User should click on the Edit Pay Rate Link Text$")
+    public void userShouldClickOnTheEditPayRateLinkText() throws Throwable {
+        page.clickEditPayRate();
+        Thread.sleep(1000);
+    }
+
+    @Then("^User is on the Edit Pay Rate Screen$")
+    public void userIsOnTheEditPayRateScreen() throws Throwable {
+        Thread.sleep(1000);
+    }
+
+    @When("^User enter the Pay Rate \"([^\"]*)\"$")
+    public void userEnterThePayRate(String payRate) throws Throwable {
+        page.enterPayRate(payRate);
+        Thread.sleep(1000);
+    }
+
+    @When("^User should click on the Edit Job Title Link Text$")
+    public void userShouldClickOnTheEditJobTitleLinkText() throws Throwable {
+        page.clickEditJobTitle();
+        Thread.sleep(1000);
+    }
+
+    @Then("^User is on the Edit Job Title Screen$")
+    public void userIsOnTheEditJobTitleScreen() throws Throwable {
+        Thread.sleep(1000);
+    }
+
+    @When("^User select Job Title from the dropdown$")
+    public void userSelectJobTitleFromTheDropdown() throws Throwable {
+        page.selectJobTitle();
+        Thread.sleep(1000);
+    }
+
+    @When("^User should click on the Edit Employee Status Link Text$")
+    public void userShouldClickOnTheEditEmployeeStatusLinkText() throws Throwable {
+        page.clickEditEmployeeStatus();
+        Thread.sleep(1000);
+    }
+
+    @Then("^User is on the Edit Employee Status Screen$")
+    public void userIsOnTheEditEmployeeStatusScreen() throws Throwable {
+        Thread.sleep(1000);
+    }
+
+    @When("^User select Employee Status from the dropdown$")
+    public void userSelectEmployeeStatusFromTheDropdown() throws Throwable {
+        page.selectEmployeeStatus();
+        Thread.sleep(1000);
+    }
+
+    @And("^User click on the Update button to update Employee Status$")
+    public void userClickOnTheUpdateButtonToUpdateEmployeeStatus() throws Throwable {
+        page.clickUpdateBtn();
+        Thread.sleep(1000);
+    }
+
+    @When("^User should click on the Edit Employee Cost Center Link Text$")
+    public void userShouldClickOnTheEditEmployeeCostCenterLinkText() throws Throwable {
+        page.clickEditEmployeeCostCenter();
+        Thread.sleep(1000);
+    }
+
+    @Then("^User is on the Edit Employee Cost Center Screen$")
+    public void userIsOnTheEditEmployeeCostCenterScreen() throws Throwable {
+        Thread.sleep(1000);
+    }
+
+    @When("^User select Employee Cost Center from the dropdown$")
+    public void userSelectEmployeeCostCenterFromTheDropdown() throws Throwable {
+        page.CostCenter();
+        Thread.sleep(1000);
+    }
+
+    @And("^User click on the Update button to update Employee Cost Center$")
+    public void userClickOnTheUpdateButtonToUpdateEmployeeCostCenter() throws Throwable {
+        page.clickUpdateBtn();
+        Thread.sleep(1000);
+    }
+
+    @When("^User should click on the Edit Cross-Trained Departments Link Text$")
+    public void userShouldClickOnTheEditCrossTrainedDepartmentsLinkText() throws Throwable {
+        page.clickEditCrossTrained();
+        Thread.sleep(1000);
+    }
+
+    @Then("^User is on the View Cross-Trained Departments Screen$")
+    public void userIsOnTheViewCrossTrainedDepartmentsScreen() throws Throwable {
+        Thread.sleep(1000);
+    }
+
+    @And("^User click on the Done button to update Cross-Trained Departments$")
+    public void userClickOnTheDoneButtonToUpdateCrossTrainedDepartments() throws Throwable {
+        page.clickDoneButton();
+        Thread.sleep(1000);
+    }
+
+    @When("^User should click on the View Dependability History Link Text$")
+    public void userShouldClickOnTheViewDependabilityHistoryLinkText() throws Throwable {
+        page.clickViewDependabilityHistory();
+        Thread.sleep(1000);
+    }
+
+    @Then("^User is on the View Dependability History Screen$")
+    public void userIsOnTheViewDependabilityHistoryScreen() throws Throwable {
+        Thread.sleep(1000);
+    }
+
+    @And("^User click on the Done button to update View Dependability History$")
+    public void userClickOnTheDoneButtonToUpdateViewDependabilityHistory() throws Throwable {
+        page.clickDoneButton();
         Thread.sleep(1000);
     }
 }

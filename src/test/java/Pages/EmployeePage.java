@@ -2,6 +2,7 @@ package Pages;
 
 import Base.BaseUtil;
 import Utilities.Helper;
+import io.cucumber.java.eo.Se;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -183,6 +184,38 @@ public class EmployeePage {
     @FindBy(how = How.LINK_TEXT, using = "Edit Trade Work Groups")
     public WebElement clickEditTradeWork;
 
+    @FindBy(how = How.LINK_TEXT, using = "Edit Pay Rate")
+    public WebElement clickPayRate;
+
+    @FindBy(how = How.ID, using = "txtPayRate")
+    public WebElement txtPayRate;
+
+    @FindBy(how = How.LINK_TEXT, using = "Edit Job Title")
+    public WebElement clickEditJobTitle;
+
+    @FindBy(how = How.ID, using = "cboJobTitle")
+    public WebElement clickJobTitle;
+
+    @FindBy(how = How.LINK_TEXT, using = "Edit Employee Status")
+    public WebElement clickEditEmployeeStatus;
+
+    @FindBy(how = How.ID, using = "cboEmployeeStatus")
+    public WebElement selectEmployeeStatus;
+
+    @FindBy(how = How.LINK_TEXT, using = "Edit Employee Cost Center")
+    public WebElement clickEditEmployeeCostCenter;
+
+    @FindBy(how = How.ID, using = "cboCostCenter")
+    public WebElement selectCostCenter;
+
+    @FindBy(how = How.LINK_TEXT, using = "Edit Cross-Trained Departments")
+    public WebElement clickEditCrossTrainedDepartments;
+
+    @FindBy(how = How.LINK_TEXT, using = "View Dependability History")
+    public WebElement clickViewDependabilityHistory;
+
+    @FindBy(how = How.ID, using = "btnDone")
+    public WebElement btnDone;
 
     public void GetLocationURL() throws Exception {
         //String locationLabel = getLocationLabel.getText().toLowerCase();
@@ -473,5 +506,56 @@ public class EmployeePage {
 
     public void clickEditTradeWorkGroups() {
         clickEditTradeWork.click();
+    }
+
+    public void clickEditPayRate() {
+        clickPayRate.click();
+    }
+
+    public void enterPayRate(String payRate) {
+        txtPayRate.clear();
+        txtPayRate.sendKeys(payRate);
+    }
+
+    public void clickEditJobTitle() {
+        clickEditJobTitle.click();
+    }
+
+    public void selectJobTitle() {
+        clickJobTitle.click();
+        Select select = new Select(clickJobTitle);
+        select.selectByIndex(0);
+    }
+
+    public void clickEditEmployeeStatus() {
+        clickEditEmployeeStatus.click();
+    }
+
+    public void selectEmployeeStatus() {
+        selectEmployeeStatus.click();
+        Select select = new Select(selectEmployeeStatus);
+        select.selectByIndex(0);
+    }
+
+    public void clickEditEmployeeCostCenter() {
+        clickEditEmployeeCostCenter.click();
+    }
+
+    public void CostCenter() {
+        selectCostCenter.click();
+        Select select = new Select(selectCostCenter);
+        select.selectByIndex(2);
+    }
+
+    public void clickEditCrossTrained() {
+        clickEditCrossTrainedDepartments.click();
+    }
+
+    public void clickDoneButton() {
+        btnDone.click();
+    }
+
+    public void clickViewDependabilityHistory() {
+        clickViewDependabilityHistory.click();
     }
 }

@@ -129,3 +129,68 @@ Feature: Employee Tab
     Then User is on the Edit Trade Work Groups Screen
     When User select from the Available group
     And User click on the Update button to update Trade Work Group
+
+  @ZZZB_EditPayRate
+  Scenario: Edit Pay Rate Feature For Location Admin under Employees tab
+#    Given User Should select Acting roles as Loc Admin
+    Given User is on the Employees Screen
+    When User should click on the Edit Employee
+    Then User should be on Edit Employee Screen
+    When User should click on the Edit Pay Rate Link Text
+    Then User is on the Edit Pay Rate Screen
+    When User enter the Pay Rate "2.00"
+    And User click on the Update button to update Pay Rate
+
+  @ZZZC_EditJobTitle
+  Scenario: Edit Job Title Feature For Location Admin under Employees tab
+#    Given User Should select Acting roles as Loc Admin
+    Given User is on the Employees Screen
+    When User should click on the Edit Employee
+    Then User should be on Edit Employee Screen
+    When User should click on the Edit Job Title Link Text
+    Then User is on the Edit Job Title Screen
+    When User select Job Title from the dropdown
+    And User click on the Update button to update Job Title
+
+  @ZZZD_EditEmployeeStatus
+  Scenario: Edit Employee Status Feature For Location Admin under Employees tab
+#    Given User Should select Acting roles as Loc Admin
+    Given User is on the Employees Screen
+    When User should click on the Edit Employee
+    Then User should be on Edit Employee Screen
+    When User should click on the Edit Employee Status Link Text
+    Then User is on the Edit Employee Status Screen
+    When User select Employee Status from the dropdown
+    And User click on the Update button to update Employee Status
+
+  @ZZZE_EditEmployeeCostCenter
+  Scenario: Edit Employee Cost Center Feature For Location Admin under Employees tab
+#    Given User Should select Acting roles as Loc Admin
+    Given User is on the Employees Screen
+    When User should click on the Edit Employee
+    Then User should be on Edit Employee Screen
+    When User should click on the Edit Employee Cost Center Link Text
+    Then User is on the Edit Employee Cost Center Screen
+    When User select Employee Cost Center from the dropdown
+    And User click on the Update button to update Employee Cost Center
+    Then User click on the Cancel button to return on the Edit Employee Screen
+
+  @ZZZF_EditCross-TrainedDepartments
+  Scenario: Edit Cross-Trained Departments Feature For Location Admin under Employees tab
+#    Given User Should select Acting roles as Loc Admin
+    Given User is on the Employees Screen
+    When User should click on the Edit Employee
+    Then User should be on Edit Employee Screen
+    When User should click on the Edit Cross-Trained Departments Link Text
+    Then User is on the View Cross-Trained Departments Screen
+    And User click on the Done button to update Cross-Trained Departments
+
+  @ZZZG_ViewDependabilityHistory
+  Scenario: View Dependability History Feature For Location Admin under Employees tab
+    Given User Should select Acting roles as Loc Admin
+    Given User is on the Employees Screen
+    When User should click on the Edit Employee
+    Then User should be on Edit Employee Screen
+    When User should click on the View Dependability History Link Text
+    Then User is on the View Dependability History Screen
+    And User click on the Done button to update View Dependability History

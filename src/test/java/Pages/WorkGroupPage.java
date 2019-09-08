@@ -236,6 +236,7 @@ public class WorkGroupPage {
     }
 
     public void selectShiftPermissions() {
+//        selectAvailableGroups.click();
         Select select = new Select(selectAvailableGroups);
         select.selectByIndex(16);
     }

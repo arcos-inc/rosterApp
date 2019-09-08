@@ -1,11 +1,7 @@
 package Runner;
 
 import cucumber.api.CucumberOptions;
-import cucumber.api.junit.Cucumber;
 import cucumber.api.testng.AbstractTestNGCucumberTests;
-import org.junit.FixMethodOrder;
-import org.junit.runner.RunWith;
-import org.junit.runners.MethodSorters;
 
 @CucumberOptions(features = {"src/test/java/Features"}, format = {"json:target/cucumber.json",
         "html:target/site/cucumber-pretty"},
@@ -25,8 +21,8 @@ import org.junit.runners.MethodSorters;
 //                " @ZZE_AddSkillsForEmployees, @ZZF_RemoveSkillsForEmployees, @ZZG_AddQualificationsForEmployees, @ZZH_AddTradeWorkGroupsForEmployees, @ZZI_RemoveTradeWorkGroupsForEmployees, @ZZJ_ResetOvertimeBank," +
 //                " @ZZK_AddSupervisor, @ZZL_RemoveSupervisor, @ZZM_AddSupervisorToMultipleLocations, @ZZN_RemoveSupervisor, @ZZO_EditAssignment, @ZZP_EditProfile," +
 //                " @ZZQ_EmployeeTab," +
-//                " @ZZR_FilterAllEmployees, @ZZS_FilterActiveEmployees, @ZZT_FilterInactiveEmployees, @ZZU_CreateNotes, @ZZV_AddNotes, @ZZW_EditOvertimeBank, @ZZX_EditSkills, @ZZY_EditQualifications, @ZZZ_EditNewQualifications, " +
-                  " @ZZZA_EditTradeWorkGroups" +
+//                " @ZZR_FilterAllEmployees, @ZZS_FilterActiveEmployees, @ZZT_FilterInactiveEmployees, @ZZU_CreateNotes, @ZZV_AddNotes, @ZZW_EditOvertimeBank, @ZZX_EditSkills, @ZZY_EditQualifications, @ZZZ_EditNewQualifications, @ZZZA_EditTradeWorkGroups, @ZZZB_EditPayRate, @ZZZC_EditJobTitle, @ZZZD_EditEmployeeStatus, @ZZZE_EditEmployeeCostCenter, @ZZZF_EditCross-TrainedDepartments, @ZZZG_ViewDependabilityHistory, " +
+                  "" +
                 ""})
 
 
