@@ -1,7 +1,7 @@
 Feature: Cost Centers Feature For Company Admin
   This Cost Centers feature deals with the Cost Centers functionality of the application
 
-  @ZE_CreateCostCenters
+  @ZB_CreateCostCenters
   Scenario: Add Cost Centers Feature For Company Admin
     Given User Should select Acting roles
     When User see the Cost Centers Tab
@@ -15,7 +15,7 @@ Feature: Cost Centers Feature For Company Admin
 #    And User check on the Is Active Checkbox on Cost Center Screen
     Then User click on the Save Button to Add Cost Center
 
-  @ZF_EditCostCenters
+  @ZC_EditCostCenters
   Scenario: Edit Cost Centers Feature For Company Admin
     Given User is on the Cost Centers Screen
     When User should click on the Edit Cost Centers

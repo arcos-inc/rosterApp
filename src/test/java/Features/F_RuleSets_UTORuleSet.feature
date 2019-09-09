@@ -1,7 +1,7 @@
 Feature: UTO Rule Sets
   This feature file is used to create New UTO Rule Sets
 
-  @F_UTORuleSet
+  @M_UTORuleSet
   Scenario Outline: Create New UTO Rule Set
     Given User should be login as a Company Admin
     When User clicks on Create New UTO Rule Set

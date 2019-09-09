@@ -1,7 +1,7 @@
 Feature: PTO Rule Sets
   From This Feature File User Should Able to Create or Edit the Rule Sets
 
-  @E_PTORuleSets
+  @L_PTORuleSets
   Scenario Outline: Create New Paid Time Off Rule Sets
     Given User should be on Company Rule Set Page
     When User click on Create New Paid Time Off Rule Set

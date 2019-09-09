@@ -92,9 +92,9 @@ public class DependabilityRuleSetSD extends BaseUtil {
     public void userClickOnTheSaveButtonToAddDependabilityRuleSet() throws Throwable {
 
         System.out.println("User click on the Save Button to Add Dependability Rule Set");
-        dependabilityRuleSetPage.saveBtn();
-        Thread.sleep(2000);
         Scroll.scrollDown();
+        Thread.sleep(2000);
+        dependabilityRuleSetPage.saveBtn();
     }
 
     @When("^User should click on the Edit New Dependability Rule Set$")

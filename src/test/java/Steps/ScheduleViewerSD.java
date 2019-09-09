@@ -3,6 +3,7 @@ package Steps;
 import Base.BaseUtil;
 import Pages.LocationPage;
 import Pages.ScheduleViewerPage;
+import Utilities.Helper;
 import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
@@ -12,9 +13,11 @@ public class ScheduleViewerSD extends BaseUtil {
 
     private BaseUtil base;
     ScheduleViewerPage scheduleViewerPage;
+    Helper helper;
 
     public ScheduleViewerSD(BaseUtil base) {
         scheduleViewerPage = new ScheduleViewerPage(Web_Driver);
+        helper = new Helper();
         this.base = base;
     }
 
@@ -153,10 +156,10 @@ public class ScheduleViewerSD extends BaseUtil {
 
     }
 
-    @And("^User edit Profile \"([^\"]*)\"$")
-    public void userEditProfile(String editName) throws Throwable {
+    @And("^User edit Profile$")
+    public void userEditProfile() throws Throwable {
 
-        scheduleViewerPage.editProfile(editName);
+        scheduleViewerPage.editProfile(helper.generateNames());
         Thread.sleep(1000);
     }
 

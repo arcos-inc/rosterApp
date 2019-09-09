@@ -1,7 +1,7 @@
 Feature: Job Title Tab
   From this Feature user should able to Add New Job Titles
 
-  @C_JobTitleTab
+  @J_JobTitleTab
   Scenario: Add New Job Title
     Given User is on Job Titles Tab
     When User click on create new Job Title

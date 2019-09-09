@@ -21,7 +21,7 @@ Feature: Location Tab
     And User select New Employee Job Title
     And User click on Add Button
 
-  @L_AddScheduleViewer
+  @C_AddScheduleViewer
   Scenario: Add Schedule Viewer to this Location
 #    Given User Should select Acting roles
     Given User see the Location Tab
@@ -34,13 +34,13 @@ Feature: Location Tab
     And User select the new schedule viewer
     Then User click on the Create button
 
-  @M_RemoveScheduleViewer
+  @D_RemoveScheduleViewer
   Scenario: Remove Schedule Viewer
     Given User is on the Schedule Viewers Screen
     When User click on the Remove Link Text
     And User click on the OK Button
 
-  @N_AddScheduleViewerToMultipleLocations
+  @E_AddScheduleViewerToMultipleLocations
   Scenario: Add Schedule Viewer to Multiple Locations
     Given User is on the Schedule Viewers Screen
     Then User click on the Add Schedule Viewer to Multiple Location
@@ -53,13 +53,13 @@ Feature: Location Tab
     And User select multiple locations
     Then User click on the Create button
 
-  @O_RemoveScheduleViewer
+  @F_RemoveScheduleViewer
   Scenario: Remove Schedule Viewer
     Given User is on the Schedule Viewers Screen
     When User click on the Remove Link Text
     And User click on the OK Button
 
-  @P_EditAssignment
+  @G_EditAssignment
   Scenario: Edit Assignment
     Given User is on the Schedule Viewers Screen
     When User click on the Edit Assignment link text
@@ -67,16 +67,16 @@ Feature: Location Tab
     And User edit locations
     Then User click on the Create button
 
-  @Q_EditProfile
+  @H_EditProfile
   Scenario: Edit Profile
     Given User is on the Schedule Viewers Screen
     When User click on the Edit Profile link text
     Then User is on the Edit Profile Viewer Screen
-    And User edit Profile "Asad"
+    And User edit Profile
     Then User click on the Update button
     And User click on the Cancel button
 
-  @R_EditAccrualAccounts
+  @I_EditAccrualAccounts
   Scenario: Edit Accrual Accounts For Company Admin
 #    Given User Should select Acting roles
     Given User see the Location Tab

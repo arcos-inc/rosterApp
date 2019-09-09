@@ -1,7 +1,7 @@
-Feature: Rounding Rule Sets Feature For Company Admin
-  This Rule Sets feature deals with the Rounding functionality of the application
+Feature: Rounding and Dependability Rule Sets Feature For Company Admin
+  This Rule Sets feature deals with the Rounding and Dependability functionality of the application
 
-  @X_CreateRoundingRuleSet
+  @O_CreateRoundingRuleSet
   Scenario: Add Rounding Rule Sets Feature For Company Admin
 #    Given User Should select Acting roles
 #    When User see the Rule Sets Tab
@@ -18,7 +18,7 @@ Feature: Rounding Rule Sets Feature For Company Admin
     And User enter the Rule Set Description "This is a test Rounding Rule Set"
     Then User click on the Add Button to Add Rounding Rule Set
 
-  @Y_EditRoundingRuleSet
+  @P_EditRoundingRuleSet
   Scenario: Edit Rounding Rule Sets Feature For Company Admin
     Given User is on the Company Rule Sets Screen
     When User should click on the Edit Rounding Rule Set
@@ -31,7 +31,7 @@ Feature: Rounding Rule Sets Feature For Company Admin
     And User enter the Rule Set Description "This is a test Rounding Rule Set"
     Then User click on the Update Button to Add Rounding Rule Set
 
-  @Z_CreateDependabilityRuleSet
+  @Q_CreateDependabilityRuleSet
   Scenario: Add Dependability Rule Sets Feature For Company Admin
 #    Given User Should select Acting roles
 #    When User see the Rule Sets Tab
@@ -47,7 +47,7 @@ Feature: Rounding Rule Sets Feature For Company Admin
     And User check on the Freeze Points
     Then User click on the Save Button to Add Dependability Rule Set
 
-  @ZA_EditDependabilityRuleSet
+  @R_EditDependabilityRuleSet
   Scenario: Edit Dependability Rule Sets Feature For Company Admin
 #    Given User Should select Acting roles
 #    When User see the Rule Sets Tab

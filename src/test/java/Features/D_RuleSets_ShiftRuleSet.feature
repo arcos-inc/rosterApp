@@ -1,7 +1,7 @@
 Feature: Shift Rule Sets
   From This Feature File User Should Able to Create or Shift Rule Set
 
-  @D_ShiftRuleSet
+  @K_ShiftRuleSet
   Scenario Outline: Create New Shift Rule Set Rule Set
     Given User should be login as a Company Admin
     And User should be on Rule Set Tab

@@ -1,7 +1,7 @@
 Feature: Qualification Feature For Company Admin
   This Qualification feature deals with the Qualification functionality of the application
 
-  @ZB_CreateQualifications
+  @Y_CreateQualifications
   Scenario: Add Qualifications Feature For Company Admin
 #    Given User Should select Acting roles
     Given User see the Qualifications Tab
@@ -15,7 +15,7 @@ Feature: Qualification Feature For Company Admin
     And User check on the Is Active Checkbox
     Then User click on the Save Button to Add Qualification
 
-  @ZC_EditQualifications
+  @Z_EditQualifications
   Scenario: Edit Qualifications Feature For Company Admin
     Given User is on the Qualifications Screen
     When User should click on the Edit Qualification
@@ -26,7 +26,7 @@ Feature: Qualification Feature For Company Admin
     And User check on the Is Active Checkbox
     Then User click on the Save Button to Add Qualification
 
-  @ZD_EditQualificationsForLocation
+  @ZA_EditQualificationsForLocation
   Scenario: Edit Qualification Feature For Company Admin - Locations
     Given User see the Location Tab
     When User click on the Locations Tab
