@@ -22,8 +22,8 @@ public class SettingsPage extends BaseUtil {
         PageFactory.initElements(driver,this);
     }
 
-    @FindBy(how = How.XPATH, using = "//*[@id=\"PostForm\"]/table[1]/tbody/tr[3]/td/ul/li[8]")
-    public WebElement clickCostCentersLinkText;
+    @FindBy(how = How.LINK_TEXT, using = "SETTINGS")
+    public WebElement clickSettingsLinkText;
 
     @FindBy(how = How.LINK_TEXT, using = "Edit Employee Profile Settings")
     public WebElement clickEmployeeProfileSettings;
@@ -197,7 +197,7 @@ public class SettingsPage extends BaseUtil {
 
 
     public void clickSettingsTabLinkText() {
-        clickCostCentersLinkText.click();
+        clickSettingsLinkText.click();
     }
 
     public void clickEditEmployeeProfileSettings() {

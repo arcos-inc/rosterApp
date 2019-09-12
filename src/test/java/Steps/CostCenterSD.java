@@ -61,7 +61,7 @@ public class CostCenterSD extends BaseUtil {
     public void userEnterTheCostCenterName() throws Throwable {
 
         System.out.println("User enter the Cost Center Name");
-        costCenterPage.enterCostCenterName(help.generateCostCenter());
+        costCenterPage.enterCostCenterName(help.randomString(5));
         Thread.sleep(1000);
     }
 

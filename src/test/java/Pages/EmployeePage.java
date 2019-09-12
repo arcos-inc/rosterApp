@@ -648,4 +648,8 @@ public class EmployeePage {
     public void clickTerminateButton() {
         btnTerminate.click();
     }
+
+    public void clickEmployeeListCheckbox() {
+        clickCheck.click();
+    }
 }

@@ -79,7 +79,7 @@ public class FilterEmployeesPage extends BaseUtil {
 
     public void clickWorkgroupDropdown() {
         Select select = new Select(filterWorkGroup);
-        select.selectByIndex(15);
+        select.selectByIndex(1);
     }
 
     public void enterEmployeeName() {

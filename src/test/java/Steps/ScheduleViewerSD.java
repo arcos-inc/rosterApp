@@ -159,7 +159,7 @@ public class ScheduleViewerSD extends BaseUtil {
     @And("^User edit Profile$")
     public void userEditProfile() throws Throwable {
 
-        scheduleViewerPage.editProfile(helper.generateNames());
+        scheduleViewerPage.editProfile("M. "+helper.generateNames());
         Thread.sleep(1000);
     }
 

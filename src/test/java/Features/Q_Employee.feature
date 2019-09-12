@@ -35,19 +35,19 @@ Feature: Employee Tab
     And User should click on the Workgroup Dropdown
 #    And User enter the Employee Name "Azfar"
 
-  @ZZS_FilterActiveEmployees
-  Scenario: Add Filter Feature For Company Admin to filter Employee
-#    Given User Should select Acting roles as Loc Admin
-    Given User is on the Employees Screen
-    Then User should click on the Filter Dropdown to select Active employees
-    And User should click on the Workgroup Dropdown
-#    And User enter the Employee Name "Azfar"
-
-  @ZZT_FilterInactiveEmployees
+  @ZZS_FilterInactiveEmployees
   Scenario: Add Filter Feature For Company Admin to filter Employee
 #    Given User Should select Acting roles as Loc Admin
     Given User is on the Employees Screen
     Then User should click on the Filter Dropdown to select Inactive employees
+    And User should click on the Workgroup Dropdown
+#    And User enter the Employee Name "Azfar"
+
+  @ZZT_FilterActiveEmployees
+  Scenario: Add Filter Feature For Company Admin to filter Employee
+#    Given User Should select Acting roles as Loc Admin
+    Given User is on the Employees Screen
+    Then User should click on the Filter Dropdown to select Active employees
     And User should click on the Workgroup Dropdown
 #    And User enter the Employee Name "Azfar"
 
@@ -61,6 +61,8 @@ Feature: Employee Tab
     And User click on the Create new note Text link
     And User add note "Employee is on work"
     And User click on the OK Button to save note
+    And User check on the Show On Employee List checkbox
+    Then User click on the Update button to return on the Edit Employee Screen
     Then User click on the Cancel button to return on the Edit Employee Screen
     Then User click on the Cancel button to return on the Edit Employee Screen
 
@@ -88,9 +90,9 @@ Feature: Employee Tab
   @ZZX_EditSkills
   Scenario: Edit Skills Feature For Location Admin under Employees tab
 #    Given User Should select Acting roles as Loc Admin
-    Given User is on the Employees Screen
-    When User should click on the Edit Employee
-    Then User should be on Edit Employee Screen
+#    Given User is on the Employees Screen
+#    When User should click on the Edit Employee
+    Given User should be on Edit Employee Screen
     When User should click on the Edit Skills Link Text
     Then User is on the Edit Skills Screen
     And User check on the checkboxes to update skills
@@ -98,10 +100,10 @@ Feature: Employee Tab
 
   @ZZY_EditQualifications
   Scenario: Edit Qualifications Feature For Location Admin under Employees tab
-    Given User Should select Acting roles as Loc Admin
-    Given User is on the Employees Screen
-    When User should click on the Edit Employee
-    Then User should be on Edit Employee Screen
+#    Given User Should select Acting roles as Loc Admin
+#    Given User is on the Employees Screen
+#    When User should click on the Edit Employee
+    Given User should be on Edit Employee Screen
     When User should click on the Edit Qualifications Link Text
     Then User is on the Edit Qualifications Screen
     When User click on the Add New Qualification Link Text
@@ -116,8 +118,8 @@ Feature: Employee Tab
     Then User is on the Edit Qualification Screen
     And User click on the remove button to remove Qualification
     And User click on the Employees tab
-    And User is on the Employees Screen Again
-    When User should click on the Edit Employee
+#    And User is on the Employees Screen Again
+#    When User should click on the Edit Employee
 
   @ZZZA_EditTradeWorkGroups
   Scenario: Edit Trade Work Groups Feature For Location Admin under Employees tab
@@ -133,9 +135,9 @@ Feature: Employee Tab
   @ZZZB_EditPayRate
   Scenario: Edit Pay Rate Feature For Location Admin under Employees tab
 #    Given User Should select Acting roles as Loc Admin
-    Given User is on the Employees Screen
-    When User should click on the Edit Employee
-    Then User should be on Edit Employee Screen
+#    Given User is on the Employees Screen
+#    When User should click on the Edit Employee
+    Given User should be on Edit Employee Screen
     When User should click on the Edit Pay Rate Link Text
     Then User is on the Edit Pay Rate Screen
     When User enter the Pay Rate "2.00"
@@ -144,9 +146,9 @@ Feature: Employee Tab
   @ZZZC_EditJobTitle
   Scenario: Edit Job Title Feature For Location Admin under Employees tab
 #    Given User Should select Acting roles as Loc Admin
-    Given User is on the Employees Screen
-    When User should click on the Edit Employee
-    Then User should be on Edit Employee Screen
+#    Given User is on the Employees Screen
+#    When User should click on the Edit Employee
+    Given User should be on Edit Employee Screen
     When User should click on the Edit Job Title Link Text
     Then User is on the Edit Job Title Screen
     When User select Job Title from the dropdown
@@ -155,9 +157,9 @@ Feature: Employee Tab
   @ZZZD_EditEmployeeStatus
   Scenario: Edit Employee Status Feature For Location Admin under Employees tab
 #    Given User Should select Acting roles as Loc Admin
-    Given User is on the Employees Screen
-    When User should click on the Edit Employee
-    Then User should be on Edit Employee Screen
+#    Given User is on the Employees Screen
+#    When User should click on the Edit Employee
+    Given User should be on Edit Employee Screen
     When User should click on the Edit Employee Status Link Text
     Then User is on the Edit Employee Status Screen
     When User select Employee Status from the dropdown
@@ -166,9 +168,9 @@ Feature: Employee Tab
   @ZZZE_EditEmployeeCostCenter
   Scenario: Edit Employee Cost Center Feature For Location Admin under Employees tab
 #    Given User Should select Acting roles as Loc Admin
-    Given User is on the Employees Screen
-    When User should click on the Edit Employee
-    Then User should be on Edit Employee Screen
+#    Given User is on the Employees Screen
+#    When User should click on the Edit Employee
+    Given User should be on Edit Employee Screen
     When User should click on the Edit Employee Cost Center Link Text
     Then User is on the Edit Employee Cost Center Screen
     When User select Employee Cost Center from the dropdown
@@ -178,9 +180,9 @@ Feature: Employee Tab
   @ZZZF_EditCross-TrainedDepartments
   Scenario: Edit Cross-Trained Departments Feature For Location Admin under Employees tab
 #    Given User Should select Acting roles as Loc Admin
-    Given User is on the Employees Screen
-    When User should click on the Edit Employee
-    Then User should be on Edit Employee Screen
+#    Given User is on the Employees Screen
+#    When User should click on the Edit Employee
+    Given User should be on Edit Employee Screen
     When User should click on the Edit Cross-Trained Departments Link Text
     Then User is on the View Cross-Trained Departments Screen
     And User click on the Done button to update Cross-Trained Departments
@@ -188,9 +190,9 @@ Feature: Employee Tab
   @ZZZG_ViewDependabilityHistory
   Scenario: View Dependability History Feature For Location Admin under Employees tab
 #    Given User Should select Acting roles as Loc Admin
-    Given User is on the Employees Screen
-    When User should click on the Edit Employee
-    Then User should be on Edit Employee Screen
+#    Given User is on the Employees Screen
+#    When User should click on the Edit Employee
+    Given User should be on Edit Employee Screen
     When User should click on the View Dependability History Link Text
     Then User is on the View Dependability History Screen
     And User click on the Done button to update View Dependability History
@@ -198,9 +200,9 @@ Feature: Employee Tab
   @ZZZH_EditEmployeeScheduleAvailability
   Scenario: Edit Employee Schedule Availability Feature For Location Admin under Employees tab
 #    Given User Should select Acting roles as Loc Admin
-    Given User is on the Employees Screen
-    When User should click on the Edit Employee
-    Then User should be on Edit Employee Screen
+#    Given User is on the Employees Screen
+#    When User should click on the Edit Employee
+    Given User should be on Edit Employee Screen
     When User should click on the Edit Employee Schedule Availability Link Text
     Then User is on the Availability Patterns Screen
     And User click on the View Link Text
@@ -210,9 +212,9 @@ Feature: Employee Tab
   @ZZZI_EditRuleSets
   Scenario: Edit Rule Sets Feature For Location Admin under Employees tab
 #    Given User Should select Acting roles as Loc Admin
-    Given User is on the Employees Screen
-    When User should click on the Edit Employee
-    Then User should be on Edit Employee Screen
+#    Given User is on the Employees Screen
+#    When User should click on the Edit Employee
+    Given User should be on Edit Employee Screen
     When User should click on the Edit Rule Sets Link Text
     Then User is on the Edit Rule Sets Screen
     And User select Shift Rule Set
@@ -222,15 +224,17 @@ Feature: Employee Tab
     And User select Dependability Rule Set
     And User click on the Update button to Update Rule Sets
     Then User click on the Cancel button to return on the Edit Employee Screen
+    Then User click on the Cancel button to return on the Edit Employee Screen
 
   @ZZZJ_TerminateEmployee
   Scenario: Terminate Employee Feature For Location Admin under Employees tab
 #    Given User Should select Acting roles as Loc Admin
+#    Given User click on the Employees tab
     Given User is on the Employees Screen
-    When User should click on the Edit Employee to terminate
-    Then User should be on Edit Employee Screen
-    When User should click on the Terminate Employee Link Text
-    Then User is on the Terminate Employee Screen
+    Then User should click on the Edit Employee to terminate
+    When User should be on Edit Employee Screen
+    Then User should click on the Terminate Employee Link Text
+    And User is on the Terminate Employee Screen
     And User select the status of the employee termination
     And User click on the Terminate Button
 

@@ -5,6 +5,7 @@ import Pages.SettingsPage;
 import Utilities.Helper;
 import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
+import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
@@ -20,14 +21,14 @@ public class SettingsSD extends BaseUtil {
         this.base = base;
     }
 
-    @When("^User see the Settings Tab$")
+    @Given("^User see the Settings Tab$")
     public void userSeeTheSettingsTab() throws Throwable {
 
         System.out.println("User see the Settings Tab");
         Thread.sleep(1000);
     }
 
-    @And("^User click on the Settings Tab$")
+    @When("^User click on the Settings Tab$")
     public void userClickOnTheSettingsTab() throws Throwable {
 
         System.out.println("User click on the Settings Tab");

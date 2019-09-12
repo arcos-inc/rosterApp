@@ -17,7 +17,7 @@ public class QualificationsPage extends BaseUtil {
         PageFactory.initElements(driver,this);
     }
 
-    @FindBy(how = How.XPATH, using = "//*[@id=\"PostForm\"]/table[1]/tbody/tr[3]/td/ul/li[4]/a")
+    @FindBy(how = How.XPATH, using = "//*[@id=\"form1\"]/table[1]/tbody/tr[3]/td/ul/li[4]/a")
     public WebElement clickQualificationsLinkText;
 
     @FindBy(how = How.XPATH, using = "//*[@id=\"divQualifications\"]/div[1]/a")

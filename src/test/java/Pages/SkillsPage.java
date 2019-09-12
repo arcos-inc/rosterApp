@@ -78,11 +78,13 @@ public class SkillsPage extends BaseUtil {
     }
 
     public void activeSkills() {
+        filterCombo.click();
         Select lastName = new Select(filterCombo);
         lastName.selectByIndex(1);
     }
 
     public void inactiveSkills() {
+        filterCombo.click();
         Select lastName = new Select(filterCombo);
         lastName.selectByIndex(2);
     }

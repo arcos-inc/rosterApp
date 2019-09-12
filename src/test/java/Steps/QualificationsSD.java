@@ -4,6 +4,7 @@ import Base.BaseUtil;
 import Pages.QualificationsPage;
 import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
+import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
@@ -17,7 +18,7 @@ public class QualificationsSD extends BaseUtil{
         this.base = base;
     }
 
-    @When("^User see the Qualifications Tab$")
+    @Given("^User see the Qualifications Tab$")
     public void userSeeTheQualificationsTab() throws Throwable {
 
         System.out.println("User see the Qualifications Tab");

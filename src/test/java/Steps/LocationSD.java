@@ -33,13 +33,13 @@ public class LocationSD extends BaseUtil {
 
     @When("^User see the Location Tab$")
     public void userSeeTheLocationTab() throws Throwable {
-        System.out.println("Check Add Location Tab");
+        System.out.println("User see the Location Tab");
         Thread.sleep(1000);
     }
 
     @Then("^User should click on Create New Location$")
     public void userShouldClickOnCreateNewLocation() throws Throwable {
-        System.out.println("Clicking on Create New Location");
+        System.out.println("User should click on Create New Location");
         page.CreateNewLocation();
         Thread.sleep(1000);
     }

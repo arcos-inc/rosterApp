@@ -216,6 +216,18 @@ public class EmployeeSD extends BaseUtil {
         Thread.sleep(1000);
     }
 
+    @And("^User check on the Show On Employee List checkbox$")
+    public void userCheckOnTheShowOnEmployeeListCheckbox() throws Throwable {
+        page.clickEmployeeListCheckbox();
+        Thread.sleep(1000);
+    }
+
+    @Then("^User click on the Update button to return on the Edit Employee Screen$")
+    public void userClickOnTheUpdateButtonToReturnOnTheEditEmployeeScreen() throws Throwable {
+        page.clickSaveUpdate();
+        Thread.sleep(1000);
+    }
+
     @Then("^User click on the Cancel button to return on the Edit Employee Screen$")
     public void userClickOnTheCancelButtonToReturnOnTheEditEmployeeScreen() throws Throwable {
         page.clickCancel();
