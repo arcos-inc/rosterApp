@@ -48,7 +48,7 @@ public class Hook extends BaseUtil {
         ReadExcel.readExcelFile();
     }
 
-    @After("@@ZZZK_Logout")
+    @After("@ZZZK_Logout")
     public void TearDownTest(Scenario scenario) {
 
         if (scenario.isFailed()) {
