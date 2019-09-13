@@ -51,7 +51,7 @@ public class ngTestListeners implements ITestListener {
 
         extentReportUtil.ExtentReport();
         //ToDo: Feature - Hard coding the feature name
-        features = extentReportUtil.extent.createTest(Feature.class, "A_LoginAsComanyAdmin Feature");
+        features = extentReportUtil.extent.createTest(Feature.class, "Regression Suite on ARCOS");
     }
 
     @Override

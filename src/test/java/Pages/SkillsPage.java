@@ -18,7 +18,7 @@ public class SkillsPage extends BaseUtil {
         PageFactory.initElements(driver, this);
     }
 
-    @FindBy(how = How.XPATH, using = "//*[@id=\"PostForm\"]/table[1]/tbody/tr[3]/td/ul/li[3]/a")
+    @FindBy(how = How.LINK_TEXT, using = "SKILLS")
     public WebElement clickSkillsTab;
 
     @FindBy(how = How.ID, using = "lnkNew")

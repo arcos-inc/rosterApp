@@ -17,7 +17,7 @@ public class DepartmentPage extends BaseUtil {
         PageFactory.initElements(driver, this);
     }
 
-    @FindBy(how = How.XPATH, using = "//*[@id=\"PostForm\"]/table[1]/tbody/tr[3]/td/ul/li[5]/a")
+    @FindBy(how = How.LINK_TEXT, using = "DEPARTMENTS")
     public WebElement clickDepartmentsTab;
 
     @FindBy(how = How.XPATH, using = "//*[@id=\"divDepartments\"]/div[1]/a")
