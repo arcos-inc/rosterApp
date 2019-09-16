@@ -252,6 +252,17 @@ public class EmployeeSD extends BaseUtil {
         Thread.sleep(1000);
     }
 
+    @When("^User should click on the Edit Paid Time Off Bank Text Link$")
+    public void userShouldClickOnTheEditPaidTimeOffBankTextLink() throws Throwable {
+        page.editPaidTimeOffBankTextLink();
+        Thread.sleep(1000);
+    }
+
+    @Then("^User should be on the Edit Paid Time Off Bank for Employee Screen$")
+    public void userShouldBeOnTheEditPaidTimeOffBankForEmployeeScreen() throws Throwable {
+        Thread.sleep(1000);
+    }
+
     @When("^User should click on the Edit Overtime Bank Text Link$")
     public void userShouldClickOnTheEditOvertimeBankTextLink() throws Throwable {
         page.editOvertimeBankTextLink();
@@ -284,6 +295,12 @@ public class EmployeeSD extends BaseUtil {
     @And("^User click on the Apply and Return button$")
     public void userClickOnTheApplyAndReturnButton() throws Throwable {
         page.clickApplyAndReturnButton();
+        Thread.sleep(1000);
+    }
+
+    @And("^User click on the Apply and Return$")
+    public void userClickOnTheApplyAndReturn() throws Throwable {
+        page.clickApplyAndReturn();
         Thread.sleep(1000);
     }
 

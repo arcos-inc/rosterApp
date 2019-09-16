@@ -134,6 +134,9 @@ public class EmployeePage {
     @FindBy(how = How.LINK_TEXT, using = "Edit Overtime Bank")
     public WebElement clickEditOvertime;
 
+    @FindBy(how = How.LINK_TEXT, using = "Edit Paid Time Off Bank")
+    public WebElement clickPaidTimeOff;
+
     @FindBy(how = How.ID, using = "ucEffectiveDate")
     public WebElement clickDatePicker;
 
@@ -148,6 +151,9 @@ public class EmployeePage {
 
     @FindBy(how = How.ID, using = "btnApply")
     public WebElement applyAndReturn;
+
+    @FindBy(how = How.ID, using = "btnApplyReturn")
+    public WebElement btnApplyReturn;
 
     @FindBy(how = How.LINK_TEXT, using = "Edit Skills")
     public WebElement clickEditSkillsLink;
@@ -176,7 +182,7 @@ public class EmployeePage {
     @FindBy(how = How.ID, using = "btnRemove")
     public WebElement clickRemove;
 
-    @FindBy(how = How.XPATH, using = "//*[@id=\"form1\"]/table[1]/tbody/tr[3]/td/ul/li[1]/a")
+    @FindBy(how = How.LINK_TEXT, using = "EMPLOYEES")
     public WebElement clickEmployeesTab;
     //*[@id="form1"]/table[1]/tbody/tr[3]/td/ul/li[1]/a
     //*[@id="PostForm"]/table[1]/tbody/tr[3]/td/ul/li[1]/a
@@ -651,5 +657,13 @@ public class EmployeePage {
 
     public void clickEmployeeListCheckbox() {
         clickCheck.click();
+    }
+
+    public void editPaidTimeOffBankTextLink() {
+        clickPaidTimeOff.click();
+    }
+
+    public void clickApplyAndReturn() {
+        btnApplyReturn.click();
     }
 }
