@@ -238,3 +238,16 @@ Feature: Employee Tab
     And User select the status of the employee termination
     And User click on the Terminate Button
 
+  @ZZZK_EditPaidTimeOffBank
+  Scenario: Edit Paid Time Off Bank Feature For Location Admin
+#    Given User Should select Acting roles as Loc Admin
+#    Given User click on the Employees tab
+    Given User is on the Employees Screen
+    When User should click on the Edit Employee
+    Then User should be on Edit Employee Screen
+    When User should click on the Edit Paid Time Off Bank Text Link
+    Then User should be on the Edit Paid Time Off Bank for Employee Screen
+    And User Select the Adjustment Date
+    And User enter the hours "1.00"
+    And User enter the comments "The following hours increases"
+    And User click on the Apply and Return
