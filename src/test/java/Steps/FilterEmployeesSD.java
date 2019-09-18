@@ -51,7 +51,7 @@ public class FilterEmployeesSD extends BaseUtil {
     @Then("^User should click on the Filter Dropdown to select Active employees$")
     public void userShouldClickOnTheFilterDropdownToSelectActiveEmployees() throws Throwable {
 
-        System.out.println("");
+        System.out.println("User should click on the Filter Dropdown to select Active employees");
         filterEmployeesPage.clickActiveFilterDropdown();
         Thread.sleep(1000);
     }
@@ -59,7 +59,7 @@ public class FilterEmployeesSD extends BaseUtil {
     @Then("^User should click on the Filter Dropdown to select Inactive employees$")
     public void userShouldClickOnTheFilterDropdownToSelectInactiveEmployees() throws Throwable {
 
-        System.out.println("");
+        System.out.println("User should click on the Filter Dropdown to select Inactive employees");
         filterEmployeesPage.clickInactiveFilterDropdown();
         Thread.sleep(1000);
     }

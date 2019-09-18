@@ -101,6 +101,7 @@ public class ScheduleViewerSD extends BaseUtil {
     @Then("^User click on the Add Schedule Viewer to Multiple Location$")
     public void userClickOnTheAddScheduleViewerToMultipleLocation() throws Throwable {
 
+        System.out.println("User click on the Add Schedule Viewer to Multiple Location");
         scheduleViewerPage.clickOnTheAddScheduleViewerToMultipleLocation();
         Thread.sleep(1000);
     }
@@ -108,6 +109,7 @@ public class ScheduleViewerSD extends BaseUtil {
     @Then("^User click on the Next button$")
     public void userClickOnTheNextButton() throws Throwable {
 
+        System.out.println("User click on the Next button");
         scheduleViewerPage.clickNextButton();
         Thread.sleep(1000);
     }
@@ -121,6 +123,7 @@ public class ScheduleViewerSD extends BaseUtil {
     @And("^User select multiple locations$")
     public void userSelectMultipleLocations() throws Throwable {
 
+        System.out.println("User select multiple locations");
         scheduleViewerPage.selectLocationsFromList();
         Thread.sleep(1000);
     }
@@ -128,6 +131,7 @@ public class ScheduleViewerSD extends BaseUtil {
     @When("^User click on the Edit Assignment link text$")
     public void userClickOnTheEditAssignmentLinkText() throws Throwable {
 
+        System.out.println("");
         scheduleViewerPage.editAssignmentLink();
         Thread.sleep(1000);
     }

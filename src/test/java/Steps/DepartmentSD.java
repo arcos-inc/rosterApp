@@ -30,6 +30,7 @@ public class DepartmentSD extends BaseUtil {
     @Then("^User should click on the Departments Tab$")
     public void userShouldClickOnTheDepartmentsTab() throws Throwable {
 
+        System.out.println("User should click on the Departments Tab");
         departmentPage.clickOnDepartmentsTab();
         Thread.sleep(1000);
     }
@@ -43,6 +44,7 @@ public class DepartmentSD extends BaseUtil {
     @Then("^User click on the Create New Department$")
     public void userClickOnTheCreateNewDepartment() throws Throwable {
 
+        System.out.println("User click on the Create New Department");
         departmentPage.createNewDepartment();
         Thread.sleep(1000);
     }
@@ -56,6 +58,7 @@ public class DepartmentSD extends BaseUtil {
     @And("^User enter the Department Name$")
     public void userEnterTheDepartmentName() throws Throwable {
 
+        System.out.println("User enter the Department Name");
         departmentPage.enterDepartmentName(help.generateDepartments());
         Thread.sleep(1000);
     }
@@ -63,6 +66,7 @@ public class DepartmentSD extends BaseUtil {
     @And("^User enter the Department Description \"([^\"]*)\"$")
     public void userEnterTheDepartmentDescription(String deptDescription) throws Throwable {
 
+        System.out.println("User enter the Department Description");
         departmentPage.enterDepartmentDescription(deptDescription);
         Thread.sleep(1000);
     }
@@ -70,6 +74,7 @@ public class DepartmentSD extends BaseUtil {
     @And("^User check the Allowed for Transfer Bidding checkbox$")
     public void userCheckTheAllowedForTransferBiddingCheckbox() throws Throwable {
 
+        System.out.println("User check the Allowed for Transfer Bidding checkbox");
         departmentPage.clickAllowedForTransferBiddingCheckbox();
         Thread.sleep(1000);
     }
@@ -77,6 +82,7 @@ public class DepartmentSD extends BaseUtil {
     @And("^User check the Is Active checkbox$")
     public void userCheckTheIsActiveCheckbox() throws Throwable {
 
+        System.out.println("User check the Is Active checkbox");
         departmentPage.clickIsActiveCheckbox();
         Thread.sleep(1000);
     }
@@ -84,6 +90,7 @@ public class DepartmentSD extends BaseUtil {
     @Then("^User click on the Save Button$")
     public void userClickOnTheSaveButton() throws Throwable {
 
+        System.out.println("User click on the Save Button");
         departmentPage.clickSaveButton();
         Thread.sleep(1000);
     }
@@ -91,6 +98,7 @@ public class DepartmentSD extends BaseUtil {
     @Then("^User click on the Edit Department$")
     public void userClickOnTheEditDepartment() throws Throwable {
 
+        System.out.println("User click on the Edit Department");
         departmentPage.clickEditLinkText();
         Thread.sleep(1000);
     }
