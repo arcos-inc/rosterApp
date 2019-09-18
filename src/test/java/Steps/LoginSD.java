@@ -29,7 +29,7 @@ public class LoginSD extends BaseUtil {
 
     @Given("^User is on Application Login Page$")
     public void userIsOnApplicationLoginPage() throws Throwable {
-        scenarioDef.createNode(new GherkinKeyword("Given"), "User is on Application Login Page");
+//        scenarioDef.createNode(new GherkinKeyword("Given"), "User is on Application Login Page");
         configFileReader = new ConfigFileReader();
         Web_Driver.navigate().to(configFileReader.getApplicationUrl());
         Web_Driver.manage().window().maximize();
@@ -54,7 +54,7 @@ public class LoginSD extends BaseUtil {
 
     @When("^User click on Admin Login DropDown$")
     public void userShouldClickOnAdminLoginDropDown() throws Throwable{
-        scenarioDef.createNode(new GherkinKeyword("When"), "User click on Admin Login DropDown");
+//        scenarioDef.createNode(new GherkinKeyword("When"), "User click on Admin Login DropDown");
         LoginPage page = new LoginPage(Web_Driver);
         page.ClickAdminRole();
         Thread.sleep(1000);
@@ -62,14 +62,14 @@ public class LoginSD extends BaseUtil {
 
     @And("^User select role as a Company Admin$")
     public void userShouldRoleAsACompanyAdmin() throws Throwable{
-        scenarioDef.createNode(new GherkinKeyword("And"), "User select role as a Company Admin");
+//        scenarioDef.createNode(new GherkinKeyword("And"), "User select role as a Company Admin");
         LoginPage page = new LoginPage(Web_Driver);
         page.SelectCompanyAdminRole();
     }
 
     @And("^User click on login button$")
     public void iClickLoginButton() throws Throwable{
-        scenarioDef.createNode(new GherkinKeyword("And"), "User click on login button");
+//        scenarioDef.createNode(new GherkinKeyword("And"), "User click on login button");
         LoginPage page = new LoginPage(Web_Driver);
         page.ClickLogin();
         Thread.sleep(1000);
@@ -77,7 +77,7 @@ public class LoginSD extends BaseUtil {
 
     @Then("^User is on Application home page$")
     public void userIsOnApplicationHomePage() throws Throwable{
-        scenarioDef.createNode(new GherkinKeyword("Then"), "User is on Application home page");
+//        scenarioDef.createNode(new GherkinKeyword("Then"), "User is on Application home page");
         System.out.println("Welcome to ARCOS-RosterApp Home Page");
         Thread.sleep(1000);
     }
@@ -103,14 +103,14 @@ public class LoginSD extends BaseUtil {
 
     @And("^User should select Admin User$")
     public void userShouldSelectAdminUser() throws Throwable{
-        scenarioDef.createNode(new GherkinKeyword("And"), "User should select Admin User");
+//        scenarioDef.createNode(new GherkinKeyword("And"), "User should select Admin User");
         LoginPage page = new LoginPage(Web_Driver);
         page.SelectUser();
     }
 
     @And("^User click on the Location$")
     public void userClickOnTheLocation() throws Throwable {
-        scenarioDef.createNode(new GherkinKeyword("And"), "User click on the Location");
+//        scenarioDef.createNode(new GherkinKeyword("And"), "User click on the Location");
         System.out.println("User click on the Location");
         LoginPage page = new LoginPage(Web_Driver);
         page.clickLocation();
@@ -119,7 +119,7 @@ public class LoginSD extends BaseUtil {
 
     @And("^User select location$")
     public void userSelectLocation() throws Throwable {
-        scenarioDef.createNode(new GherkinKeyword("And"), "User select location");
+//        scenarioDef.createNode(new GherkinKeyword("And"), "User select location");
         System.out.println("User select location");
         LoginPage page = new LoginPage(Web_Driver);
         page.selectLocation();
