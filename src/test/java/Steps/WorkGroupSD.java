@@ -38,7 +38,7 @@ public class WorkGroupSD extends BaseUtil {
     @And("^User should enter work group$")
     public void userShouldEnterWorkGroup() throws Exception {
         System.out.println("Entering Work Group Name");
-        page.enterWorkGroupName(help.randomString(5));
+        page.enterWorkGroupName("D. " + help.randomString(5));
         Thread.sleep(1000);
     }
 
@@ -120,6 +120,9 @@ public class WorkGroupSD extends BaseUtil {
     @Then("^User should click on Hide Inactive Work Group$")
     public void userShouldClickOnHideInactiveWorkGroup() throws Throwable {
         System.out.println("User should click on Hide Inactive Work Group");
+        //Hide Inactive Work Groups should be Unchecked before Running
+        page.checkHideInactiveBtn();
+        Thread.sleep(1500);
         page.checkHideInactiveBtn();
         Thread.sleep(1000);
     }

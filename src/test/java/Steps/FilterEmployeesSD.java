@@ -23,6 +23,7 @@ public class FilterEmployeesSD extends BaseUtil {
 
     @Given("^User Should select Acting roles as Loc Admin$")
     public void userShouldSelectActingRolesAsLocAdmin() throws Throwable {
+        System.out.println("User Should select Acting roles as Loc Admin");
         filterEmployeesPage.GetLocationURL();
         Web_Driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }

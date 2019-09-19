@@ -28,6 +28,7 @@ public class LocationSD extends BaseUtil {
 
     @Given("^User Should select Acting roles$")
     public void userShouldSelectActingRoles() throws Throwable {
+        System.out.println("User Should select Acting roles");
 //        scenarioDef.createNode(new GherkinKeyword("Given"), "User Should select Acting roles");
         page.GetLocationURL();
         Web_Driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
@@ -59,7 +60,7 @@ public class LocationSD extends BaseUtil {
     public void userEnterTheName() throws Throwable {
 //        scenarioDef.createNode(new GherkinKeyword("Then"), "User enter the Name");
         System.out.println("User can enter Location Name");
-        page.enterLocationName(helper.generateDepartments());
+        page.enterLocationName("Mr. " + helper.generateDepartments() + " " +  helper.randomString(3));
         Thread.sleep(1000);
     }
 

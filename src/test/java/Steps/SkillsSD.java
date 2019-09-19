@@ -26,7 +26,8 @@ public class SkillsSD  extends BaseUtil {
     @When("^User see the Skills Tab$")
     public void userSeeTheSkillsTab() throws Throwable {
 
-        System.out.println("Check Add Location Tab");
+        System.out.println("User see the Skills Tab");
+        Thread.sleep(2000);
     }
 
     @Then("^User should click on Skills Tab$")
@@ -46,7 +47,7 @@ public class SkillsSD  extends BaseUtil {
     @Then("^User click on the Create New Skill$")
     public void userClickOnTheCreateNewSkill() throws Throwable {
 
-        System.out.println("");
+        System.out.println("User click on the Create New Skill");
         skillsPage.createNewSkill();
         Thread.sleep(1000);
     }

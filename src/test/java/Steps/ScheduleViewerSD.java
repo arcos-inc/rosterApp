@@ -131,19 +131,20 @@ public class ScheduleViewerSD extends BaseUtil {
     @When("^User click on the Edit Assignment link text$")
     public void userClickOnTheEditAssignmentLinkText() throws Throwable {
 
-        System.out.println("");
+        System.out.println("User click on the Edit Assignment link text");
         scheduleViewerPage.editAssignmentLink();
         Thread.sleep(1000);
     }
 
     @Then("^User is on the Edit Schedule Viewer Screen$")
     public void userIsOnTheEditScheduleViewerScreen() throws Throwable {
-
+        System.out.println("User is on the Edit Schedule Viewer Screen");
     }
 
     @And("^User edit locations$")
     public void userEditLocations() throws Throwable {
 
+        System.out.println("User edit locations");
         scheduleViewerPage.editSchedule();
         Thread.sleep(1000);
     }
@@ -151,19 +152,21 @@ public class ScheduleViewerSD extends BaseUtil {
     @When("^User click on the Edit Profile link text$")
     public void userClickOnTheEditProfileLinkText() throws Throwable {
 
+        System.out.println("User click on the Edit Profile link text");
         scheduleViewerPage.editProfileLink();
         Thread.sleep(1000);
     }
 
     @Then("^User is on the Edit Profile Viewer Screen$")
     public void userIsOnTheEditProfileViewerScreen() throws Throwable {
-
+        System.out.println("User is on the Edit Profile Viewer Screen");
     }
 
     @And("^User edit Profile$")
     public void userEditProfile() throws Throwable {
 
-        scheduleViewerPage.editProfile("M. "+helper.generateNames());
+        System.out.println("User edit Profile");
+        scheduleViewerPage.editProfile("M. "+helper.generateNames() + " " + helper.randomString(2));
         Thread.sleep(1000);
     }
 

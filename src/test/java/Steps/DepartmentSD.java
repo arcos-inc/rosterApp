@@ -59,7 +59,7 @@ public class DepartmentSD extends BaseUtil {
     public void userEnterTheDepartmentName() throws Throwable {
 
         System.out.println("User enter the Department Name");
-        departmentPage.enterDepartmentName(help.generateDepartments());
+        departmentPage.enterDepartmentName(help.generateDepartments() + " " + help.randomString(2));
         Thread.sleep(1000);
     }
 

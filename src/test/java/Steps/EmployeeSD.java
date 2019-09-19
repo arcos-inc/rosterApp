@@ -52,7 +52,7 @@ public class EmployeeSD extends BaseUtil {
     @And("^User should enter the employee First Name$")
     public void userShouldEnterTheEmployeeFirstName() throws Exception {
         System.out.println("Entering Employee First Name");
-        page.enterEmployeeFirstName(help.generateNames());
+        page.enterEmployeeFirstName("C. " + help.generateNames() + " " + help.randomString(2));
     }
 
     @And("^User should enter the employee Last Name$")

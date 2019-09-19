@@ -19,7 +19,7 @@ public class SkillsPage extends BaseUtil {
     }
 
     @FindBy(how = How.LINK_TEXT, using = "SKILLS")
-    public WebElement clickSkillsTab;
+    public WebElement clickSkillsTab;//*[@id="PostForm"]/table[1]/tbody/tr[3]/td/ul/li[3]/a
 
     @FindBy(how = How.ID, using = "lnkNew")
     public WebElement clickCreateNewSkillLink;

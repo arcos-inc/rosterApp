@@ -14,7 +14,9 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
                 " @W_AddDepartment, @X_EditDepartment," +
                 " @Y_CreateQualifications, @Z_EditQualifications, @ZA_EditQualificationsForLocation," +
                 " @ZB_CreateCostCenters, @ZC_EditCostCenters," +
-                " @ZD_EditEmployeeProfileSettings, @ZE_NewAbsentReason, @ZF_EditAbsentReasons, @ZG_NewPaidTimeOffReason, @ZH_EditPaidTimeOffReason, @ZI_NewOvertimeReasons, @ZJ_EditOvertimeReasons, @ZK_NewUnauthorizedHoursReasons, @ZL_EditUnauthorizedHoursReasons, @ZM_EditPasswordPolicy, @ZN_EditCompanyTerminology, @ZO_EditQuarterDates, @ZP_AddNewSeniorityRankRule, @ZQ_EditSeniorityRankRule, @ZR_AddNewBreakClassification, @ZS_EditBreakClassification, @ZT_EditDefaultBreakSettings, " +
+                " @ZD_EditEmployeeProfileSettings, " +
+//                        "@ZE_NewAbsentReason, @ZF_EditAbsentReasons, " +
+                "@ZG_NewPaidTimeOffReason, @ZH_EditPaidTimeOffReason, @ZI_NewOvertimeReasons, @ZJ_EditOvertimeReasons, @ZK_NewUnauthorizedHoursReasons, @ZL_EditUnauthorizedHoursReasons, @ZM_EditPasswordPolicy, @ZN_EditCompanyTerminology, @ZO_EditQuarterDates, @ZP_AddNewSeniorityRankRule, @ZQ_EditSeniorityRankRule, @ZR_AddNewBreakClassification, @ZS_EditBreakClassification, @ZT_EditDefaultBreakSettings, " +
                 " @H_Logout," +
 
                 " @ZZA_LoginAsLocationAdmin, " +

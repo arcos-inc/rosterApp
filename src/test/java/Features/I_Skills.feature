@@ -26,15 +26,15 @@ Feature: Skill Feature For Company Admin
 
   @U_FilterSkills
   Scenario: Filter Skills For Company Admin
-    Given User Should select Acting roles
-    When User see the Skills Tab
-    Then User should click on Skills Tab
-    When User is on the Skills Screen
-    And User select Active Skills from dropdown
+    Given User is on the Skills Screen
+    And User select Inactive Skills from dropdown
     Then User click on the Filter Button
 
   @V_FilterSkills
   Scenario: Filter Skills For Company Admin
+#    Given User Should select Acting roles
+#    When User see the Skills Tab
+#    Then User should click on Skills Tab
     Given User is on the Skills Screen
-    And User select Inactive Skills from dropdown
+    And User select Active Skills from dropdown
     Then User click on the Filter Button
