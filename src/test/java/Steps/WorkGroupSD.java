@@ -38,7 +38,7 @@ public class WorkGroupSD extends BaseUtil {
     @And("^User should enter work group$")
     public void userShouldEnterWorkGroup() throws Exception {
         System.out.println("Entering Work Group Name");
-        page.enterWorkGroupName("D. " + help.randomString(5));
+        page.enterWorkGroupName("F. " + help.randomString(5));
         Thread.sleep(1000);
     }
 
